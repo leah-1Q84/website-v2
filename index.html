@@ -1,0 +1,535 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>saferspaces – Einfach, sicher, für alle</title>
+<meta name="description" content="saferspaces macht Sicherheit zugänglich – niedrigschwellig, anonym und in Echtzeit. Für Veranstaltungen, Städte und Organisationen.">
+<meta name="author" content="saferspaces">
+<meta name="robots" content="index, follow">
+<meta name="theme-color" content="#2A1482">
+<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0">
+</head>
+<body>
+
+<!-- ============================================================
+     NAVIGATION – Neue Struktur v3: 4 Hauptpunkte
+     Lösung | Einsatzbereiche | Preise | Über uns | [Demo buchen] [Login]
+     ============================================================ -->
+<nav class="nav" id="nav">
+  <div class="nav-inner">
+    <!-- Logo -->
+    <div class="nav-logo">
+      <a href="index.html">
+        <img src="images/logo-folded.svg" alt="saferspaces" class="logo-folded">
+        <img src="images/logo-unfolded.svg" alt="saferspaces" class="logo-unfolded">
+      </a>
+    </div>
+
+    <!-- Hauptnavigation -->
+    <div class="nav-menu">
+
+      <!-- 1. Lösung -->
+      <div class="nav-item">
+        <a href="loesung.html" style="text-decoration:none; color:inherit;">Lösung</a>
+        <div class="nav-dropdown">
+          <a href="loesung.html"><strong>Übersicht</strong><span>Das Gesamtsystem</span></a>
+          <a href="loesung-melden.html"><strong>Melden</strong><span>Rapid Response</span></a>
+          <a href="loesung-reagieren.html"><strong>Reagieren</strong><span>Dashboard & Koordination</span></a>
+          <a href="loesung-verstehen.html"><strong>Verstehen</strong><span>Analyse Dashboard</span></a>
+          <a href="loesung-rapid-report.html"><strong>Rapid Report</strong><span>Meldungen ohne Team vor Ort</span></a>
+        </div>
+      </div>
+
+      <!-- 2. Einsatzbereiche (war: Branchen + Referenzen) -->
+      <div class="nav-item">
+        <a href="einsatzbereiche.html" style="text-decoration:none; color:inherit;">Einsatzbereiche</a>
+        <div class="nav-dropdown">
+          <a href="einsatzbereiche-sport.html"><strong>Sport &amp; Stadien</strong><span>DFB/DFL, Bundesliga, UEFA</span></a>
+          <a href="einsatzbereiche-events.html"><strong>Festivals &amp; Events</strong><span>OMR, gamescom, Reeperbahn</span></a>
+          <a href="einsatzbereiche-kommunen.html"><strong>Kommunen</strong><span>Stadtfeste, öffentl. Raum</span></a>
+          <a href="einsatzbereiche-bildung.html"><strong>Bildung</strong><span>Hochschulen, Schulträger</span></a>
+          <a href="einsatzbereiche-oepnv.html"><strong>ÖPNV &amp; Mobilität</strong><span>Busse, Bahnen, Haltestellen</span></a>
+          <a href="einsatzbereiche-freizeit.html"><strong>Freizeit &amp; Kultur</strong><span>Arenen, Theater, Saunen</span></a>
+          <a href="einsatzbereiche-unternehmen.html"><strong>Unternehmen</strong><span>HR, Compliance, Hinweisgeberschutz</span></a>
+        </div>
+      </div>
+
+      <!-- 3. Preise (direkt, kein Dropdown) -->
+      <a href="preise.html" class="nav-item nav-item-link">Preise</a>
+
+      <!-- 4. Über uns (war: Mehr) -->
+      <div class="nav-item">
+        <span>Über uns</span>
+        <div class="nav-dropdown">
+          <a href="ueber-uns-mission.html"><strong>Mission</strong><span>Warum Schutzkonzepte</span></a>
+          <a href="ueber-uns-team.html"><strong>Team</strong><span>Die Menschen hinter saferspaces</span></a>
+          <a href="ueber-uns-impact.html"><strong>Impact</strong><span>Kennzahlen &amp; Auszeichnungen</span></a>
+          <a href="ueber-uns-faq.html"><strong>FAQ</strong><span>Häufig gestellte Fragen</span></a>
+          <a href="ueber-uns-netzwerk.html"><strong>Netzwerk</strong><span>Partner &amp; Kooperationen</span></a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Actions: Demo + Login -->
+    <div class="nav-actions">
+      <a href="#" class="btn btn-secondary btn-sm" style="font-size:14px; height:36px; padding:0 16px;">Login</a>
+      <a href="demo.html" class="btn btn-primary btn-sm">Demo buchen</a>
+      <button class="mobile-toggle" onclick="toggleMobile()"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<!-- MOBILE MENU – Neue Struktur v3 -->
+<div id="mobileMenu" class="mobile-menu">
+  <div class="mobile-menu-section">
+    <div class="mobile-menu-section-title"><a href="loesung.html" style="color:inherit; text-decoration:none; flex:1;">Lösung</a><span class="mobile-menu-toggle" onclick="event.stopPropagation(); this.closest('.mobile-menu-section').classList.toggle('open')"></span></div>
+    <div class="mobile-menu-links">
+      <a href="loesung-melden.html">Melden</a>
+      <a href="loesung-reagieren.html">Reagieren</a>
+      <a href="loesung-verstehen.html">Verstehen</a>
+      <a href="loesung-rapid-report.html">Rapid Report</a>
+    </div>
+  </div>
+  <div class="mobile-menu-section">
+    <div class="mobile-menu-section-title"><a href="einsatzbereiche.html" style="color:inherit; text-decoration:none; flex:1;">Einsatzbereiche</a><span class="mobile-menu-toggle" onclick="event.stopPropagation(); this.closest('.mobile-menu-section').classList.toggle('open')"></span></div>
+    <div class="mobile-menu-links">
+      <a href="einsatzbereiche-sport.html">Sport &amp; Stadien</a>
+      <a href="einsatzbereiche-events.html">Festivals &amp; Events</a>
+      <a href="einsatzbereiche-kommunen.html">Kommunen</a>
+      <a href="einsatzbereiche-bildung.html">Bildung</a>
+      <a href="einsatzbereiche-oepnv.html">ÖPNV &amp; Mobilität</a>
+      <a href="einsatzbereiche-freizeit.html">Freizeit &amp; Kultur</a>
+      <a href="einsatzbereiche-unternehmen.html">Unternehmen</a>
+    </div>
+  </div>
+  <a href="preise.html">Preise</a>
+  <div class="mobile-menu-section">
+    <div class="mobile-menu-section-title"><span style="flex:1;">Über uns</span><span class="mobile-menu-toggle" onclick="event.stopPropagation(); this.closest('.mobile-menu-section').classList.toggle('open')"></span></div>
+    <div class="mobile-menu-links">
+      <a href="ueber-uns-mission.html">Mission</a>
+      <a href="ueber-uns-team.html">Team</a>
+      <a href="ueber-uns-impact.html">Impact</a>
+      <a href="ueber-uns-faq.html">FAQ</a>
+      <a href="ueber-uns-netzwerk.html">Netzwerk</a>
+    </div>
+  </div>
+  <div style="padding: 24px 0; display: flex; gap: 12px;">
+    <a href="#" class="btn btn-secondary btn-md" style="flex:1;">Login</a>
+    <a href="demo.html" class="btn btn-primary btn-md" style="flex:1;">Demo buchen</a>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     SEKTION 1.1: HERO
+     Rolle: Schaufenster – Überzeugen in 30 Sekunden
+     [Quelle: GitHub]
+     ============================================================ -->
+<div class="hero-wrapper">
+  <div class="hero-section has-image" style="background-image: url('images/hero-home.jpg'); background-size: cover; background-position: center;">
+    <div class="hero-content">
+      <h1 class="headline1 headline-white">Einfach, sicher, für alle</h1>
+      <p class="copy copy-white" style="margin: 24px 0 32px; max-width: 560px;">Saferspaces macht Sicherheit zugänglich – niedrigschwellig, anonym und in Echtzeit. Für Veranstaltungen, Städte und Organisationen.</p>
+      <div style="display: flex; gap: 16px; flex-wrap: wrap;">
+        <a href="demo.html" class="btn btn-primary btn-lg">Demo buchen</a>
+        <a href="loesung.html" class="btn btn-tertiary btn-lg">Lösung entdecken →</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     SEKTION 1.2: LOGO-CAROUSEL
+     Vertrauenssignale durch bekannte Marken
+     [Quelle: Live]
+     ============================================================ -->
+<div class="section bg-white" style="padding-top: 40px; padding-bottom: 40px;">
+  <div class="marquee-container">
+    <div class="marquee-track">
+      <span>OMR</span>
+      <span>gamescom</span>
+      <span>Barclays Arena</span>
+      <span>FC St. Pauli</span>
+      <span>Reeperbahn Festival</span>
+      <span>Tollwood</span>
+      <span>Kiel Sailing City</span>
+      <span>FC Magdeburg</span>
+      <span>Hamburg</span>
+      <span>Uni Flensburg</span>
+      <span>Maschseefest</span>
+      <!-- Dupliziert für nahtlosen Loop -->
+      <span>OMR</span>
+      <span>gamescom</span>
+      <span>Barclays Arena</span>
+      <span>FC St. Pauli</span>
+      <span>Reeperbahn Festival</span>
+      <span>Tollwood</span>
+      <span>Kiel Sailing City</span>
+      <span>FC Magdeburg</span>
+      <span>Hamburg</span>
+      <span>Uni Flensburg</span>
+      <span>Maschseefest</span>
+    </div>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     SEKTION 1.3: VORTEILE („Warum Saferspaces?")
+     6 Feature-Cards mit Icons
+     [Quelle: GitHub]
+     ============================================================ -->
+<div class="section bg-white">
+  <div class="section-content section-flex">
+    <div>
+      <h2 class="headline3">Warum Saferspaces?</h2>
+      <p class="copy" style="margin-top: 16px; max-width: 640px;">Saferspaces verbindet Schutz und Wohlbefinden in einer integrierten Sicherheitslösung.</p>
+    </div>
+    <div class="benefit-grid">
+      <!-- Card 1 -->
+      <div class="card">
+        <div class="benefit-icon"><span class="material-symbols-rounded">qr_code_2</span></div>
+        <h3 class="subhead-small">Kein Download notwendig</h3>
+        <p class="copy-small copy-muted" style="margin-top: 8px;">QR-Code scannen, fertig. Läuft im Browser.</p>
+      </div>
+      <!-- Card 2 -->
+      <div class="card">
+        <div class="benefit-icon"><span class="material-symbols-rounded">dashboard</span></div>
+        <h3 class="subhead-small">Kleines Team, große Reichweite</h3>
+        <p class="copy-small copy-muted" style="margin-top: 8px;">Flächendeckend, in Echtzeit, von einem Dashboard aus.</p>
+      </div>
+      <!-- Card 3 -->
+      <div class="card">
+        <div class="benefit-icon"><span class="material-symbols-rounded">verified_user</span></div>
+        <h3 class="subhead-small">DSGVO-konform</h3>
+        <p class="copy-small copy-muted" style="margin-top: 8px;">Anonym melden ist jederzeit möglich. Keine Telefonnummer, keine Registrierung.</p>
+      </div>
+      <!-- Card 4 -->
+      <div class="card">
+        <div class="benefit-icon"><span class="material-symbols-rounded">location_on</span></div>
+        <h3 class="subhead-small">Standort inklusive</h3>
+        <p class="copy-small copy-muted" style="margin-top: 8px;">Jeder QR-Code weiß, wo er hängt.</p>
+      </div>
+      <!-- Card 5 -->
+      <div class="card">
+        <div class="benefit-icon"><span class="material-symbols-rounded">translate</span></div>
+        <h3 class="subhead-small">Automatisch mehrsprachig</h3>
+        <p class="copy-small copy-muted" style="margin-top: 8px;">Öffnet sich in der Gerätesprache. 30+ Sprachen.</p>
+      </div>
+      <!-- Card 6 -->
+      <div class="card">
+        <div class="benefit-icon"><span class="material-symbols-rounded">insights</span></div>
+        <h3 class="subhead-small">Daten statt Bauchgefühl</h3>
+        <p class="copy-small copy-muted" style="margin-top: 8px;">Heatmaps, Statistiken, Compliance-Reports.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     SEKTION 1.4: HIGHLIGHTS-TEASER
+     Top-3-Systemfeatures anteasern
+     [Quelle: Live + GitHub]
+     ============================================================ -->
+<div class="section bg-lavender">
+  <div class="section-content section-flex">
+    <div>
+      <h2 class="headline3">Besondere Highlights</h2>
+    </div>
+
+    <!-- Highlight 1: Rapid Response -->
+    <div class="feature-split">
+      <div class="feature-visual">
+        <!-- Platzhalter für Screenshot/Bild -->
+        <span class="material-symbols-rounded" style="font-size: 64px; color: var(--purple-main);">bolt</span>
+      </div>
+      <div class="feature-content">
+        <h3 class="subhead">Rapid Response</h3>
+        <p class="label-text" style="margin-bottom: 12px;">Einfach. Direkt. Wirksam.</p>
+        <p class="copy">Unser Rapid-Response-System sorgt dafür, dass Hilfe schnell, zielgerichtet und ohne Umwege genau dort ankommt, wo sie gebraucht wird.</p>
+        <a href="loesung.html#rapid-response" class="text-link" style="margin-top: 16px; display: inline-block;">Mehr erfahren →</a>
+      </div>
+    </div>
+
+    <!-- Highlight 2: Heatmap -->
+    <div class="feature-split reverse">
+      <div class="feature-visual alt">
+        <span class="material-symbols-rounded" style="font-size: 64px; color: var(--purple-main);">map</span>
+      </div>
+      <div class="feature-content">
+        <h3 class="subhead">Heatmap</h3>
+        <p class="label-text" style="margin-bottom: 12px;">Erkennen, wo am meisten Hilfe benötigt wird.</p>
+        <p class="copy">Die Heatmap zeigt auf einen Blick, wo Unterstützung besonders häufig benötigt wird – und macht Muster sichtbar, die sonst verborgen bleiben.</p>
+        <a href="loesung.html#heatmap" class="text-link" style="margin-top: 16px; display: inline-block;">Mehr erfahren →</a>
+      </div>
+    </div>
+
+    <!-- Highlight 3: Datenauswertung -->
+    <div class="feature-split">
+      <div class="feature-visual">
+        <span class="material-symbols-rounded" style="font-size: 64px; color: var(--purple-main);">analytics</span>
+      </div>
+      <div class="feature-content">
+        <h3 class="subhead">Datenauswertung</h3>
+        <p class="label-text" style="margin-bottom: 12px;">Klare Übersicht aller relevanten Daten.</p>
+        <p class="copy">Das Analyse-Dashboard macht die Systemwirksamkeit sichtbar und liefert Daten für eine nachhaltige Verbesserung der Sicherheitslage.</p>
+        <a href="loesung.html#datenauswertung" class="text-link" style="margin-top: 16px; display: inline-block;">Mehr erfahren →</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     SEKTION 1.5: MEHRWERT
+     4 Business-Argumente
+     [Quelle: GitHub]
+     ============================================================ -->
+<div class="section bg-purple">
+  <div class="section-content section-flex">
+    <div>
+      <h2 class="headline3 headline-white">Euer Mehrwert</h2>
+    </div>
+    <div class="statements-grid">
+      <!-- Punkt 1 -->
+      <div class="statement-card" style="background: var(--white);">
+        <h3 class="headline5" style="font-size: clamp(28px, 3vw, 36px);">Dunkelziffer senken</h3>
+        <p class="copy copy-muted" style="margin-top: 12px;">Anonyme, barrierefreie Meldewege führen zu mehr Meldungen.</p>
+      </div>
+      <!-- Punkt 2 -->
+      <div class="statement-card" style="background: var(--white);">
+        <h3 class="headline5" style="font-size: clamp(28px, 3vw, 36px);">Compliance erfüllen</h3>
+        <p class="copy copy-muted" style="margin-top: 12px;">DFB/DFL-Safeguarding, Hinweisgeberschutzgesetz, EU-Richtlinien.</p>
+      </div>
+      <!-- Punkt 3 -->
+      <div class="statement-card" style="background: var(--white);">
+        <h3 class="headline5" style="font-size: clamp(28px, 3vw, 36px);">Belastbare Daten gewinnen</h3>
+        <p class="copy copy-muted" style="margin-top: 12px;">Heatmaps, Vorfallstatistiken und Reports.</p>
+      </div>
+      <!-- Punkt 4 -->
+      <div class="statement-card" style="background: var(--white);">
+        <h3 class="headline5" style="font-size: clamp(28px, 3vw, 36px);">Haltung zeigen</h3>
+        <p class="copy copy-muted" style="margin-top: 12px;">Sichtbare Schutzkonzepte stärken das Vertrauen.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     SEKTION 1.6: SYSTEM-ÜBERBLICK (Teaser)
+     3-Säulen-Darstellung: Melden. Reagieren. Verstehen.
+     [Quelle: GitHub]
+     ============================================================ -->
+<div class="section bg-white">
+  <div class="section-content section-flex">
+    <div style="text-align: center;">
+      <h2 class="headline2">Melden. Reagieren. Verstehen.</h2>
+      <p class="copy" style="margin-top: 16px; max-width: 680px; margin-left: auto; margin-right: auto;">Drei Säulen. Ein durchgängiger Prozess. Von der ersten Meldung bis zur strategischen Auswertung.</p>
+    </div>
+    <div class="pillars-row">
+      <!-- Säule 1: Melden -->
+      <a href="loesung-melden.html" class="pillar" style="text-decoration: none; color: inherit;">
+        <div class="pillar-num">01</div>
+        <h3 class="subhead">Melden</h3>
+        <p class="copy-small" style="margin-top: 12px;">Per QR-Code, Venue-Link oder App-Integration – Betroffene erreichen das Team in Sekunden.</p>
+        <span class="text-link" style="margin-top: auto; padding-top: 24px;">Mehr erfahren →</span>
+        <div class="pillar-arrow">→</div>
+      </a>
+      <!-- Säule 2: Reagieren -->
+      <a href="loesung-reagieren.html" class="pillar" style="text-decoration: none; color: inherit;">
+        <div class="pillar-num">02</div>
+        <h3 class="subhead">Reagieren</h3>
+        <p class="copy-small" style="margin-top: 12px;">Meldungen erscheinen in Echtzeit mit Standort. Kommunizieren, koordinieren und dokumentieren.</p>
+        <span class="text-link" style="margin-top: auto; padding-top: 24px;">Mehr erfahren →</span>
+        <div class="pillar-arrow">→</div>
+      </a>
+      <!-- Säule 3: Verstehen -->
+      <a href="loesung-verstehen.html" class="pillar" style="text-decoration: none; color: inherit;">
+        <div class="pillar-num">03</div>
+        <h3 class="subhead">Verstehen</h3>
+        <p class="copy-small" style="margin-top: 12px;">Heatmaps, Vorfallstatistiken, Sprachverteilungen. Für Sicherheitskonzepte, die auf Fakten basieren.</p>
+        <span class="text-link" style="margin-top: auto; padding-top: 24px;">Mehr erfahren →</span>
+      </a>
+    </div>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     SEKTION 1.7: REFERENZEN-TEASER
+     4–6 Top-Cases als Cards
+     [Quelle: Live + Neu]
+     ============================================================ -->
+<div class="section bg-lavender">
+  <div class="section-content section-flex">
+    <div>
+      <h2 class="headline3">Unsere Kunden</h2>
+    </div>
+    <div class="cards-grid">
+      <!-- UEFA EURO 2024 -->
+      <div class="ref-card">
+        <span class="ref-tag">Sport</span>
+        <h3 class="subhead-small">UEFA EURO 2024</h3>
+        <p class="copy-small copy-muted" style="margin-top: 8px;">Teil des offiziellen Safeguarding-Konzepts in allen 10 Stadien.</p>
+        <a href="einsatzbereiche-sport.html" class="text-link" style="margin-top: 16px; display: inline-block;">Zum Einsatzbereich →</a>
+      </div>
+      <!-- OMR -->
+      <div class="ref-card">
+        <span class="ref-tag">Festival</span>
+        <h3 class="subhead-small">OMR Festival</h3>
+        <p class="copy-small copy-muted" style="margin-top: 8px;">QR-Codes auf Screens + Venue-Link für alle Besucher:innen.</p>
+        <a href="einsatzbereiche-events.html" class="text-link" style="margin-top: 16px; display: inline-block;">Zum Einsatzbereich →</a>
+      </div>
+      <!-- gamescom -->
+      <div class="ref-card">
+        <span class="ref-tag">Messe</span>
+        <h3 class="subhead-small">gamescom</h3>
+        <p class="copy-small copy-muted" style="margin-top: 8px;">Awareness-Infrastruktur für eine der größten Gaming-Messen.</p>
+        <a href="einsatzbereiche-events.html" class="text-link" style="margin-top: 16px; display: inline-block;">Zum Einsatzbereich →</a>
+      </div>
+      <!-- Kieler Woche -->
+      <div class="ref-card">
+        <span class="ref-tag">Kommune</span>
+        <h3 class="subhead-small">Kieler Woche</h3>
+        <p class="copy-small copy-muted" style="margin-top: 8px;">Barrierefreie Meldewege auf dem gesamten Festgelände.</p>
+        <a href="einsatzbereiche-kommunen.html" class="text-link" style="margin-top: 16px; display: inline-block;">Zum Einsatzbereich →</a>
+      </div>
+      <!-- FC St. Pauli -->
+      <div class="ref-card">
+        <span class="ref-tag">Bundesliga</span>
+        <h3 class="subhead-small">FC St. Pauli</h3>
+        <p class="copy-small copy-muted" style="margin-top: 8px;">Niedrigschwellige Meldeoption im Stadion.</p>
+        <a href="einsatzbereiche-sport.html" class="text-link" style="margin-top: 16px; display: inline-block;">Zum Einsatzbereich →</a>
+      </div>
+      <!-- Barclays Arena -->
+      <div class="ref-card">
+        <span class="ref-tag">Arena</span>
+        <h3 class="subhead-small">Barclays Arena Hamburg</h3>
+        <p class="copy-small copy-muted" style="margin-top: 8px;">Direkter Kontakt zum Awareness-Team seit 2025.</p>
+        <a href="einsatzbereiche-sport.html" class="text-link" style="margin-top: 16px; display: inline-block;">Zum Einsatzbereich →</a>
+      </div>
+    </div>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     SEKTION 1.8: TESTIMONIAL
+     Großes Zitat mit Foto und Rolle
+     [Quelle: GitHub]
+     ============================================================ -->
+<div class="section bg-white">
+  <div class="section-content">
+    <div class="testimonial-block">
+      <p class="quote" style="font-style: italic;">„Saferspaces lenkt das Prinzip Sicherheit von dem Gefühl, bedroht zu sein, hin zu dem Gefühl aufgehoben zu sein."</p>
+      <p class="subhead-small" style="margin-top: 32px; color: var(--purple-main);">Petra Ackmann</p>
+      <p class="copy-small copy-muted">Vorsitzende Landesfrauenrat Hamburg e.V.</p>
+    </div>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     SEKTION 1.9: CTA / CLOSING
+     Abschließender Handlungsaufruf
+     [Quelle: GitHub + Live]
+     ============================================================ -->
+<div class="section bg-white">
+  <div class="section-content">
+    <div class="cta-block">
+      <h2 class="headline3">Ready to create safer spaces?</h2>
+      <p class="copy" style="margin-top: 16px; max-width: 600px; margin-left: auto; margin-right: auto;">In einer persönlichen Demo zeigen wir euch, wie saferspaces in eurem Kontext funktioniert – und welche Erkenntnisse ihr vom ersten Einsatz an gewinnt.</p>
+      <a href="demo.html" class="btn btn-primary btn-lg" style="margin-top: 32px;">Demo buchen</a>
+    </div>
+  </div>
+</div>
+
+
+<!-- ============================================================
+     FOOTER
+     ============================================================ -->
+<footer class="section bg-purple" style="padding-bottom: 32px;">
+  <div class="section-content">
+    <div style="display: grid; grid-template-columns: repeat(4, 1fr); gap: 48px;">
+
+      <!-- Lösung -->
+      <div>
+        <p class="label-text" style="color: var(--lavender-main); margin-bottom: 16px;">Lösung</p>
+        <a href="loesung.html" style="display: block; color: var(--lavender-main); text-decoration: none; padding: 6px 0; font-size: 15px;">Übersicht</a>
+        <a href="loesung-melden.html" style="display: block; color: var(--lavender-main); text-decoration: none; padding: 6px 0; font-size: 15px;">Melden</a>
+        <a href="loesung-reagieren.html" style="display: block; color: var(--lavender-main); text-decoration: none; padding: 6px 0; font-size: 15px;">Reagieren</a>
+        <a href="loesung-verstehen.html" style="display: block; color: var(--lavender-main); text-decoration: none; padding: 6px 0; font-size: 15px;">Verstehen</a>
+        <a href="loesung-rapid-report.html" style="display: block; color: var(--lavender-main); text-decoration: none; padding: 6px 0; font-size: 15px;">Rapid Report</a>
+      </div>
+
+      <!-- Einsatzbereiche -->
+      <div>
+        <p class="label-text" style="color: var(--lavender-main); margin-bottom: 16px;">Einsatzbereiche</p>
+        <a href="einsatzbereiche-sport.html" style="display: block; color: var(--lavender-main); text-decoration: none; padding: 6px 0; font-size: 15px;">Sport &amp; Stadien</a>
+        <a href="einsatzbereiche-events.html" style="display: block; color: var(--lavender-main); text-decoration: none; padding: 6px 0; font-size: 15px;">Festivals &amp; Events</a>
+        <a href="einsatzbereiche-kommunen.html" style="display: block; color: var(--lavender-main); text-decoration: none; padding: 6px 0; font-size: 15px;">Kommunen</a>
+        <a href="einsatzbereiche-bildung.html" style="display: block; color: var(--lavender-main); text-decoration: none; padding: 6px 0; font-size: 15px;">Bildung</a>
+        <a href="einsatzbereiche-oepnv.html" style="display: block; color: var(--lavender-main); text-decoration: none; padding: 6px 0; font-size: 15px;">ÖPNV &amp; Mobilität</a>
+        <a href="einsatzbereiche-freizeit.html" style="display: block; color: var(--lavender-main); text-decoration: none; padding: 6px 0; font-size: 15px;">Freizeit &amp; Kultur</a>
+        <a href="einsatzbereiche-unternehmen.html" style="display: block; color: var(--lavender-main); text-decoration: none; padding: 6px 0; font-size: 15px;">Unternehmen</a>
+      </div>
+
+      <!-- Über uns -->
+      <div>
+        <p class="label-text" style="color: var(--lavender-main); margin-bottom: 16px;">Über uns</p>
+        <a href="ueber-uns-mission.html" style="display: block; color: var(--lavender-main); text-decoration: none; padding: 6px 0; font-size: 15px;">Mission</a>
+        <a href="ueber-uns-team.html" style="display: block; color: var(--lavender-main); text-decoration: none; padding: 6px 0; font-size: 15px;">Team</a>
+        <a href="ueber-uns-impact.html" style="display: block; color: var(--lavender-main); text-decoration: none; padding: 6px 0; font-size: 15px;">Impact</a>
+        <a href="ueber-uns-faq.html" style="display: block; color: var(--lavender-main); text-decoration: none; padding: 6px 0; font-size: 15px;">FAQ</a>
+        <a href="ueber-uns-netzwerk.html" style="display: block; color: var(--lavender-main); text-decoration: none; padding: 6px 0; font-size: 15px;">Netzwerk</a>
+      </div>
+
+      <!-- Rechtliches + Kontakt -->
+      <div>
+        <p class="label-text" style="color: var(--lavender-main); margin-bottom: 16px;">Rechtliches</p>
+        <a href="impressum.html" style="display: block; color: var(--lavender-main); text-decoration: none; padding: 6px 0; font-size: 15px;">Impressum</a>
+        <a href="datenschutz.html" style="display: block; color: var(--lavender-main); text-decoration: none; padding: 6px 0; font-size: 15px;">Datenschutz</a>
+        <a href="#" style="display: block; color: var(--lavender-main); text-decoration: none; padding: 6px 0; font-size: 15px;">AGB</a>
+        <a href="#" style="display: block; color: var(--lavender-main); text-decoration: none; padding: 6px 0; font-size: 15px;">Barrierefreiheit</a>
+        <div style="margin-top: 24px;">
+          <a href="preise.html" style="display: block; color: var(--lavender-main); text-decoration: none; padding: 6px 0; font-size: 15px; font-weight: 700;">Preise</a>
+          <a href="demo.html" style="display: block; color: var(--lavender-main); text-decoration: none; padding: 6px 0; font-size: 15px; font-weight: 700;">Demo buchen</a>
+        </div>
+      </div>
+
+    </div>
+
+    <!-- Copyright -->
+    <div style="margin-top: 56px; padding-top: 24px; border-top: 1px solid rgba(210,214,239,0.2); display: flex; justify-content: space-between; align-items: center;">
+      <p style="color: var(--lavender-main); font-size: 14px; opacity: 0.6;">© 2026 saferspaces GmbH. Alle Rechte vorbehalten.</p>
+      <img src="images/logo-unfolded-white.svg" alt="saferspaces" style="height: 14px; opacity: 0.4;">
+    </div>
+  </div>
+</footer>
+
+
+<!-- Scripts -->
+<script>
+// Navigation scroll effect
+window.addEventListener('scroll', () => {
+  document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 60);
+});
+
+// Mobile menu toggle
+function toggleMobile() {
+  const menu = document.getElementById('mobileMenu');
+  menu.classList.toggle('active');
+  document.body.style.overflow = menu.classList.contains('active') ? 'hidden' : '';
+}
+</script>
+<script src="animations.js"></script>
+</body>
+</html>
