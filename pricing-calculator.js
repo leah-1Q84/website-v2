@@ -312,7 +312,7 @@
   // ===== RESULT RENDERING =====
   function renderResult() {
     var result = calculatePrice();
-    var isDE = document.body.classList.contains('lang-de');
+    var isDE = !document.body.classList.contains('lang-en');
 
     // Price display
     document.getElementById('pwResultAmount').textContent = formatCurrency(result.annual);
