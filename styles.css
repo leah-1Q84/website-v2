@@ -203,12 +203,7 @@ em { font-weight: 700; font-style: normal; }
   content: '';
   position: absolute;
   inset: 0;
-  background: linear-gradient(
-    to right,
-    rgba(42, 20, 130, 0.82) 0%,
-    rgba(42, 20, 130, 0.6) 50%,
-    rgba(42, 20, 130, 0.3) 100%
-  );
+  background: rgba(42, 20, 130, 0.65);
   z-index: 1;
   border-radius: inherit;
 }
