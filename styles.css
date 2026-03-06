@@ -197,6 +197,20 @@ em { font-weight: 700; font-style: normal; }
   flex-direction: column;
   justify-content: center;
   align-items: flex-start;
+  position: relative;
+}
+.hero-image-bg::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to right,
+    rgba(42, 20, 130, 0.82) 0%,
+    rgba(42, 20, 130, 0.6) 50%,
+    rgba(42, 20, 130, 0.3) 100%
+  );
+  z-index: 1;
+  border-radius: inherit;
 }
 .hero-image-bg .hero-content {
   position: relative; z-index: 2;
@@ -403,6 +417,64 @@ a.nav-item-link.active { border-bottom: 2px solid var(--purple-main); }
   .pillar-arrow { display: none; }
 }
 
+/* ===== SYSTEM CARDS (PNG Design) ===== */
+.system-cards {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+.system-card {
+  background: #f5f8ff;
+  border: none;
+  border-radius: var(--rounded-medium);
+  padding: 40px 32px;
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+.system-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(42,20,130,0.1);
+}
+.system-card-icon {
+  width: 56px;
+  height: 56px;
+  border-radius: 16px;
+  background: var(--lavender-main);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 24px;
+}
+.system-card-icon .material-symbols-rounded {
+  font-size: 28px;
+  color: var(--purple-main);
+}
+.system-card .subhead {
+  color: var(--black);
+}
+.system-card .copy-small {
+  color: var(--grey-mid);
+}
+.system-card-link {
+  margin-top: auto;
+  padding-top: 24px;
+  color: var(--purple-main);
+  font-family: 'Mabry Pro', sans-serif;
+  font-weight: bold;
+  font-size: 14px;
+}
+@media (max-width: 768px) {
+  .system-cards {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .system-card {
+    padding: 32px 24px;
+  }
+}
+
 /* ===== STATS ===== */
 .stats-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 24px; }
 .stat-item { text-align: center; padding: 32px 16px; }
@@ -567,11 +639,14 @@ a.nav-item-link.active { border-bottom: 2px solid var(--purple-main); }
   background: var(--purple-main) !important;
   color: var(--white) !important;
 }
+.benefit-grid.grid-2col {
+  grid-template-columns: repeat(2, 1fr);
+}
 @media (max-width: 900px) {
   .benefit-grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 600px) {
-  .benefit-grid { grid-template-columns: 1fr; }
+  .benefit-grid, .benefit-grid.grid-2col { grid-template-columns: 1fr; }
 }
 
 /* ===== VALUE CARDS (Kunden-Mehrwert) ===== */
@@ -1611,3 +1686,44 @@ body.menu-open { overflow: hidden; }
   .testimonial-carousel-section { padding: 48px 24px; }
   .testimonial-slide { min-height: auto; padding: 0; }
 }
+
+/* ===== Case Study Pages ===== */
+.cs-back-link {
+  display: inline-flex; align-items: center; gap: 6px;
+  font-family: 'Mabry Pro', sans-serif; font-size: 14px; font-weight: 700;
+  color: var(--lavender-main); text-decoration: none; opacity: 0.8;
+  transition: opacity 0.2s; margin-bottom: 16px;
+}
+.cs-back-link:hover { opacity: 1; }
+
+.cs-meta {
+  display: flex; flex-wrap: wrap; gap: 24px; margin-top: 24px;
+}
+.cs-meta-item {
+  font-size: 14px; font-weight: 700; color: var(--lavender-main); opacity: 0.7;
+}
+
+.cs-highlight {
+  background: var(--lavender-main); border-radius: var(--rounded-medium);
+  padding: 40px; border-left: 4px solid var(--purple-main);
+}
+@media (min-width: 1280px) { .cs-highlight { padding: 48px; } }
+
+.cs-two-col {
+  display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start;
+}
+@media (max-width: 900px) { .cs-two-col { grid-template-columns: 1fr; gap: 32px; } }
+
+.cs-related-grid {
+  display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px;
+}
+.cs-related-card {
+  display: block; text-decoration: none; color: inherit;
+  border: 1px solid var(--grey-main); border-radius: var(--rounded-small);
+  padding: 24px; transition: all 0.3s ease;
+}
+.cs-related-card:hover {
+  border-color: var(--purple-main); box-shadow: var(--shadow-custom);
+}
+.cs-related-card .label-text { margin-bottom: 8px; }
+.cs-related-card .subhead { color: var(--purple-main); }
