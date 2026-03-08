@@ -112,7 +112,7 @@ em { font-weight: 700; font-style: normal; }
 .copy { font-family: 'Mabry Pro', sans-serif; font-size: clamp(18px, 1.3vw, 22px); font-weight: 400; line-height: 1.444; color: var(--black); }
 .copy-hero { font-family: 'Mabry Pro', sans-serif; font-size: clamp(18px, 1.3vw, 22px); font-weight: 700; line-height: 1.444; color: var(--black); }
 .copy-small { font-family: 'Mabry Pro', sans-serif; font-size: clamp(16px, 1.2vw, 22px); font-weight: 400; line-height: 1.25; color: var(--black); }
-.copy-muted { color: var(--grey-mid); }
+.copy-muted { color: var(--black); }
 .copy-white { color: var(--white); }
 .copy-purple { color: var(--purple-main); }
 .label-text { font-family: 'Mabry Pro', sans-serif; font-size: 14px; font-weight: 700; color: var(--grey-mid); text-transform: uppercase; letter-spacing: 0.06em; }
@@ -203,9 +203,12 @@ em { font-weight: 700; font-style: normal; }
   content: '';
   position: absolute;
   inset: 0;
-  background: rgba(42, 20, 130, 0.65);
+  background: rgba(0, 0, 0, 0.45);
   z-index: 1;
   border-radius: inherit;
+}
+.hero-image-bg.hero-purple-overlay::before {
+  background: rgba(42, 20, 130, 0.65);
 }
 .hero-image-bg .hero-content {
   position: relative; z-index: 2;
@@ -506,7 +509,7 @@ a.nav-item-link.active { border-bottom: 2px solid var(--purple-main); }
   color: var(--lavender-main);
 }
 .process-step .subhead-small {
-  color: var(--purple-main);
+  color: var(--black);
   margin-bottom: 8px;
 }
 .process-arrow {
@@ -549,7 +552,7 @@ a.nav-item-link.active { border-bottom: 2px solid var(--purple-main); }
   padding: 20px 24px;
   border: 1px solid rgba(42, 20, 130, 0.15);
   border-radius: var(--rounded-small, 12px);
-  background: transparent;
+  background: var(--lavender-main);
 }
 .category-item .category-icon {
   width: 40px;
@@ -566,13 +569,12 @@ a.nav-item-link.active { border-bottom: 2px solid var(--purple-main); }
   color: var(--lavender-main);
 }
 .category-item .category-text .subhead-small {
-  color: var(--purple-main);
+  color: var(--black);
   margin-bottom: 4px;
   font-size: 15px;
 }
 .category-item .category-text .copy-small {
-  color: var(--purple-main);
-  opacity: 0.6;
+  color: var(--black);
   font-size: 14px;
   line-height: 1.45;
 }
@@ -673,12 +675,11 @@ a.nav-item-link.active { border-bottom: 2px solid var(--purple-main); }
   flex: 1;
 }
 .challenge-content .subhead-small {
-  color: var(--purple-main);
+  color: var(--black);
   margin-bottom: 6px;
 }
 .challenge-content .copy-small {
-  color: var(--purple-main);
-  opacity: 0.65;
+  color: var(--black);
   line-height: 1.5;
 }
 @media (max-width: 768px) {

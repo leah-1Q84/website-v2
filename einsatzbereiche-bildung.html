@@ -10,7 +10,7 @@
 <meta name="theme-color" content="#2A1482">
 <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
 <link rel="icon" type="image/png" href="favicon.png">
-<link rel="stylesheet" href="styles.css?v=7">
+<link rel="stylesheet" href="styles.css?v=10">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0">
 </head>
 <body>
@@ -93,7 +93,7 @@
 <main id="main">
 
 <div class="hero-wrapper">
-  <div class="hero-section hero-image-bg" style="background-image: url('images/hero-bildung.jpg');">
+  <div class="hero-section hero-image-bg hero-purple-overlay" style="background-image: url('images/hero-bildung.jpg');">
     <div class="hero-content">
       <p class="label-text" style="color: var(--lavender-main);">BRANCHE · BILDUNG</p>
       <h1 class="headline1 headline-white">Sichere Lernumgebungen</h1>
@@ -110,69 +110,97 @@
   </div>
 </section>
 
-<section class="section bg-lavender" aria-labelledby="process-title">
-  <div class="section-content">
-    <p class="label-text" style="color: var(--purple-main);">SO FUNKTIONIERT'S</p>
-    <h2 class="headline2" id="process-title">Wie saferspaces an eurer Einrichtung funktioniert</h2>
-    <div class="process-flow animate-on-scroll">
-      <div class="process-step">
-        <div class="process-icon"><span class="material-symbols-rounded">chat_bubble</span></div>
-        <h3 class="subhead-small">Melden</h3>
-        <p class="copy-small copy-muted">Per QR-Code oder Venue-Link öffnet sich die Web-App. Studierende und Mitarbeitende wählen die Vorfallsart und werden per Chat mit der zuständigen Stelle verbunden.</p>
+<section class="section bg-white" aria-labelledby="challenges-title">
+  <div class="section-content section-flex">
+    <div class="animate-on-scroll" style="text-align: center;">
+      <p class="label-text">Herausforderungen</p>
+      <h2 class="headline2" id="challenges-title">Melden muss einfach sein.</h2>
+      <p class="copy" style="margin-top: 16px; max-width: 680px; margin-left: auto; margin-right: auto;">Die meisten Hochschulen haben Beschwerdestellen. Die wenigsten werden genutzt. saferspaces senkt die Hemmschwelle auf ein Minimum.</p>
+    </div>
+    <div class="benefit-grid animate-on-scroll">
+      <div class="benefit-card">
+        <span class="material-symbols-rounded benefit-icon">visibility_off</span>
+        <h3 class="subhead-small">Hohe Hemmschwelle</h3>
+        <p class="copy-small copy-muted" style="margin-top: 8px;">Offizielle Beschwerdestellen werden als bürokratisch und einschüchternd empfunden. Anonyme, digitale Meldewege senken die Hürde.</p>
       </div>
-      <div class="process-arrow"><span class="material-symbols-rounded">arrow_forward</span></div>
-      <div class="process-step">
-        <div class="process-icon"><span class="material-symbols-rounded">bolt</span></div>
-        <h3 class="subhead-small">Reagieren</h3>
-        <p class="copy-small copy-muted">Verantwortliche erhalten einen kritischen Alarm in der saferspaces App – und können dort direkt koordinieren, kommunizieren und jeden Vorfall dokumentieren. Alles in einer Anwendung.</p>
+      <div class="benefit-card">
+        <span class="material-symbols-rounded benefit-icon">swap_vert</span>
+        <h3 class="subhead-small">Abhängigkeitsverhältnisse</h3>
+        <p class="copy-small copy-muted" style="margin-top: 8px;">Studierende stehen in Abhängigkeit zu Dozent:innen. Anonyme Meldungen schützen vor Konsequenzen.</p>
       </div>
-      <div class="process-arrow"><span class="material-symbols-rounded">arrow_forward</span></div>
-      <div class="process-step">
-        <div class="process-icon"><span class="material-symbols-rounded">query_stats</span></div>
-        <h3 class="subhead-small">Verstehen</h3>
-        <p class="copy-small copy-muted">Im Analyse-Dashboard zeigen Grafiken, Berichte und Heatmaps Muster und Trends – Grundlage für nachhaltige Schutzkonzepte.</p>
+      <div class="benefit-card">
+        <span class="material-symbols-rounded benefit-icon">translate</span>
+        <h3 class="subhead-small">Internationale Studierende</h3>
+        <p class="copy-small copy-muted" style="margin-top: 8px;">Automatische Mehrsprachigkeit sorgt dafür, dass alle Studierenden Hilfe in ihrer Sprache erhalten.</p>
+      </div>
+      <div class="benefit-card">
+        <span class="material-symbols-rounded benefit-icon">fact_check</span>
+        <h3 class="subhead-small">Nachweispflicht</h3>
+        <p class="copy-small copy-muted" style="margin-top: 8px;">Hochschulen müssen Schutzkonzepte nachweisen. saferspaces liefert die Datenbasis für Compliance-Reporting.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section bg-lavender">
-  <div class="section-content">
-    <p class="label-text" style="color: var(--purple-main); margin-bottom: 8px;">Konzept</p>
-    <h2 class="headline3">Geplante Inhalte dieser Seite</h2>
-    <div style="margin-top: 32px; max-width: 800px;">
-      <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 16px;">
-        <li class="card" style="padding: 20px 24px;">
-          <h3 class="subhead-small" style="color: var(--purple-main);">Hero</h3>
-          <p class="copy-small copy-muted" style="margin-top: 8px;">Visueller Einstieg mit Bildungswelt (Campus, Hörsaal). Headline und Subline betonen vertrauliche Meldestrukturen für Bildungseinrichtungen.</p>
-        </li>
-        <li class="card" style="padding: 20px 24px;">
-          <h3 class="subhead-small" style="color: var(--purple-main);">Herausforderungen im Bildungsbereich</h3>
-          <p class="copy-small copy-muted" style="margin-top: 8px;">Kinderschutz: Gesetzliche Anforderungen an Schutzkonzepte in Schulen und Kitas. Machtmissbrauch: Abhängigkeitsverhältnisse zwischen Lehrenden und Studierenden. Anonyme Meldekanäle: Niedrigschwellige, vertrauliche Wege für Betroffene, Hemmschwelle senken.</p>
-        </li>
-        <li class="card" style="padding: 20px 24px;">
-          <h3 class="subhead-small" style="color: var(--purple-main);">Referenz</h3>
-          <p class="copy-small copy-muted" style="margin-top: 8px;">Universität Flensburg als erste Referenz im Bildungsbereich. Case Study mit Beschreibung des Einsatzes, Erfahrungen und Ergebnissen.</p>
-        </li>
-        <li class="card" style="padding: 20px 24px;">
-          <h3 class="subhead-small" style="color: var(--purple-main);">Warum saferspaces für Bildung</h3>
-          <p class="copy-small copy-muted" style="margin-top: 8px;">Argumente für den Einsatz im Bildungsbereich: Vertraulichkeit und Anonymität. Einfache Integration in bestehende Strukturen. Erfüllung gesetzlicher Anforderungen. Datenbasierte Auswertung für nachhaltige Prävention.</p>
-        </li>
-        <li class="card" style="padding: 20px 24px;">
-          <h3 class="subhead-small" style="color: var(--purple-main);">CTA</h3>
-          <p class="copy-small copy-muted" style="margin-top: 8px;">Abschließender Call-to-Action mit Einladung zur Demo. Spezifisch auf Hochschulen, Schulträger und Bildungseinrichtungen zugeschnitten.</p>
-        </li>
-      </ul>
+<section class="section bg-lavender" aria-labelledby="refs-title">
+  <div class="section-content section-flex">
+    <div class="animate-on-scroll" style="text-align: center;">
+      <p class="label-text" style="color: var(--purple-main);">Referenzen</p>
+      <h2 class="headline2" id="refs-title">saferspaces im Hochschulkontext.</h2>
+    </div>
+    <div class="benefit-grid animate-on-scroll">
+      <div class="benefit-card">
+        <h3 class="subhead-small">Universität Flensburg</h3>
+        <p class="copy-small copy-muted" style="margin-top: 8px;">Seit 2023 als niedrigschwelliger Meldeweg für Studierende und Mitarbeitende. QR-Codes in Gebäuden, Bibliotheken und Mensen plus campusweiter Venue-Link.</p>
+      </div>
+      <div class="benefit-card">
+        <h3 class="subhead-small">Hochschule Niederrhein</h3>
+        <p class="copy-small copy-muted" style="margin-top: 8px;">saferspaces im Einsatz bei studentischen Veranstaltungen wie der Ersti-Party – Awareness-Infrastruktur für den Campus.</p>
+      </div>
+      <div class="benefit-card">
+        <h3 class="subhead-small">AStA Uni Lübeck</h3>
+        <p class="copy-small copy-muted" style="margin-top: 8px;">Beim COAL (Campus Open Air Lübeck) sorgt saferspaces für sichere Festivalatmosphäre auf dem Uni-Gelände.</p>
+      </div>
     </div>
   </div>
 </section>
 
-<section class="section bg-white">
+<section class="section bg-white" aria-labelledby="systems-title">
+  <div class="section-content section-flex">
+    <div class="animate-on-scroll" style="text-align: center;">
+      <p class="label-text">Zwei Systeme – Ein Zweck</p>
+      <h2 class="headline2" id="systems-title">Da sein, wenn Unterstützung gebraucht wird.</h2>
+    </div>
+    <div style="display: grid; grid-template-columns: 1fr 1fr; gap: 24px; max-width: 800px; margin: 0 auto;" class="animate-on-scroll">
+      <a href="loesung.html#melden" class="system-card">
+        <div class="system-card-icon">
+          <span class="material-symbols-rounded">bolt</span>
+        </div>
+        <h3 class="subhead">Rapid Response</h3>
+        <p class="copy-small copy-muted" style="margin-top: 12px;">Das Live-System für Veranstaltungen auf dem Campus. Per QR-Code melden Studierende Vorfälle in Echtzeit – das Awareness-Team reagiert sofort über die saferspaces App. Ideal für Ersti-Partys, Sommerfeste und Campus-Events.</p>
+        <span class="system-card-link">Mehr erfahren &darr;</span>
+      </a>
+      <a href="loesung-rapid-report.html" class="system-card">
+        <div class="system-card-icon">
+          <span class="material-symbols-rounded">description</span>
+        </div>
+        <h3 class="subhead">Rapid Report</h3>
+        <p class="copy-small copy-muted" style="margin-top: 12px;">Der permanente Meldekanal – unabhängig von Veranstaltungen. Studierende und Mitarbeitende melden anonym Diskriminierung, Belästigung oder Machtmissbrauch. Die Meldungen gehen direkt an die zuständige Stelle, z.B. die Gleichstellungsbeauftragte. So wissen Hochschulen, was ihre Studierenden bewegt.</p>
+        <span class="system-card-link">Mehr erfahren &darr;</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section class="section bg-lavender" aria-label="Demo buchen">
   <div class="section-content">
-    <div class="cta-block">
-      <h2 class="headline3">Ready to create safer spaces?</h2>
-      <p class="copy" style="margin-top: 16px; max-width: 600px; margin-left: auto; margin-right: auto;">In einer persönlichen Demo zeigen wir euch, wie saferspaces in eurem Kontext funktioniert.</p>
-      <a href="demo.html" class="btn btn-primary btn-lg" style="margin-top: 32px;">Demo buchen</a>
+    <div class="cta-block animate-on-scroll">
+      <h2 class="headline3" style="color: var(--purple-main);">Schutzkonzepte für eure Einrichtung?</h2>
+      <p class="copy" style="margin-top: 16px; max-width: 600px; margin-left: auto; margin-right: auto;">In einer persönlichen Demo zeigen wir euch, wie saferspaces an eurer Hochschule oder Schule funktioniert.</p>
+      <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 32px;">
+        <a href="demo.html" class="btn btn-primary btn-lg">Demo buchen</a>
+        <a href="loesung.html" class="btn btn-secondary btn-lg">Lösung ansehen</a>
+      </div>
     </div>
   </div>
 </section>

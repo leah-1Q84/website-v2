@@ -10,8 +10,39 @@
 <meta name="theme-color" content="#2A1482">
 <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
 <link rel="icon" type="image/png" href="favicon.png">
-<link rel="stylesheet" href="styles.css?v=7">
+<link rel="stylesheet" href="styles.css?v=10">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0">
+<link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+<script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+<style>
+  .ss-dot { border-radius: 50%; border: 2px solid rgba(255,255,255,0.9); box-shadow: 0 0 12px rgba(0,0,0,0.4), 0 0 4px rgba(0,0,0,0.2); transition: transform 0.15s ease; }
+  .ss-dot:hover { transform: scale(1.4); z-index: 1000 !important; }
+  .ss-dot-lg { width: 14px; height: 14px; }
+  .ss-dot-md { width: 11px; height: 11px; }
+  .ss-dot-sm { width: 9px; height: 9px; }
+  .leaflet-popup-content-wrapper { border-radius: 14px !important; font-family: 'Mabry Pro', sans-serif !important; box-shadow: 0 8px 32px rgba(0,0,0,0.3) !important; padding: 0 !important; background: var(--white) !important; }
+  .leaflet-popup-content { margin: 0 !important; min-width: 200px; }
+  .leaflet-popup-tip { box-shadow: 0 8px 32px rgba(0,0,0,0.3) !important; }
+  .ss-popup { padding: 18px 20px; }
+  .ss-popup-header { display: flex; align-items: center; gap: 6px; margin-bottom: 6px; }
+  .ss-popup-icon { font-size: 18px; line-height: 1; }
+  .ss-popup-cat { font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: rgba(42,20,130,0.5); }
+  .ss-popup-name { font-family: 'GT Alpina Condensed', Georgia, serif; font-weight: 700; font-size: 22px; line-height: 1.1em; color: rgb(42,20,130); margin-bottom: 4px; }
+  .ss-popup-context { font-size: 14px; color: rgb(69,69,69); margin-bottom: 2px; }
+  .ss-popup-city { font-size: 13px; color: rgb(134,134,134); margin-bottom: 10px; }
+  .ss-popup-link { display: inline-flex; align-items: center; gap: 4px; font-size: 13px; font-weight: 700; color: rgb(42,20,130); text-decoration: none; }
+  .ss-popup-link:hover { text-decoration: underline; }
+  .leaflet-control-zoom a { background: rgb(30,14,95) !important; color: white !important; border-color: rgba(255,255,255,0.15) !important; }
+  .leaflet-control-zoom a:hover { background: rgb(42,20,130) !important; }
+  .leaflet-control-attribution { background: rgba(20,10,60,0.7) !important; color: rgba(255,255,255,0.4) !important; font-size: 10px !important; }
+  .leaflet-control-attribution a { color: rgba(255,255,255,0.5) !important; }
+  .filter-chip { display:inline-flex; align-items:center; gap:6px; height:32px; padding:0 14px; border-radius:var(--rounded-full); border:1.5px solid rgba(42,20,130,0.2); background:transparent; font-family:'Mabry Pro',sans-serif; font-size:13px; font-weight:700; color:rgba(42,20,130,0.55); cursor:pointer; transition:all 0.2s; white-space:nowrap; }
+  .filter-chip:hover { border-color:rgba(42,20,130,0.4); color:var(--purple-main); }
+  .filter-chip.active { background:rgba(42,20,130,0.1); border-color:rgba(42,20,130,0.4); color:var(--purple-main); }
+  .chip-dot { width:8px; height:8px; border-radius:50%; flex-shrink:0; }
+  .filter-count { font-size:13px; color:rgba(42,20,130,0.4); margin-left:4px; font-weight:400; }
+  #mapCenterBtn:hover { background: var(--lavender-main); }
+</style>
 </head>
 <body>
 
@@ -96,7 +127,7 @@
   <div class="hero-section hero-image-bg" style="background-image: url('images/iStock-638650658 1.png');">
     <div class="hero-content">
       <p class="label-text" style="color: var(--lavender-main);">EINSATZBEREICHE</p>
-      <h1 class="headline1 headline-white">saferspaces for safer places.</h1>
+      <h1 class="headline1 headline-white">Saferspaces for safer places.</h1>
       <p class="copy copy-white" style="margin: 24px 0 32px; max-width: 560px;">Von der kleinen Sauna über Clubkonzerte, Festivals und Stadtfeste bis hin zu den größten Stadien – saferspaces sorgt für ein gesteigertes Sicherheitsempfinden überall dort, wo Menschen zusammenkommen.</p>
     </div>
   </div>
@@ -110,39 +141,184 @@
   </div>
 </section>
 
-<section class="section bg-lavender">
-  <div class="section-content">
-    <p class="label-text" style="color: var(--purple-main); margin-bottom: 8px;">Konzept</p>
-    <h2 class="headline3">Geplante Inhalte dieser Seite</h2>
-    <div style="margin-top: 32px; max-width: 800px;">
-      <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 16px;">
-        <li class="card" style="padding: 20px 24px;">
-          <h3 class="subhead-small" style="color: var(--purple-main);">Hero – Breite Ansprache</h3>
-          <p class="copy-small copy-muted" style="margin-top: 8px;">Emotionaler Einstieg mit starker Headline und Subline, die alle Branchen adressiert. Visueller Überblick über die Vielfalt der Einsatzbereiche.</p>
-        </li>
-        <li class="card" style="padding: 20px 24px;">
-          <h3 class="subhead-small" style="color: var(--purple-main);">7 Branchen-Cards im Grid</h3>
-          <p class="copy-small copy-muted" style="margin-top: 8px;">Übersichtliches Grid mit je einer Card pro Branche: Sport &amp; Stadien, Festivals &amp; Events, Kommunen, Bildung, ÖPNV &amp; Mobilität, Freizeit &amp; Kultur, Unternehmen. Jede Card mit Kurzbeschreibung, Icon und Link zur jeweiligen Detailseite.</p>
-        </li>
-        <li class="card" style="padding: 20px 24px;">
-          <h3 class="subhead-small" style="color: var(--purple-main);">Testimonials-Carousel</h3>
-          <p class="copy-small copy-muted" style="margin-top: 8px;">Branchenübergreifende Kundenstimmen in einem horizontalen Carousel. Zitate von Kund:innen aus verschiedenen Einsatzbereichen mit Name, Rolle und Organisation.</p>
-        </li>
-        <li class="card" style="padding: 20px 24px;">
-          <h3 class="subhead-small" style="color: var(--purple-main);">CTA – Euer Einsatzbereich ist nicht dabei?</h3>
-          <p class="copy-small copy-muted" style="margin-top: 8px;">Abschließender Call-to-Action für Branchen, die nicht explizit aufgeführt sind. Einladung zur persönlichen Demo, um den individuellen Einsatz zu besprechen.</p>
-        </li>
-      </ul>
+<!-- ============================================================
+     BRANCHEN-GRID
+     ============================================================ -->
+<section class="section bg-white" aria-labelledby="branchen-title">
+  <div class="section-content section-flex">
+    <div class="animate-on-scroll" style="text-align: center;">
+      <p class="label-text">Einsatzbereiche</p>
+      <h2 class="headline2" id="branchen-title">Ein System. Viele Einsatzorte.</h2>
+      <p class="copy" style="margin-top: 16px; max-width: 680px; margin-left: auto; margin-right: auto;">saferspaces passt sich eurem Kontext an – von der Großveranstaltung bis zum Unternehmensalltag.</p>
+    </div>
+    <div class="benefit-grid animate-on-scroll">
+      <a href="einsatzbereiche-sport.html" class="benefit-card" style="text-decoration: none; color: inherit;">
+        <span class="material-symbols-rounded benefit-icon">stadium</span>
+        <h3 class="subhead-small">Sport &amp; Stadien</h3>
+        <p class="copy-small copy-muted" style="margin-top: 8px;">Von der Kreisliga bis zur UEFA EURO. Digitale Meldewege im Spielbetrieb, DFB/DFL-konform und erprobt in 23 Stadien.</p>
+        <p style="margin-top: 12px; font-size: 14px; font-weight: 700; color: var(--purple-main);">Mehr erfahren &rarr;</p>
+      </a>
+      <a href="einsatzbereiche-events.html" class="benefit-card" style="text-decoration: none; color: inherit;">
+        <span class="material-symbols-rounded benefit-icon">celebration</span>
+        <h3 class="subhead-small">Festivals &amp; Events</h3>
+        <p class="copy-small copy-muted" style="margin-top: 8px;">OMR, gamescom, Reeperbahn Festival – saferspaces schützt Gäste auf Großveranstaltungen mit bis zu 100.000 Besucher:innen.</p>
+        <p style="margin-top: 12px; font-size: 14px; font-weight: 700; color: var(--purple-main);">Mehr erfahren &rarr;</p>
+      </a>
+      <a href="einsatzbereiche-kommunen.html" class="benefit-card" style="text-decoration: none; color: inherit;">
+        <span class="material-symbols-rounded benefit-icon">location_city</span>
+        <h3 class="subhead-small">Kommunen</h3>
+        <p class="copy-small copy-muted" style="margin-top: 8px;">Stadtfeste, öffentlicher Raum, Innenstädte – ein niedrigschwelliger Meldekanal für Bürger:innen und Besucher:innen.</p>
+        <p style="margin-top: 12px; font-size: 14px; font-weight: 700; color: var(--purple-main);">Mehr erfahren &rarr;</p>
+      </a>
+      <a href="einsatzbereiche-bildung.html" class="benefit-card" style="text-decoration: none; color: inherit;">
+        <span class="material-symbols-rounded benefit-icon">school</span>
+        <h3 class="subhead-small">Bildung</h3>
+        <p class="copy-small copy-muted" style="margin-top: 8px;">Hochschulen, Schulträger, Studierendenwerke – anonyme Meldewege für Diskriminierung, Belästigung und Machtmissbrauch.</p>
+        <p style="margin-top: 12px; font-size: 14px; font-weight: 700; color: var(--purple-main);">Mehr erfahren &rarr;</p>
+      </a>
+      <a href="einsatzbereiche-oepnv.html" class="benefit-card" style="text-decoration: none; color: inherit;">
+        <span class="material-symbols-rounded benefit-icon">directions_bus</span>
+        <h3 class="subhead-small">ÖPNV &amp; Mobilität</h3>
+        <p class="copy-small copy-muted" style="margin-top: 8px;">Busse, Bahnen, Haltestellen – Fahrgäste melden Vorfälle direkt per QR-Code, ohne Personal ansprechen zu müssen.</p>
+        <p style="margin-top: 12px; font-size: 14px; font-weight: 700; color: var(--purple-main);">Mehr erfahren &rarr;</p>
+      </a>
+      <a href="einsatzbereiche-freizeit.html" class="benefit-card" style="text-decoration: none; color: inherit;">
+        <span class="material-symbols-rounded benefit-icon">pool</span>
+        <h3 class="subhead-small">Freizeit &amp; Kultur</h3>
+        <p class="copy-small copy-muted" style="margin-top: 8px;">Arenen, Theater, Schwimmbäder, Saunen – überall dort, wo Menschen zusammenkommen und Schutz brauchen.</p>
+        <p style="margin-top: 12px; font-size: 14px; font-weight: 700; color: var(--purple-main);">Mehr erfahren &rarr;</p>
+      </a>
+      <a href="einsatzbereiche-unternehmen.html" class="benefit-card" style="text-decoration: none; color: inherit;">
+        <span class="material-symbols-rounded benefit-icon">business</span>
+        <h3 class="subhead-small">Unternehmen</h3>
+        <p class="copy-small copy-muted" style="margin-top: 8px;">HR, Compliance, Hinweisgeberschutz – Rapid Report als interner Meldekanal gemäß HinSchG. Anonym und rechtssicher.</p>
+        <p style="margin-top: 12px; font-size: 14px; font-weight: 700; color: var(--purple-main);">Mehr erfahren &rarr;</p>
+      </a>
     </div>
   </div>
 </section>
 
-<section class="section bg-white">
+<!-- ============================================================
+     KARTE
+     ============================================================ -->
+<section class="section bg-white" aria-labelledby="karte-title" style="padding-bottom: 48px;">
+  <div class="section-content section-flex" style="text-align: center;">
+    <p class="label-text">Saferspaces im Einsatz</p>
+    <h2 class="headline2" id="karte-title">Eine Karte, viele Orte.</h2>
+    <p class="copy" style="margin-top: 16px; max-width: 680px; margin-left: auto; margin-right: auto;">An denen man sich schon mit uns für ein respektvolles Miteinander vor Ort einsetzt.</p>
+  </div>
+</section>
+<div style="position: relative;">
+  <div id="einsatz-map" style="width: 100%; height: 520px; background: rgb(20, 10, 60);"></div>
+  <button id="mapCenterBtn" style="position:absolute; top:12px; right:12px; z-index:600; display:flex; align-items:center; gap:6px; padding:6px 14px; background:var(--white); border:none; border-radius:var(--rounded-full); font-family:'Mabry Pro',sans-serif; font-size:12px; font-weight:700; color:var(--purple-main); cursor:pointer; box-shadow:0 2px 8px rgba(0,0,0,0.25);">
+    <span class="material-symbols-rounded" style="font-size:16px;">my_location</span> Zentrieren
+  </button>
+</div>
+<div style="background: var(--white); padding: 20px 32px;">
+  <div style="max-width: 2680px; margin: 0 auto; display: flex; gap: 8px; flex-wrap: wrap; align-items: center;" id="mapFilters">
+    <button class="filter-chip active" data-filter="all">Alle</button>
+    <button class="filter-chip" data-filter="stadion"><span class="chip-dot" style="background:rgb(42,20,130)"></span> Stadien</button>
+    <button class="filter-chip" data-filter="festival"><span class="chip-dot" style="background:rgb(0,170,120)"></span> Festivals &amp; Messen</button>
+    <button class="filter-chip" data-filter="event"><span class="chip-dot" style="background:rgb(255,200,60)"></span> Events &amp; Stadtfeste</button>
+    <button class="filter-chip" data-filter="fanzone"><span class="chip-dot" style="background:rgb(214,239,238); border:1px solid rgba(42,20,130,0.2)"></span> Fanzonen</button>
+    <button class="filter-chip" data-filter="club"><span class="chip-dot" style="background:rgb(220,80,160)"></span> Clubs &amp; Bars</button>
+    <button class="filter-chip" data-filter="venue"><span class="chip-dot" style="background:rgb(130,115,190)"></span> Venues</button>
+    <button class="filter-chip" data-filter="institution"><span class="chip-dot" style="background:rgb(80,160,220)"></span> Institutionen &amp; Bildung</button>
+    <button class="filter-chip" data-filter="kollektiv"><span class="chip-dot" style="background:rgb(210,214,239); border:1px solid rgba(42,20,130,0.2)"></span> Kollektive &amp; Sonstige</button>
+    <button class="filter-chip" data-filter="konzert"><span class="chip-dot" style="background:rgb(240,120,50)"></span> Konzerte &amp; Touren</button>
+  </div>
+</div>
+
+<!-- ============================================================
+     KUNDENSTIMMEN
+     ============================================================ -->
+<section class="testimonial-carousel-section" aria-label="Kundenstimmen">
+  <div class="testimonial-carousel-wrapper">
+    <div class="testimonial-slides" id="testimonialSlides">
+
+      <div class="testimonial-slide">
+        <p class="quote-text">„Die Kooperation von saferspaces und der Landeshauptstadt Kiel ermöglicht ein sichereres Feiern und den demokratischen Zusammenhalt auf der Kieler Woche."</p>
+        <cite class="quote-cite">
+          <img class="quote-avatar" src="images/quotes/vanessa.png" alt="Vanessa-Zoe Vitulskis" width="120" height="120">
+          <figcaption>
+            <p class="quote-author-name">Vanessa-Zoe Vitulskis</p>
+            <p class="quote-author-role">Referatsleiterin Stadtordnungsdienst</p>
+            <p class="quote-author-org">Kieler Woche</p>
+          </figcaption>
+        </cite>
+      </div>
+
+      <div class="testimonial-slide">
+        <p class="quote-text">„Durch die Nutzung werden wir unnötige Zeitverluste bei der Standortbestimmung des Notfalls verhindern und somit den Hilfestandard im Stadion erhöhen."</p>
+        <cite class="quote-cite">
+          <img class="quote-avatar" src="images/quotes/sven.png" alt="Sven Brux" width="120" height="120">
+          <figcaption>
+            <p class="quote-author-name">Sven Brux</p>
+            <p class="quote-author-role">Leitung Spielorganisation &amp; Fanangelegenheiten</p>
+            <p class="quote-author-org">FC St. Pauli</p>
+          </figcaption>
+        </cite>
+      </div>
+
+      <div class="testimonial-slide">
+        <p class="quote-text">„Wir haben den Eindruck, dass unser Publikum, durch die Ansprache und Nutzen der App, direkt mehr aufeinander acht gibt."</p>
+        <cite class="quote-cite">
+          <img class="quote-avatar" src="images/quotes/fenja.png" alt="Fenja Möller" width="120" height="120">
+          <figcaption>
+            <p class="quote-author-name">Fenja Möller</p>
+            <p class="quote-author-role">Bookerin</p>
+            <p class="quote-author-org">Molotow Musikclub</p>
+          </figcaption>
+        </cite>
+      </div>
+
+      <div class="testimonial-slide">
+        <p class="quote-text">„Die Personen, die die Codes nutzen, um Hilfe zu bekommen, waren überrascht, wie schnell und zuverlässig dann auch Hilfe vor Ort war."</p>
+        <cite class="quote-cite">
+          <img class="quote-avatar" src="images/quotes/sandra.png" alt="Sandra Lechtenböhmer" width="120" height="120">
+          <figcaption>
+            <p class="quote-author-name">Sandra Lechtenböhmer</p>
+            <p class="quote-author-role">Leiterin Awareness</p>
+            <p class="quote-author-org">Millerntor Gallery</p>
+          </figcaption>
+        </cite>
+      </div>
+
+      <div class="testimonial-slide">
+        <p class="quote-text">„Für uns ist die Zusammenarbeit sehr wertvoll. Saferspaces bietet unseren Besucher*innen einen sicheren und niedrigschwelligen Kommunikationsweg von jedem Standort."</p>
+        <cite class="quote-cite">
+          <img class="quote-avatar" src="images/quotes/felicitas.png" alt="Felicitas Niere" width="120" height="120">
+          <figcaption>
+            <p class="quote-author-name">Felicitas Niere</p>
+            <p class="quote-author-role">Leading Customer Support &amp; Stakeholder Relations</p>
+            <p class="quote-author-org">OMR</p>
+          </figcaption>
+        </cite>
+      </div>
+
+    </div>
+  </div>
+  <div class="testimonial-dots" id="testimonialDots">
+    <button class="testimonial-dot active" data-slide="0" aria-label="Kundenstimme 1"></button>
+    <button class="testimonial-dot" data-slide="1" aria-label="Kundenstimme 2"></button>
+    <button class="testimonial-dot" data-slide="2" aria-label="Kundenstimme 3"></button>
+    <button class="testimonial-dot" data-slide="3" aria-label="Kundenstimme 4"></button>
+    <button class="testimonial-dot" data-slide="4" aria-label="Kundenstimme 5"></button>
+  </div>
+</section>
+
+<!-- ============================================================
+     CTA
+     ============================================================ -->
+<section class="section bg-lavender" aria-label="Demo buchen">
   <div class="section-content">
-    <div class="cta-block">
-      <h2 class="headline3">Ready to create safer spaces?</h2>
-      <p class="copy" style="margin-top: 16px; max-width: 600px; margin-left: auto; margin-right: auto;">In einer persönlichen Demo zeigen wir euch, wie saferspaces in eurem Kontext funktioniert.</p>
-      <a href="demo.html" class="btn btn-primary btn-lg" style="margin-top: 32px;">Demo buchen</a>
+    <div class="cta-block animate-on-scroll">
+      <h2 class="headline3" style="color: var(--purple-main);">Ihr seid noch nicht dabei?</h2>
+      <p class="copy" style="margin-top: 16px; max-width: 600px; margin-left: auto; margin-right: auto;">saferspaces lässt sich an nahezu jeden Kontext anpassen. In einer persönlichen Demo zeigen wir euch, wie es bei euch funktioniert.</p>
+      <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 32px;">
+        <a href="demo.html" class="btn btn-primary btn-lg">Demo buchen</a>
+        <a href="loesung.html" class="btn btn-secondary btn-lg">Lösung ansehen</a>
+      </div>
     </div>
   </div>
 </section>
@@ -167,6 +343,182 @@
 <script>
 window.addEventListener('scroll', () => { document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 60); }, { passive: true });
 function toggleMobile() { const menu = document.getElementById('mobileMenu'); const btn = document.querySelector('.mobile-toggle'); const isOpen = menu.classList.contains('active'); if (isOpen) { menu.classList.remove('active'); btn.classList.remove('active'); btn.setAttribute('aria-expanded','false'); btn.setAttribute('aria-label','Menü öffnen'); document.body.style.overflow=''; } else { menu.classList.add('active'); btn.classList.add('active'); btn.setAttribute('aria-expanded','true'); btn.setAttribute('aria-label','Menü schließen'); document.body.style.overflow='hidden'; } }
+</script>
+<script src="animations.js"></script>
+<script>
+// Testimonial Carousel
+(function() {
+  const slides = document.getElementById('testimonialSlides');
+  const dots = document.querySelectorAll('.testimonial-dot');
+  if (!slides || !dots.length) return;
+  let current = 0;
+  const total = dots.length;
+  let autoTimer;
+
+  function goTo(idx) {
+    current = idx;
+    slides.style.transform = 'translateX(-' + (current * 100) + '%)';
+    dots.forEach((d, i) => d.classList.toggle('active', i === current));
+  }
+
+  function autoAdvance() {
+    autoTimer = setInterval(() => goTo((current + 1) % total), 6000);
+  }
+
+  dots.forEach(d => d.addEventListener('click', () => {
+    clearInterval(autoTimer);
+    goTo(parseInt(d.dataset.slide));
+    autoAdvance();
+  }));
+
+  autoAdvance();
+})();
+
+// Leaflet Map
+(function() {
+  var LOCATIONS = [
+    {name:"Stadion Wankdorf",cat:"stadion",context:"BSC Young Boys",city:"Bern",lat:46.9631,lng:7.4658,link:"https://www.stadedesuisse.ch",icon:"🏟️"},
+    {name:"Stadion Letzigrund",cat:"stadion",context:"FC Zürich / GC",city:"Zürich",lat:47.3823,lng:8.5203,link:"https://www.letzigrund.ch",icon:"🏟️"},
+    {name:"Swissporarena",cat:"stadion",context:"FC Luzern",city:"Luzern",lat:47.0355,lng:8.3102,link:"https://www.swissporarena.ch",icon:"🏟️"},
+    {name:"Stockhorn Arena",cat:"stadion",context:"FC Thun",city:"Thun",lat:46.7520,lng:7.6218,link:"https://www.stockhornarena.ch",icon:"🏟️"},
+    {name:"Stade de Tourbillon",cat:"stadion",context:"FC Sion",city:"Sion",lat:46.2319,lng:7.3817,link:"https://www.fc-sion.ch",icon:"🏟️"},
+    {name:"Stade de Genève",cat:"stadion",context:"Servette FC",city:"Genf",lat:46.2327,lng:6.1163,link:"https://www.stadedegeneve.ch",icon:"🏟️"},
+    {name:"St. Jakob-Park",cat:"stadion",context:"FC Basel",city:"Basel",lat:47.5413,lng:7.6200,link:"https://www.st-jakob-park.ch",icon:"🏟️"},
+    {name:"kybunpark",cat:"stadion",context:"FC St. Gallen",city:"St. Gallen",lat:47.4081,lng:9.3095,link:"https://www.kybunpark.ch",icon:"🏟️"},
+    {name:"Signal Iduna Park",cat:"stadion",context:"BVB Dortmund",city:"Dortmund",lat:51.4926,lng:7.4515,link:"https://www.signal-iduna-park.de",icon:"🏟️"},
+    {name:"Allianz Arena",cat:"stadion",context:"FC Bayern München",city:"München",lat:48.2188,lng:11.6247,link:"https://allianz-arena.com",icon:"🏟️"},
+    {name:"Merkur Spiel-Arena",cat:"stadion",context:"Fortuna Düsseldorf",city:"Düsseldorf",lat:51.2614,lng:6.7338,link:"https://www.merkur-spiel-arena.de",icon:"🏟️"},
+    {name:"Volksparkstadion",cat:"stadion",context:"HSV Hamburg",city:"Hamburg",lat:53.5871,lng:9.8987,link:"https://www.volksparkstadion.de",icon:"🏟️"},
+    {name:"Red Bull Arena",cat:"stadion",context:"RB Leipzig",city:"Leipzig",lat:51.3459,lng:12.3485,link:"https://www.redbullarena.com",icon:"🏟️"},
+    {name:"Olympiastadion",cat:"stadion",context:"Hertha BSC",city:"Berlin",lat:52.5146,lng:13.2394,link:"https://www.olympiastadion.berlin",icon:"🏟️"},
+    {name:"MHPArena",cat:"stadion",context:"VfB Stuttgart",city:"Stuttgart",lat:48.7924,lng:9.2320,link:"https://www.mhp-arena.de",icon:"🏟️"},
+    {name:"Veltins-Arena",cat:"stadion",context:"Schalke 04",city:"Gelsenkirchen",lat:51.5546,lng:7.0678,link:"https://www.veltins-arena.de",icon:"🏟️"},
+    {name:"Deutsche Bank Park",cat:"stadion",context:"Eintracht Frankfurt",city:"Frankfurt",lat:50.0686,lng:8.6455,link:"https://www.deutschebank-park.de",icon:"🏟️"},
+    {name:"RheinEnergieSTADION",cat:"stadion",context:"1. FC Köln",city:"Köln",lat:50.9335,lng:6.8754,link:"https://www.rheinenergiestadion.de",icon:"🏟️"},
+    {name:"Holstein-Stadion",cat:"stadion",context:"Holstein Kiel",city:"Kiel",lat:54.3499,lng:10.1224,link:"https://www.holstein-kiel.de",icon:"🏟️"},
+    {name:"Millerntor-Stadion",cat:"stadion",context:"FC St. Pauli",city:"Hamburg",lat:53.5547,lng:9.9675,link:"https://www.fcstpauli.com",icon:"🏟️"},
+    {name:"Barclays Arena",cat:"stadion",context:"Veranstaltungsarena",city:"Hamburg",lat:53.5873,lng:9.9001,link:"https://www.barclays-arena.de",icon:"🏟️"},
+    {name:"Gigaset Arena",cat:"stadion",context:"1. FC Bocholt",city:"Bocholt",lat:51.8390,lng:6.6172,link:"https://www.fcbocholt.de",icon:"🏟️"},
+    {name:"AVNET Arena",cat:"stadion",context:"1. FC Magdeburg",city:"Magdeburg",lat:52.1307,lng:11.6388,link:"https://www.fc-magdeburg.de",icon:"🏟️"},
+    {name:"Tollwood Festival",cat:"festival",context:"Kunde",city:"München",lat:48.1750,lng:11.5514,link:"https://www.tollwood.de",icon:"🎪"},
+    {name:"Kieler Woche",cat:"festival",context:"Kunde",city:"Kiel",lat:54.3233,lng:10.1349,link:"https://www.kieler-woche.de",icon:"🎪"},
+    {name:"gamescom",cat:"festival",context:"Kunde",city:"Köln",lat:50.9475,lng:6.9820,link:"https://www.gamescom.de",icon:"🎮"},
+    {name:"OMR Festival",cat:"festival",context:"Kunde",city:"Hamburg",lat:53.5632,lng:10.0023,link:"https://omr.com",icon:"🎪"},
+    {name:"Millerntor Gallery",cat:"festival",context:"Kunde",city:"Hamburg",lat:53.5557,lng:9.9665,link:"https://www.millerntorgallery.org",icon:"🎨"},
+    {name:"Reeperbahn Festival",cat:"festival",context:"2022 + 2023",city:"Hamburg",lat:53.5498,lng:9.9629,link:"https://www.reeperbahnfestival.com",icon:"🎵"},
+    {name:"Wutzrock",cat:"festival",context:"ehem. genutzt",city:"Fleckeby",lat:54.4900,lng:9.7500,link:"https://www.wutzrock.de",icon:"🎪"},
+    {name:"R.SH Kindertag",cat:"festival",context:"ehem. genutzt",city:"Neumünster",lat:54.0706,lng:9.9870,link:"https://www.rsh.de",icon:"🎪"},
+    {name:"COAL (Campus Open Air)",cat:"festival",context:"Festival / Uni",city:"Lübeck",lat:53.8353,lng:10.7010,link:"https://coaluebeck.de",icon:"🎪"},
+    {name:"Fährmannsfest",cat:"event",context:"Stadtfest",city:"Hannover",lat:52.3672,lng:9.7230,link:"https://www.faehrmannsfest.de",icon:"🎉"},
+    {name:"Maschseefest",cat:"event",context:"Stadtfest",city:"Hannover",lat:52.3575,lng:9.7383,link:"https://www.maschseefest.de",icon:"🎉"},
+    {name:"Schützenfest Hannover",cat:"event",context:"Volksfest",city:"Hannover",lat:52.3623,lng:9.7318,link:"https://www.schuetzenfest-hannover.de",icon:"🎉"},
+    {name:"Fête de la Musique",cat:"event",context:"Musikfest",city:"Hannover",lat:52.3759,lng:9.7320,link:"https://www.fete-hannover.de",icon:"🎶"},
+    {name:"Japantag",cat:"event",context:"Stadtfest",city:"Düsseldorf",lat:51.2270,lng:6.7696,link:"https://www.japantag-duesseldorf-nrw.de",icon:"🎉"},
+    {name:"Holstenköste",cat:"event",context:"Stadtfest",city:"Neumünster",lat:54.0754,lng:9.9831,link:"https://www.holstenkoeste.de",icon:"🎉"},
+    {name:"Kulturfest Essen",cat:"event",context:"Stadtfest",city:"Essen",lat:51.4556,lng:7.0116,link:"",icon:"🎉"},
+    {name:"CSD Hannover",cat:"event",context:"Pride",city:"Hannover",lat:52.3759,lng:9.7413,link:"https://www.csd-hannover.de",icon:"🏳️‍🌈"},
+    {name:"Blütenball",cat:"event",context:"Event",city:"Mainz",lat:50.0012,lng:8.2714,link:"",icon:"🌸"},
+    {name:"Soli-Party Leipzig",cat:"event",context:"Event",city:"Leipzig",lat:51.3397,lng:12.3750,link:"",icon:"🎉"},
+    {name:"Fanzone Hamburg",cat:"fanzone",context:"UEFA EURO 2024",city:"Hamburg",lat:53.5527,lng:9.9665,link:"https://www.hamburg.de",icon:"⚽"},
+    {name:"Fanzone Berlin",cat:"fanzone",context:"UEFA EURO 2024",city:"Berlin",lat:52.5145,lng:13.3501,link:"https://www.berlin.de",icon:"⚽"},
+    {name:"Fanzone Frankfurt",cat:"fanzone",context:"UEFA EURO 2024",city:"Frankfurt",lat:50.1109,lng:8.6821,link:"https://www.frankfurt.de",icon:"⚽"},
+    {name:"Fanzone München",cat:"fanzone",context:"UEFA EURO 2024",city:"München",lat:48.1760,lng:11.5524,link:"https://www.muenchen.de",icon:"⚽"},
+    {name:"Molotow",cat:"club",context:"Club",city:"Hamburg",lat:53.5495,lng:9.9609,link:"https://www.molotowclub.com",icon:"🎵"},
+    {name:"Frappant",cat:"club",context:"Club / Bar",city:"Hamburg",lat:53.5574,lng:9.9384,link:"",icon:"🎵"},
+    {name:"Tanzhaus West",cat:"club",context:"Club",city:"Frankfurt",lat:50.1017,lng:8.6439,link:"https://www.tanzhaus-west.de",icon:"🎵"},
+    {name:"Tokonoma",cat:"club",context:"Club / Bar",city:"Frankfurt",lat:50.1261,lng:8.6936,link:"",icon:"🎵"},
+    {name:"Geheimclub",cat:"club",context:"Club",city:"Magdeburg",lat:52.1250,lng:11.6379,link:"",icon:"🎵"},
+    {name:"Viertel",cat:"club",context:"Clubs / Stadtviertel",city:"Bremen",lat:53.0711,lng:8.8242,link:"",icon:"🎵"},
+    {name:"Kulturfabrik (KuFa)",cat:"club",context:"Club",city:"Krefeld",lat:51.3329,lng:6.5631,link:"https://www.kulturfabrik-krefeld.de",icon:"🎵"},
+    {name:"Feinkost Lampe",cat:"club",context:"Bar / Venue",city:"Hannover",lat:52.3710,lng:9.7380,link:"https://www.feinkostlampe.de",icon:"🍸"},
+    {name:"halle02",cat:"club",context:"Club",city:"Heidelberg",lat:49.4052,lng:8.6720,link:"https://www.halle02.de",icon:"🎵"},
+    {name:"Amadeus",cat:"club",context:"Club",city:"Oldenburg",lat:53.1434,lng:8.2127,link:"https://www.amadeus-ol.de",icon:"🎵"},
+    {name:"Frau Gunstmann",cat:"club",context:"Bar",city:"Oldenburg",lat:53.1420,lng:8.2140,link:"https://www.fraugunstmann.de",icon:"🍸"},
+    {name:"umBAUbar",cat:"club",context:"Club / Bar",city:"Oldenburg",lat:53.1431,lng:8.2172,link:"https://umbaubar.net",icon:"🎵"},
+    {name:"Gleispark",cat:"club",context:"Venue / Kultur",city:"Oldenburg",lat:53.1450,lng:8.2100,link:"https://gleispark-oldenburg.de",icon:"🎵"},
+    {name:"Kampnagel",cat:"venue",context:"Kulturzentrum",city:"Hamburg",lat:53.5830,lng:10.0183,link:"https://www.kampnagel.de",icon:"🏛️"},
+    {name:"Haus 73",cat:"venue",context:"Kulturzentrum",city:"Hamburg",lat:53.5626,lng:9.9667,link:"https://www.haus73.de",icon:"🏛️"},
+    {name:"Schlachthof Wiesbaden",cat:"venue",context:"Kulturzentrum",city:"Wiesbaden",lat:50.0753,lng:8.2502,link:"https://www.schlachthof-wiesbaden.de",icon:"🏛️"},
+    {name:"Landtag NRW",cat:"institution",context:"Institution",city:"Düsseldorf",lat:51.2212,lng:6.7704,link:"https://www.landtag.nrw.de",icon:"🏛️"},
+    {name:"Stadt Krefeld",cat:"institution",context:"Kommune",city:"Krefeld",lat:51.3388,lng:6.5853,link:"https://www.krefeld.de",icon:"🏛️"},
+    {name:"Hochschule Niederrhein",cat:"institution",context:"Bildung",city:"Krefeld",lat:51.3329,lng:6.5631,link:"https://www.hs-niederrhein.de",icon:"🎓"},
+    {name:"AStA Uni Lübeck",cat:"institution",context:"Bildung",city:"Lübeck",lat:53.8353,lng:10.7010,link:"https://www.asta-luebeck.de",icon:"🎓"},
+    {name:"Hochschule Flensburg",cat:"institution",context:"Bildung",city:"Flensburg",lat:54.7833,lng:9.4366,link:"https://www.hs-flensburg.de",icon:"🎓"},
+    {name:"Starterkitchen",cat:"institution",context:"Bildung / Startup",city:"Kiel",lat:54.3379,lng:10.1262,link:"https://www.starterkitchen.de",icon:"🚀"},
+    {name:"ASB Schleswig-Holstein",cat:"institution",context:"Organisation",city:"Kiel",lat:54.3133,lng:10.1349,link:"https://www.asb-sh.de",icon:"🏥"},
+    {name:"Explorer Konferenz",cat:"institution",context:"Konferenz",city:"Kiel",lat:54.3280,lng:10.1400,link:"https://www.explorerkonferenz.de",icon:"🎤"},
+    {name:"Rune Sauna",cat:"institution",context:"Freizeit",city:"Kiel",lat:54.3365,lng:10.1586,link:"https://www.runesauna.de",icon:"♨️"},
+    {name:"Jugendhaus Bargteheide",cat:"institution",context:"Jugendhaus",city:"Bargteheide",lat:53.7270,lng:10.2630,link:"",icon:"🏠"},
+    {name:"Antira",cat:"kollektiv",context:"Kollektiv",city:"Hamburg",lat:53.5511,lng:9.9937,link:"",icon:"✊"},
+    {name:"Artig Works",cat:"kollektiv",context:"Kollektiv",city:"Osnabrück",lat:52.2799,lng:8.0472,link:"",icon:"✊"},
+    {name:"The Changency",cat:"kollektiv",context:"Nachhaltigkeitsagentur (Milky Chance)",city:"Kappeln",lat:54.6631,lng:9.9337,link:"",icon:"🌱"},
+    {name:"Milky Chance",cat:"konzert",context:"Konzert · Orangerie Kassel",city:"Kassel",lat:51.3050,lng:9.4478,link:"https://www.milkychance.net",icon:"🎸"},
+    {name:"Mojo Club",cat:"konzert",context:"Jeremias Club Tour 2025",city:"Hamburg",lat:53.5498,lng:9.9640,link:"https://www.mojo.de",icon:"🎸"},
+    {name:"Kupfersaal",cat:"konzert",context:"Jeremias Club Tour 2025",city:"Leipzig",lat:51.3397,lng:12.3731,link:"https://www.kupfersaal.de",icon:"🎸"},
+    {name:"Musikzentrum",cat:"konzert",context:"Jeremias Club Tour 2025",city:"Hannover",lat:52.3838,lng:9.7228,link:"https://www.musikzentrum-hannover.de",icon:"🎸"},
+    {name:"ZOOM",cat:"konzert",context:"Jeremias Club Tour 2025",city:"Frankfurt",lat:50.1151,lng:8.6827,link:"https://zoomfrankfurt.com",icon:"🎸"}
+  ];
+
+  var CAT_COLORS = {
+    stadion:"rgb(42,20,130)", festival:"rgb(0,170,120)", event:"rgb(255,200,60)",
+    fanzone:"rgb(214,239,238)", club:"rgb(220,80,160)", venue:"rgb(130,115,190)",
+    institution:"rgb(80,160,220)", kollektiv:"rgb(210,214,239)", konzert:"rgb(240,120,50)"
+  };
+
+  var allMarkers = [];
+
+  var euBounds = L.latLngBounds(L.latLng(35.0, -12.0), L.latLng(58.0, 20.0));
+  var map = L.map('einsatz-map', {
+    zoomControl: true, scrollWheelZoom: false,
+    maxBounds: euBounds, maxBoundsViscosity: 1.0,
+    minZoom: 5, maxZoom: 14
+  }).setView([50.5, 10.0], 6);
+
+  L.tileLayer('https://{s}.basemaps.cartocdn.com/dark_nolabels/{z}/{x}/{y}{r}.png', {
+    attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OSM</a> &copy; <a href="https://carto.com/">CARTO</a>',
+    subdomains: 'abcd', maxZoom: 14
+  }).addTo(map);
+
+  LOCATIONS.forEach(function(loc) {
+    var color = CAT_COLORS[loc.cat] || "rgb(134,134,134)";
+    var sizeClass = 'ss-dot-sm';
+    if (loc.cat === 'stadion' || loc.cat === 'fanzone') sizeClass = 'ss-dot-lg';
+    else if (loc.cat === 'festival' || loc.cat === 'event' || loc.cat === 'venue' || loc.cat === 'konzert') sizeClass = 'ss-dot-md';
+
+    var icon = L.divIcon({
+      className: '', html: '<div class="ss-dot ' + sizeClass + '" style="background:' + color + ';"></div>',
+      iconSize: [14, 14], iconAnchor: [7, 7], popupAnchor: [0, -10]
+    });
+
+    var catLabel = {stadion:'Stadion',festival:'Festival',event:'Event',fanzone:'Fanzone',club:'Club',venue:'Venue',institution:'Institution',kollektiv:'Kollektiv',konzert:'Konzert'}[loc.cat] || loc.cat;
+    var linkHtml = loc.link ? '<a class="ss-popup-link" href="' + loc.link + '" target="_blank" rel="noopener">Website →</a>' : '';
+    var popupHtml = '<div class="ss-popup"><div class="ss-popup-header"><span class="ss-popup-icon">' + loc.icon + '</span><span class="ss-popup-cat">' + catLabel + '</span></div><div class="ss-popup-name">' + loc.name + '</div><div class="ss-popup-context">' + loc.context + '</div><div class="ss-popup-city">' + loc.city + '</div>' + linkHtml + '</div>';
+
+    var marker = L.marker([loc.lat, loc.lng], { icon: icon }).bindPopup(popupHtml, { maxWidth: 280 }).addTo(map);
+    allMarkers.push({ marker: marker, cat: loc.cat });
+  });
+
+  // Center button
+  document.getElementById('mapCenterBtn').addEventListener('click', function() {
+    map.setView([50.5, 10.0], 6, { animate: true, duration: 0.5 });
+  });
+
+  // Filter logic
+  var filterChips = document.querySelectorAll('#mapFilters .filter-chip');
+  filterChips.forEach(function(chip) {
+    chip.addEventListener('click', function() {
+      var cat = this.getAttribute('data-filter');
+      var visibleCount = 0;
+      allMarkers.forEach(function(item) {
+        if (cat === 'all' || item.cat === cat) { item.marker.addTo(map); visibleCount++; }
+        else { map.removeLayer(item.marker); }
+      });
+      filterChips.forEach(function(c) { c.classList.remove('active'); });
+      this.classList.add('active');
+      // filter updated
+    });
+  });
+})();
 </script>
 <script src="animations.js"></script>
 </body>

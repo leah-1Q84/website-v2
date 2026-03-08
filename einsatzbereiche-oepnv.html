@@ -10,7 +10,7 @@
 <meta name="theme-color" content="#2A1482">
 <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
 <link rel="icon" type="image/png" href="favicon.png">
-<link rel="stylesheet" href="styles.css?v=7">
+<link rel="stylesheet" href="styles.css?v=10">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0">
 </head>
 <body>
@@ -93,7 +93,7 @@
 <main id="main">
 
 <div class="hero-wrapper">
-  <div class="hero-section hero-image-bg" style="background-image: url('images/hero-oepnv.jpg');">
+  <div class="hero-section hero-image-bg hero-purple-overlay" style="background-image: url('images/hero-oepnv.jpg');">
     <div class="hero-content">
       <p class="label-text" style="color: var(--lavender-main);">BRANCHE · ÖPNV</p>
       <h1 class="headline1 headline-white">Sicherheit im öffentlichen Nahverkehr</h1>
@@ -110,65 +110,47 @@
   </div>
 </section>
 
-<section class="section bg-lavender" aria-labelledby="process-title">
-  <div class="section-content">
-    <p class="label-text" style="color: var(--purple-main);">SO FUNKTIONIERT'S</p>
-    <h2 class="headline2" id="process-title">Wie saferspaces im ÖPNV funktioniert</h2>
-    <div class="process-flow animate-on-scroll">
-      <div class="process-step">
-        <div class="process-icon"><span class="material-symbols-rounded">chat_bubble</span></div>
-        <h3 class="subhead-small">Melden</h3>
-        <p class="copy-small copy-muted">Per QR-Code in Bus, Bahn oder an der Haltestelle öffnet sich die Web-App. Fahrgäste wählen die Vorfallsart und werden per Chat mit dem Team verbunden.</p>
+<section class="section bg-white" aria-labelledby="challenges-title">
+  <div class="section-content section-flex">
+    <div class="animate-on-scroll" style="text-align: center;">
+      <p class="label-text">Herausforderungen</p>
+      <h2 class="headline2" id="challenges-title">Seid die Ersten, die den Unterschied machen.</h2>
+      <p class="copy" style="margin-top: 16px; max-width: 680px; margin-left: auto; margin-right: auto;">Hunderte Haltestellen, Dutzende Linien, Tausende Fahrgäste – im ÖPNV fehlt es bisher an niedrigschwelligen Meldewegen.</p>
+    </div>
+    <div class="benefit-grid animate-on-scroll">
+      <div class="benefit-card">
+        <span class="material-symbols-rounded benefit-icon">route</span>
+        <h3 class="subhead-small">Verteilte Infrastruktur</h3>
+        <p class="copy-small copy-muted" style="margin-top: 8px;">Hunderte Haltestellen, Dutzende Linien – saferspaces macht jede Location per QR-Code erreichbar.</p>
       </div>
-      <div class="process-arrow"><span class="material-symbols-rounded">arrow_forward</span></div>
-      <div class="process-step">
-        <div class="process-icon"><span class="material-symbols-rounded">bolt</span></div>
-        <h3 class="subhead-small">Reagieren</h3>
-        <p class="copy-small copy-muted">Die Leitstelle erhält einen kritischen Alarm in der saferspaces App – und kann dort direkt koordinieren, kommunizieren und jeden Vorfall dokumentieren. Alles in einer Anwendung.</p>
+      <div class="benefit-card">
+        <span class="material-symbols-rounded benefit-icon">visibility_off</span>
+        <h3 class="subhead-small">Hohe Hemmschwelle</h3>
+        <p class="copy-small copy-muted" style="margin-top: 8px;">Viele Fahrgäste scheuen den direkten Kontakt. Anonyme, digitale Meldungen senken die Hürde drastisch.</p>
       </div>
-      <div class="process-arrow"><span class="material-symbols-rounded">arrow_forward</span></div>
-      <div class="process-step">
-        <div class="process-icon"><span class="material-symbols-rounded">query_stats</span></div>
-        <h3 class="subhead-small">Verstehen</h3>
-        <p class="copy-small copy-muted">Im Analyse-Dashboard zeigen Heatmaps und Statistiken, wo und wann Vorfälle gehäuft auftreten.</p>
+      <div class="benefit-card">
+        <span class="material-symbols-rounded benefit-icon">translate</span>
+        <h3 class="subhead-small">Diverse Fahrgäste</h3>
+        <p class="copy-small copy-muted" style="margin-top: 8px;">Automatische Mehrsprachigkeit – jede Meldung öffnet sich in der Gerätesprache der Fahrgäste.</p>
+      </div>
+      <div class="benefit-card">
+        <span class="material-symbols-rounded benefit-icon">analytics</span>
+        <h3 class="subhead-small">Daten für Planung</h3>
+        <p class="copy-small copy-muted" style="margin-top: 8px;">Heatmaps und Statistiken zeigen, wo Handlungsbedarf besteht – für bessere Routen und sicherere Haltestellen.</p>
       </div>
     </div>
   </div>
 </section>
 
-<section class="section bg-lavender">
+<section class="section bg-lavender" aria-label="Demo buchen">
   <div class="section-content">
-    <p class="label-text" style="color: var(--purple-main); margin-bottom: 8px;">Konzept</p>
-    <h2 class="headline3">Geplante Inhalte dieser Seite</h2>
-    <div style="margin-top: 32px; max-width: 800px;">
-      <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 16px;">
-        <li class="card" style="padding: 20px 24px;">
-          <h3 class="subhead-small" style="color: var(--purple-main);">Hero</h3>
-          <p class="copy-small copy-muted" style="margin-top: 8px;">Visueller Einstieg mit ÖPNV-Bildwelt (Busse, Bahnen, Haltestellen). Headline und Subline betonen niedrigschwellige Meldewege im öffentlichen Nahverkehr.</p>
-        </li>
-        <li class="card" style="padding: 20px 24px;">
-          <h3 class="subhead-small" style="color: var(--purple-main);">Herausforderungen im ÖPNV</h3>
-          <p class="copy-small copy-muted" style="margin-top: 8px;">Belästigung im ÖPNV: Sexuelle Belästigung, Rassismus und Übergriffe in Bussen und Bahnen. Fehlende Meldestrukturen: Keine einfachen Wege, Vorfälle zu melden, während sie passieren. Anonyme Kontaktaufnahme: Betroffene brauchen vertrauliche Kanäle ohne Hemmschwelle.</p>
-        </li>
-        <li class="card" style="padding: 20px 24px;">
-          <h3 class="subhead-small" style="color: var(--purple-main);">Referenzen</h3>
-          <p class="copy-small copy-muted" style="margin-top: 8px;">Noch keine Referenzen im ÖPNV-Bereich vorhanden. Diese Seite wird ausgebaut, sobald erste Pilotprojekte starten. Hinweis auf die Übertragbarkeit der Technologie aus anderen Einsatzbereichen.</p>
-        </li>
-        <li class="card" style="padding: 20px 24px;">
-          <h3 class="subhead-small" style="color: var(--purple-main);">CTA</h3>
-          <p class="copy-small copy-muted" style="margin-top: 8px;">Abschließender Call-to-Action mit Einladung zur Demo. Spezifisch auf Verkehrsbetriebe und ÖPNV-Verantwortliche zugeschnitten.</p>
-        </li>
-      </ul>
-    </div>
-  </div>
-</section>
-
-<section class="section bg-white">
-  <div class="section-content">
-    <div class="cta-block">
-      <h2 class="headline3">Ready to create safer spaces?</h2>
-      <p class="copy" style="margin-top: 16px; max-width: 600px; margin-left: auto; margin-right: auto;">In einer persönlichen Demo zeigen wir euch, wie saferspaces in eurem Kontext funktioniert.</p>
-      <a href="demo.html" class="btn btn-primary btn-lg" style="margin-top: 32px;">Demo buchen</a>
+    <div class="cta-block animate-on-scroll">
+      <h2 class="headline3" style="color: var(--purple-main);">Sicherheit für euren Nahverkehr?</h2>
+      <p class="copy" style="margin-top: 16px; max-width: 600px; margin-left: auto; margin-right: auto;">In einer persönlichen Demo zeigen wir euch, wie saferspaces im ÖPNV funktioniert – an jeder Haltestelle, in jedem Fahrzeug.</p>
+      <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 32px;">
+        <a href="demo.html" class="btn btn-primary btn-lg">Demo buchen</a>
+        <a href="loesung.html" class="btn btn-secondary btn-lg">Lösung ansehen</a>
+      </div>
     </div>
   </div>
 </section>
