@@ -539,27 +539,29 @@ a.nav-item-link.active { border-bottom: 2px solid var(--purple-main); }
 .challenge-list {
   display: flex;
   flex-direction: column;
-  gap: 0;
+  gap: 16px;
   margin-top: 48px;
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
 }
 .challenge-row {
   display: flex;
   align-items: flex-start;
-  gap: 32px;
-  padding: 32px 0;
-  border-bottom: 1px solid rgba(42, 20, 130, 0.1);
-}
-.challenge-row:last-child {
-  border-bottom: none;
+  gap: 28px;
+  padding: 28px 32px;
+  background: rgba(255, 255, 255, 0.6);
+  border-radius: var(--rounded-small, 12px);
+  border-left: 3px solid var(--purple-main);
 }
 .challenge-number {
   font-family: 'GT Alpina Condensed', serif;
-  font-size: 48px;
+  font-size: 40px;
   font-weight: bold;
   color: var(--purple-main);
-  opacity: 0.25;
+  opacity: 0.2;
   line-height: 1;
-  min-width: 56px;
+  min-width: 48px;
   flex-shrink: 0;
 }
 .challenge-content {
@@ -567,20 +569,21 @@ a.nav-item-link.active { border-bottom: 2px solid var(--purple-main); }
 }
 .challenge-content .subhead-small {
   color: var(--purple-main);
-  margin-bottom: 8px;
+  margin-bottom: 6px;
 }
 .challenge-content .copy-small {
   color: var(--purple-main);
-  opacity: 0.7;
+  opacity: 0.65;
+  line-height: 1.5;
 }
 @media (max-width: 768px) {
   .challenge-row {
     gap: 20px;
-    padding: 24px 0;
+    padding: 20px 24px;
   }
   .challenge-number {
-    font-size: 36px;
-    min-width: 40px;
+    font-size: 32px;
+    min-width: 36px;
   }
 }
 
