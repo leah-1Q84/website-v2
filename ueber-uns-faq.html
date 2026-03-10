@@ -30,10 +30,9 @@
         <a href="loesung.html">Lösung</a>
         <div class="nav-dropdown">
           <a href="loesung.html"><strong>Übersicht</strong><span>Das Gesamtsystem</span></a>
-          <a href="loesung.html#melden"><strong>Melden</strong><span>Rapid Response</span></a>
-          <a href="loesung.html#reagieren"><strong>Reagieren</strong><span>Dashboard &amp; Koordination</span></a>
-          <a href="loesung.html#verstehen"><strong>Verstehen</strong><span>Analyse Dashboard</span></a>
+          <a href="loesung-rapid-response.html"><strong>Rapid Response</strong><span>Live-Einsatz &amp; Koordination</span></a>
           <a href="loesung-rapid-report.html"><strong>Rapid Report</strong><span>Meldungen ohne Team vor Ort</span></a>
+          <a href="loesung-analyse.html"><strong>Analyse Dashboard</strong><span>Daten &amp; Auswertungen</span></a>
         </div>
       </div>
       <div class="nav-item">
@@ -50,13 +49,11 @@
       </div>
       <a href="preise.html" class="nav-item nav-item-link">Preise</a>
       <div class="nav-item">
-        <span>Über uns</span>
+        <span>Mehr</span>
         <div class="nav-dropdown">
-          <a href="ueber-uns-mission.html"><strong>Mission</strong><span>Warum Schutzkonzepte</span></a>
-          <a href="ueber-uns-team.html"><strong>Team</strong><span>Die Menschen hinter saferspaces</span></a>
-          <a href="ueber-uns-impact.html"><strong>Impact</strong><span>Kennzahlen &amp; Auszeichnungen</span></a>
+          <a href="ueber-uns-mission.html"><strong>Mission</strong><span>Warum saferspaces?</span></a>
+          <a href="voraussetzungen.html"><strong>Voraussetzungen</strong><span>Was braucht es?</span></a>
           <a href="ueber-uns-faq.html"><strong>FAQ</strong><span>Häufig gestellte Fragen</span></a>
-          <a href="ueber-uns-netzwerk.html"><strong>Netzwerk</strong><span>Partner &amp; Kooperationen</span></a>
         </div>
       </div>
     </div>
@@ -71,7 +68,7 @@
 <div id="mobileMenu" class="mobile-menu" role="dialog" aria-label="Navigation">
   <div class="mobile-menu-section">
     <div class="mobile-menu-section-title"><a href="loesung.html">Lösung</a><span class="mobile-menu-toggle" onclick="event.stopPropagation(); this.closest('.mobile-menu-section').classList.toggle('open')"></span></div>
-    <div class="mobile-menu-links"><a href="loesung.html#melden">Melden</a><a href="loesung.html#reagieren">Reagieren</a><a href="loesung.html#verstehen">Verstehen</a><a href="loesung-rapid-report.html">Rapid Report</a></div>
+    <div class="mobile-menu-links"><a href="loesung-rapid-response.html">Rapid Response</a><a href="loesung-rapid-report.html">Rapid Report</a><a href="loesung-analyse.html">Analyse Dashboard</a></div>
   </div>
   <div class="mobile-menu-section">
     <div class="mobile-menu-section-title"><a href="einsatzbereiche.html">Einsatzbereiche</a><span class="mobile-menu-toggle" onclick="event.stopPropagation(); this.closest('.mobile-menu-section').classList.toggle('open')"></span></div>
@@ -81,8 +78,12 @@
     <div class="mobile-menu-section-title"><a href="preise.html">Preise</a></div>
   </div>
   <div class="mobile-menu-section">
-    <div class="mobile-menu-section-title"><span>Über uns</span><span class="mobile-menu-toggle" onclick="event.stopPropagation(); this.closest('.mobile-menu-section').classList.toggle('open')"></span></div>
-    <div class="mobile-menu-links"><a href="ueber-uns-mission.html">Mission</a><a href="ueber-uns-team.html">Team</a><a href="ueber-uns-impact.html">Impact</a><a href="ueber-uns-faq.html">FAQ</a><a href="ueber-uns-netzwerk.html">Netzwerk</a></div>
+    <div class="mobile-menu-section-title"><span>Mehr</span><span class="mobile-menu-toggle" onclick="event.stopPropagation(); this.closest('.mobile-menu-section').classList.toggle('open')"></span></div>
+    <div class="mobile-menu-links">
+      <a href="ueber-uns-mission.html">Mission</a>
+      <a href="voraussetzungen.html">Voraussetzungen</a>
+      <a href="ueber-uns-faq.html">FAQ</a>
+    </div>
   </div>
   <div style="padding: 24px 0; display: flex; gap: 12px;">
     <a href="demo.html" class="btn btn-primary btn-md" style="flex:1;">Demo buchen</a>
@@ -95,7 +96,7 @@
 <div class="hero-wrapper">
   <div class="hero-section" style="background: var(--purple-main);">
     <div class="hero-content">
-      <p class="label-text" style="color: var(--lavender-main);">Über uns · FAQ</p>
+      <p class="label-text" style="color: var(--lavender-main);">Mehr · FAQ</p>
       <h1 class="headline1 headline-white">Häufig gestellte Fragen</h1>
       <p class="copy copy-white" style="margin: 24px 0 32px; max-width: 560px;">Alles was ihr über saferspaces wissen müsst – kompakt beantwortet.</p>
     </div>
@@ -110,41 +111,252 @@
   </div>
 </section>
 
+<!-- Besucher:innen -->
+<section class="section bg-white">
+  <div class="section-content" style="max-width: 800px;">
+    <p class="label-text" style="color: var(--purple-main); margin-bottom: 8px;">Für Besucher:innen</p>
+    <h2 class="headline3">Fragen zur Nutzung vor Ort</h2>
+
+    <div style="margin-top: 32px;">
+      <details class="accordion-item">
+        <summary>
+          <span class="material-symbols-rounded" style="color: var(--purple-main); font-size: 28px;">qr_code_scanner</span>
+          Müssen Besucher:innen eine App herunterladen?
+          <span class="material-symbols-rounded chevron">expand_more</span>
+        </summary>
+        <div class="accordion-body">
+          <p class="copy">Nein. Besucher:innen müssen lediglich einen QR-Code scannen, um Kontakt mit dem Awareness-Team aufzunehmen. Es ist keine App-Installation nötig.</p>
+        </div>
+      </details>
+
+      <details class="accordion-item">
+        <summary>
+          <span class="material-symbols-rounded" style="color: var(--purple-main); font-size: 28px;">location_off</span>
+          Müssen Besucher:innen ihren Standort teilen?
+          <span class="material-symbols-rounded chevron">expand_more</span>
+        </summary>
+        <div class="accordion-body">
+          <p class="copy">Nein. Jeder QR-Code hat bereits einen Standort hinterlegt. Besucher:innen müssen keine persönlichen Standortdaten freigeben.</p>
+        </div>
+      </details>
+
+      <details class="accordion-item">
+        <summary>
+          <span class="material-symbols-rounded" style="color: var(--purple-main); font-size: 28px;">move</span>
+          Was passiert, wenn ich mich vom Code-Standort entferne?
+          <span class="material-symbols-rounded chevron">expand_more</span>
+        </summary>
+        <div class="accordion-body">
+          <p class="copy">Im Chat kann optional die Standortfreigabe aktiviert werden, damit das Team euch auch an einem anderen Ort finden kann.</p>
+        </div>
+      </details>
+
+      <details class="accordion-item">
+        <summary>
+          <span class="material-symbols-rounded" style="color: var(--purple-main); font-size: 28px;">photo_camera</span>
+          Was, wenn Handykameras auf Veranstaltungen abgeklebt werden?
+          <span class="material-symbols-rounded chevron">expand_more</span>
+        </summary>
+        <div class="accordion-body">
+          <p class="copy">Die Abklebe-Regel wird für die Nutzung von saferspaces ausgesetzt. Besucher:innen dürfen ihre Kamera zum Scannen der QR-Codes nutzen.</p>
+        </div>
+      </details>
+
+      <details class="accordion-item">
+        <summary>
+          <span class="material-symbols-rounded" style="color: var(--purple-main); font-size: 28px;">info</span>
+          Woher wissen Besucher:innen von den QR-Codes?
+          <span class="material-symbols-rounded chevron">expand_more</span>
+        </summary>
+        <div class="accordion-body">
+          <p class="copy">An Eingängen und auf dem gesamten Gelände informieren Hinweisschilder über saferspaces und die Codes. Einige Venues weisen auch beim Einlass darauf hin.</p>
+        </div>
+      </details>
+
+      <details class="accordion-item">
+        <summary>
+          <span class="material-symbols-rounded" style="color: var(--purple-main); font-size: 28px;">chat_bubble</span>
+          Muss ich meine Situation im Chat beschreiben?
+          <span class="material-symbols-rounded chevron">expand_more</span>
+        </summary>
+        <div class="accordion-body">
+          <p class="copy">Nein, der Chat ist optional. Das Awareness-Team macht sich auch ohne eine Nachricht auf den Weg zu euch.</p>
+        </div>
+      </details>
+
+      <details class="accordion-item">
+        <summary>
+          <span class="material-symbols-rounded" style="color: var(--purple-main); font-size: 28px;">verified</span>
+          Welche Vorteile haben QR-Codes?
+          <span class="material-symbols-rounded chevron">expand_more</span>
+        </summary>
+        <div class="accordion-body">
+          <p class="copy">QR-Codes ermöglichen anonymen Kontakt, eine direkte Verbindung zu geschultem Personal – ohne App-Download oder Preisgabe persönlicher Daten.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- Veranstalter:innen -->
 <section class="section bg-lavender">
-  <div class="section-content">
-    <p class="label-text" style="color: var(--purple-main); margin-bottom: 8px;">Konzept</p>
-    <h2 class="headline3">Geplante Inhalte dieser Seite</h2>
-    <div style="margin-top: 32px; max-width: 800px;">
-      <ul style="list-style: none; padding: 0; display: flex; flex-direction: column; gap: 16px;">
-        <li class="card" style="padding: 20px 24px;">
-          <h3 class="subhead-small" style="color: var(--purple-main);">Hero</h3>
-          <p class="copy-small copy-muted" style="margin-top: 8px;">Einstieg mit Suchfunktion oder Kategorieübersicht</p>
-        </li>
-        <li class="card" style="padding: 20px 24px;">
-          <h3 class="subhead-small" style="color: var(--purple-main);">Allgemeine Fragen</h3>
-          <p class="copy-small copy-muted" style="margin-top: 8px;">Was ist saferspaces? Wie funktioniert es?</p>
-        </li>
-        <li class="card" style="padding: 20px 24px;">
-          <h3 class="subhead-small" style="color: var(--purple-main);">Technische Fragen</h3>
-          <p class="copy-small copy-muted" style="margin-top: 8px;">Brauche ich eine App? Welche Browser werden unterstützt?</p>
-        </li>
-        <li class="card" style="padding: 20px 24px;">
-          <h3 class="subhead-small" style="color: var(--purple-main);">Datenschutz & Sicherheit</h3>
-          <p class="copy-small copy-muted" style="margin-top: 8px;">Ist es DSGVO-konform? Werden Daten gespeichert?</p>
-        </li>
-        <li class="card" style="padding: 20px 24px;">
-          <h3 class="subhead-small" style="color: var(--purple-main);">Preise & Vertrag</h3>
-          <p class="copy-small copy-muted" style="margin-top: 8px;">Was kostet saferspaces? Gibt es Mindestlaufzeiten?</p>
-        </li>
-        <li class="card" style="padding: 20px 24px;">
-          <h3 class="subhead-small" style="color: var(--purple-main);">Implementierung</h3>
-          <p class="copy-small copy-muted" style="margin-top: 8px;">Wie schnell kann ich starten? Was brauche ich?</p>
-        </li>
-        <li class="card" style="padding: 20px 24px;">
-          <h3 class="subhead-small" style="color: var(--purple-main);">CTA</h3>
-          <p class="copy-small copy-muted" style="margin-top: 8px;">Call-to-Action zur Demo oder Kontaktaufnahme</p>
-        </li>
-      </ul>
+  <div class="section-content" style="max-width: 800px;">
+    <p class="label-text" style="color: var(--purple-main); margin-bottom: 8px;">Für Veranstalter:innen</p>
+    <h2 class="headline3">Fragen zu Einsatz &amp; Kosten</h2>
+
+    <div style="margin-top: 32px;">
+      <details class="accordion-item">
+        <summary>
+          <span class="material-symbols-rounded" style="color: var(--purple-main); font-size: 28px;">event</span>
+          Kann saferspaces auch für einmalige Events genutzt werden?
+          <span class="material-symbols-rounded chevron">expand_more</span>
+        </summary>
+        <div class="accordion-body">
+          <p class="copy">Ja. saferspaces funktioniert sowohl für einmalige als auch für wiederkehrende Veranstaltungen – mit minimalem Einrichtungsaufwand.</p>
+        </div>
+      </details>
+
+      <details class="accordion-item">
+        <summary>
+          <span class="material-symbols-rounded" style="color: var(--purple-main); font-size: 28px;">payments</span>
+          Was kostet saferspaces?
+          <span class="material-symbols-rounded chevron">expand_more</span>
+        </summary>
+        <div class="accordion-body">
+          <p class="copy">Die Kosten hängen von der Größe des Veranstaltungsorts ab. Dazu kommt eine einmalige Onboarding-Gebühr für Setup und Schulung. <a href="preise.html" style="color: var(--purple-main); font-weight: 700;">Mehr zu unseren Preisen →</a></p>
+        </div>
+      </details>
+
+      <details class="accordion-item">
+        <summary>
+          <span class="material-symbols-rounded" style="color: var(--purple-main); font-size: 28px;">qr_code</span>
+          Warum QR-Codes?
+          <span class="material-symbols-rounded chevron">expand_more</span>
+        </summary>
+        <div class="accordion-body">
+          <p class="copy">QR-Codes sind maximal niedrigschwellig, signalisieren ein umfassendes Schutzkonzept und erfordern keine Standortdaten der Gäste.</p>
+        </div>
+      </details>
+
+      <details class="accordion-item">
+        <summary>
+          <span class="material-symbols-rounded" style="color: var(--purple-main); font-size: 28px;">devices</span>
+          Welche Infrastruktur wird benötigt?
+          <span class="material-symbols-rounded chevron">expand_more</span>
+        </summary>
+        <div class="accordion-body">
+          <p class="copy">Stabiles Internet, ein Tablet oder Smartphone, geschultes Personal – und das dreiteilige System: Management-Konsole, Awareness-Team-App und QR-Codes für Besucher:innen. <a href="voraussetzungen.html" style="color: var(--purple-main); font-weight: 700;">Alle Voraussetzungen →</a></p>
+        </div>
+      </details>
+
+      <details class="accordion-item">
+        <summary>
+          <span class="material-symbols-rounded" style="color: var(--purple-main); font-size: 28px;">notifications_active</span>
+          Wie stelle ich sicher, dass Meldungen gesehen werden?
+          <span class="material-symbols-rounded chevron">expand_more</span>
+        </summary>
+        <div class="accordion-body">
+          <p class="copy">Das Endgerät muss aktiv betreut werden. Bei eingehenden Meldungen blinkt der Bildschirm und es ertönt ein Alarmsignal für eine Minute.</p>
+        </div>
+      </details>
+
+      <details class="accordion-item">
+        <summary>
+          <span class="material-symbols-rounded" style="color: var(--purple-main); font-size: 28px;">shield</span>
+          Können QR-Codes missbraucht werden?
+          <span class="material-symbols-rounded chevron">expand_more</span>
+        </summary>
+        <div class="accordion-body">
+          <p class="copy">In der Praxis kommt Missbrauch nicht vor. Nutzende müssen angeben, ob sie selbst betroffen sind oder eine Beobachtung melden. Venue-Briefings wirken zusätzlich präventiv.</p>
+        </div>
+      </details>
+
+      <details class="accordion-item">
+        <summary>
+          <span class="material-symbols-rounded" style="color: var(--purple-main); font-size: 28px;">support_agent</span>
+          Können Mitarbeitende die Codes ebenfalls nutzen?
+          <span class="material-symbols-rounded chevron">expand_more</span>
+        </summary>
+        <div class="accordion-body">
+          <p class="copy">Ja. Mitarbeitende können sich vor ihrer Schicht einloggen, um Unterstützung anzufordern oder einen Notfallalarm auszulösen.</p>
+        </div>
+      </details>
+    </div>
+  </div>
+</section>
+
+<!-- Personal -->
+<section class="section bg-white">
+  <div class="section-content" style="max-width: 800px;">
+    <p class="label-text" style="color: var(--purple-main); margin-bottom: 8px;">Für Teams</p>
+    <h2 class="headline3">Fragen zu Personal &amp; Qualifikation</h2>
+
+    <div style="margin-top: 32px;">
+      <details class="accordion-item">
+        <summary>
+          <span class="material-symbols-rounded" style="color: var(--purple-main); font-size: 28px;">school</span>
+          Welche Qualifikationen braucht das Personal?
+          <span class="material-symbols-rounded chevron">expand_more</span>
+        </summary>
+        <div class="accordion-body">
+          <p class="copy">Es braucht Personen, die sich der Unterstützung Betroffener widmen – mit Fokus auf die betroffene Person, nicht auf Täter:innen-Identifikation.</p>
+        </div>
+      </details>
+
+      <details class="accordion-item">
+        <summary>
+          <span class="material-symbols-rounded" style="color: var(--purple-main); font-size: 28px;">meeting_room</span>
+          Was ist ein Saferspace?
+          <span class="material-symbols-rounded chevron">expand_more</span>
+        </summary>
+        <div class="accordion-body">
+          <p class="copy">Ein ruhiger, geschützter Bereich abseits des Geschehens – für vertrauliche Gespräche und Unterstützung.</p>
+        </div>
+      </details>
+
+      <details class="accordion-item">
+        <summary>
+          <span class="material-symbols-rounded" style="color: var(--purple-main); font-size: 28px;">diversity_3</span>
+          Warum diverse Teams?
+          <span class="material-symbols-rounded chevron">expand_more</span>
+        </summary>
+        <div class="accordion-body">
+          <p class="copy">Mindestens eine weiblich gelesene Person sollte im Team sein, da häufig weiblich gelesene Personen betroffen sind und sich eher an sie wenden.</p>
+        </div>
+      </details>
+
+      <details class="accordion-item">
+        <summary>
+          <span class="material-symbols-rounded" style="color: var(--purple-main); font-size: 28px;">cake</span>
+          Gibt es ein Mindestalter?
+          <span class="material-symbols-rounded chevron">expand_more</span>
+        </summary>
+        <div class="accordion-body">
+          <p class="copy">Das Personal sollte mindestens 23 Jahre alt sein oder bereits umfassende Erfahrung in der Awareness-Arbeit mitbringen.</p>
+        </div>
+      </details>
+
+      <details class="accordion-item">
+        <summary>
+          <span class="material-symbols-rounded" style="color: var(--purple-main); font-size: 28px;">psychology</span>
+          Braucht es einen bestimmten beruflichen Hintergrund?
+          <span class="material-symbols-rounded chevron">expand_more</span>
+        </summary>
+        <div class="accordion-body">
+          <p class="copy">Ein sozialer, psychologischer oder medizinischer Hintergrund ist hilfreich, aber nicht zwingend erforderlich. Diversität im Team ist erwünscht.</p>
+        </div>
+      </details>
+
+      <details class="accordion-item">
+        <summary>
+          <span class="material-symbols-rounded" style="color: var(--purple-main); font-size: 28px;">lightbulb</span>
+          Gibt es allgemeine Empfehlungen?
+          <span class="material-symbols-rounded chevron">expand_more</span>
+        </summary>
+        <div class="accordion-body">
+          <p class="copy">Organisationen sollten sich grundsätzlich mit Awareness-Arbeit und Prävention auseinandersetzen. Hilfreiche Ressourcen bieten z.&nbsp;B. das Awareness-Institut und die Initiative Awareness.</p>
+        </div>
+      </details>
     </div>
   </div>
 </section>
@@ -152,7 +364,7 @@
 <section class="section bg-white">
   <div class="section-content">
     <div class="cta-block">
-      <h2 class="headline3">Ready to create safer spaces?</h2>
+      <h2 class="headline3">Ready to create a safer space?</h2>
       <p class="copy" style="margin-top: 16px; max-width: 600px; margin-left: auto; margin-right: auto;">In einer persönlichen Demo zeigen wir euch, wie saferspaces in eurem Kontext funktioniert.</p>
       <a href="demo.html" class="btn btn-primary btn-lg" style="margin-top: 32px;">Demo buchen</a>
     </div>
@@ -164,9 +376,14 @@
 <footer class="section bg-purple" style="padding-bottom: 32px;" role="contentinfo">
   <div class="section-content">
     <div class="footer-grid">
-      <div><p class="footer-col-title">Lösung</p><a href="loesung.html" class="footer-link">Übersicht</a><a href="loesung.html#melden" class="footer-link">Melden</a><a href="loesung.html#reagieren" class="footer-link">Reagieren</a><a href="loesung.html#verstehen" class="footer-link">Verstehen</a><a href="loesung-rapid-report.html" class="footer-link">Rapid Report</a></div>
+      <div><p class="footer-col-title">Lösung</p><a href="loesung.html" class="footer-link">Übersicht</a><a href="loesung-rapid-response.html" class="footer-link">Rapid Response</a><a href="loesung-rapid-report.html" class="footer-link">Rapid Report</a><a href="loesung-analyse.html" class="footer-link">Analyse Dashboard</a></div>
       <div><p class="footer-col-title">Einsatzbereiche</p><a href="einsatzbereiche-sport.html" class="footer-link">Sport &amp; Stadien</a><a href="einsatzbereiche-events.html" class="footer-link">Festivals &amp; Events</a><a href="einsatzbereiche-kommunen.html" class="footer-link">Kommunen</a><a href="einsatzbereiche-bildung.html" class="footer-link">Bildung</a><a href="einsatzbereiche-oepnv.html" class="footer-link">ÖPNV &amp; Mobilität</a><a href="einsatzbereiche-freizeit.html" class="footer-link">Freizeit &amp; Kultur</a><a href="einsatzbereiche-unternehmen.html" class="footer-link">Unternehmen</a></div>
-      <div><p class="footer-col-title">Über uns</p><a href="ueber-uns-mission.html" class="footer-link">Mission</a><a href="ueber-uns-team.html" class="footer-link">Team</a><a href="ueber-uns-impact.html" class="footer-link">Impact</a><a href="ueber-uns-faq.html" class="footer-link">FAQ</a><a href="ueber-uns-netzwerk.html" class="footer-link">Netzwerk</a></div>
+      <div>
+        <p class="footer-col-title">Mission</p>
+        <a href="ueber-uns-mission.html" class="footer-link">Mission</a>
+        <a href="voraussetzungen.html" class="footer-link">Voraussetzungen</a>
+        <a href="ueber-uns-faq.html" class="footer-link">FAQ</a>
+      </div>
       <div><p class="footer-col-title">Rechtliches</p><a href="impressum.html" class="footer-link">Impressum</a><a href="datenschutz.html" class="footer-link">Datenschutz</a><a href="#" class="footer-link">AGB</a><a href="#" class="footer-link">Barrierefreiheit</a><div style="margin-top: 24px;"><a href="preise.html" class="footer-link footer-link--bold">Preise</a><a href="demo.html" class="footer-link footer-link--bold">Demo buchen</a></div></div>
     </div>
     <div class="footer-bottom-bar">
