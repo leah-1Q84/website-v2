@@ -12,6 +12,11 @@
 <link rel="icon" type="image/png" href="favicon.png">
 <link rel="stylesheet" href="styles.css?v=7">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0">
+<style>
+  .pw-option-card { background: rgba(210, 214, 239, 0.35) !important; }
+  .pw-option-card:hover { background: var(--lavender-main) !important; }
+  .pw-option-card.selected { background: var(--lavender-main) !important; }
+</style>
 </head>
 <body>
 
@@ -117,21 +122,22 @@
 <!-- ============================================================
      SEKTION 1: HERO
      ============================================================ -->
-<section class="section bg-white" aria-labelledby="preise-hero-title" style="padding-top: 160px;">
-  <div class="section-content" style="text-align: center;">
-    <div class="animate-on-scroll">
+<div class="hero-wrapper">
+  <div class="hero-section" style="background: var(--lavender-main);">
+    <div class="hero-content" style="text-align: center; align-items: center; max-width: 100%; display: flex; flex-direction: column;">
+      <p class="label-text" style="color: var(--purple-main);">Preiskalkulator</p>
       <h1 class="headline1" id="preise-hero-title">Transparente Preise</h1>
-      <p class="copy" style="margin-top: 24px; max-width: 640px; margin-left: auto; margin-right: auto;">Berechnet in wenigen Schritten den Preis für eure saferspaces-Lösung. Unser Preismodell senkt die Einstiegshürde und schützt euer Budget für Personal und Schulungen.</p>
+      <p class="copy" style="margin: 24px 0 0; max-width: 640px;">Berechnet in wenigen Schritten den Preis für eure saferspaces-Lösung. Unser Preismodell senkt die Einstiegshürde und schützt euer Budget für Personal und Schulungen.</p>
     </div>
   </div>
-</section>
+</div>
 
 
 <!-- ============================================================
      SEKTION 2: PRICING CALCULATOR
      Der Kalkulator wird durch pricing-calculator.js initialisiert
      ============================================================ -->
-<section class="section bg-white" aria-label="Preiskalkulator" style="padding-top: 0;">
+<section class="section bg-white" aria-label="Preiskalkulator" style="padding-top: 64px;">
   <div class="section-content">
     <div id="pricing-calculator">
       <div class="pricing-wizard" id="pricingWizard" style="max-width:720px; margin:0 auto;">
@@ -346,76 +352,13 @@
 
 
 <!-- ============================================================
-     SEKTION 3: MUST-HAVES FÜR DIE NUTZUNG
-     ============================================================ -->
-<section class="section bg-lavender" aria-labelledby="musthaves-title">
-  <div class="section-content">
-    <div class="section-intro animate-on-scroll" style="text-align: center;">
-      <h2 class="headline3" id="musthaves-title">Must-haves für die Nutzung</h2>
-    </div>
-    <div class="benefit-grid animate-on-scroll" style="grid-template-columns: repeat(3, 1fr);">
-      <div class="card">
-        <div class="benefit-icon"><span class="material-symbols-rounded">group</span></div>
-        <h3 class="subhead-small">Geschultes Personal</h3>
-        <p class="copy-small copy-muted" style="margin-top: 8px;">Der Einsatz von Personal, das für die Betreuung vorgesehen ist.</p>
-      </div>
-      <div class="card">
-        <div class="benefit-icon"><span class="material-symbols-rounded">wifi</span></div>
-        <h3 class="subhead-small">Stabiles Internet</h3>
-        <p class="copy-small copy-muted" style="margin-top: 8px;">Da saferspaces webbasiert ist, ist eine stabile Internetverbindung erforderlich.</p>
-      </div>
-      <div class="card">
-        <div class="benefit-icon"><span class="material-symbols-rounded">meeting_room</span></div>
-        <h3 class="subhead-small">Saferspace</h3>
-        <p class="copy-small copy-muted" style="margin-top: 8px;">Ein geeigneter Rückzugsraum für vertrauliche Gespräche und Unterstützung.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- ============================================================
-     SEKTION 4: ONBOARDING-PROZESS
-     ============================================================ -->
-<section class="section bg-white" aria-labelledby="onboarding-title">
-  <div class="section-content section-flex">
-    <div class="animate-on-scroll" style="text-align: center;">
-      <h2 class="headline3" id="onboarding-title">Sofort einsatzbereit</h2>
-      <p class="copy" style="margin-top: 16px; max-width: 640px; margin-left: auto; margin-right: auto;">Die Einrichtung der Anwendung erfolgt schnell und mit minimalem Aufwand.</p>
-    </div>
-    <div class="statements-grid animate-on-scroll">
-      <div class="statement-card" style="position: relative; overflow: hidden;">
-        <span class="statement-num">01</span>
-        <h3 class="headline5" style="font-size: clamp(22px, 2.5vw, 28px); position: relative;">Check-in</h3>
-        <p class="copy copy-muted" style="margin-top: 12px; position: relative;">Kurzes Gespräch über den Einsatzkontext.</p>
-      </div>
-      <div class="statement-card" style="position: relative; overflow: hidden;">
-        <span class="statement-num">02</span>
-        <h3 class="headline5" style="font-size: clamp(22px, 2.5vw, 28px); position: relative;">Aufsetzen der Infrastruktur</h3>
-        <p class="copy copy-muted" style="margin-top: 12px; position: relative;">Projekt einrichten, Druckdateien bereitstellen, Zugänge vergeben.</p>
-      </div>
-      <div class="statement-card" style="position: relative; overflow: hidden;">
-        <span class="statement-num">03</span>
-        <h3 class="headline5" style="font-size: clamp(22px, 2.5vw, 28px); position: relative;">Onboarding und Live-Test</h3>
-        <p class="copy copy-muted" style="margin-top: 12px; position: relative;">Einweisung für die zuständigen Teams.</p>
-      </div>
-      <div class="statement-card" style="position: relative; overflow: hidden;">
-        <span class="statement-num">04</span>
-        <h3 class="headline5" style="font-size: clamp(22px, 2.5vw, 28px); position: relative;">Platzieren und Live-Test vor Ort</h3>
-        <p class="copy copy-muted" style="margin-top: 12px; position: relative;">Plakate platzieren und Positionen testen.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-<!-- ============================================================
-     SEKTION 5: CTA
+     CTA
      ============================================================ -->
 <section class="section bg-white" aria-label="Demo buchen">
   <div class="section-content">
     <div class="cta-block animate-on-scroll">
-      <p class="copy" style="max-width: 600px; margin-left: auto; margin-right: auto;">Unverbindlich &amp; kostenlos – in 30 Minuten zeigen wir euch alles.</p>
+      <h2 class="headline3">Jetzt Demo buchen</h2>
+      <p class="copy" style="margin-top: 16px; max-width: 600px; margin-left: auto; margin-right: auto;">Unverbindlich &amp; kostenlos – in 30 Minuten zeigen wir euch alles.</p>
       <a href="demo.html" class="btn btn-primary btn-lg" style="margin-top: 32px;">Demo buchen</a>
     </div>
   </div>
@@ -448,7 +391,7 @@
         <a href="einsatzbereiche-unternehmen.html" class="footer-link">Unternehmen</a>
       </div>
       <div>
-        <p class="footer-col-title">Mission</p>
+        <p class="footer-col-title">Mehr</p>
         <a href="ueber-uns-mission.html" class="footer-link">Mission</a>
         <a href="voraussetzungen.html" class="footer-link">Voraussetzungen</a>
         <a href="ueber-uns-faq.html" class="footer-link">FAQ</a>
