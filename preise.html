@@ -134,11 +134,63 @@
 
 
 <!-- ============================================================
-     SEKTION 2: PRICING CALCULATOR
+     SEKTION 2: PRODUKTAUSWAHL
+     ============================================================ -->
+<section class="section bg-white" aria-labelledby="produkt-title" style="padding-top: 64px; padding-bottom: 0;">
+  <div class="section-content section-flex">
+    <div class="animate-on-scroll" style="text-align: center;">
+      <p class="label-text" style="color: var(--purple-main);">Zwei Produkte. Ein Ziel.</p>
+      <h2 class="headline2" id="produkt-title" style="color: var(--purple-main);">Welches Produkt passt zu euch?</h2>
+      <p class="copy" style="margin-top: 16px; max-width: 680px; margin-left: auto; margin-right: auto;">Je nach Einsatz wählt ihr zwischen zwei Produkten – oder kombiniert beide. Das Analyse Dashboard ist bei Rapid Response inklusive und bei Rapid Report optional zubuchbar.</p>
+    </div>
+    <div class="system-cards animate-on-scroll" style="grid-template-columns: repeat(2, 1fr);">
+      <a href="#rapid-response-preise" class="system-card" style="text-decoration: none; color: inherit;">
+        <div class="system-card-icon">
+          <span class="material-symbols-rounded">chat_bubble</span>
+        </div>
+        <h3 class="subhead">Rapid Response</h3>
+        <p class="copy-small copy-muted" style="margin-top: 12px;">Für Situationen <strong>mit Team vor Ort</strong> – bei Veranstaltungen, in Stadien, auf Festivals oder in Arenen. Echtzeit-Chat zwischen Meldenden und Awareness-Team.</p>
+        <ul class="check-list" style="margin-top: 16px; font-size: 14px;">
+          <li>Echtzeit-Reaktion &amp; Live-Chat</li>
+          <li>Kapazitätsbasiertes Preismodell</li>
+          <li>Geofencing &amp; Multi-Location</li>
+          <li>Anonyme standortbezogene Meldungen</li>
+          <li>100 % DSGVO-konform</li>
+          <li>Analyse Dashboard inklusive</li>
+        </ul>
+        <span style="display: inline-block; margin-top: 16px; font-size: 14px; font-weight: 700; color: var(--purple-main);">Preis berechnen ↓</span>
+      </a>
+      <a href="#rapid-report-preise" class="system-card" style="text-decoration: none; color: inherit;">
+        <div class="system-card-icon">
+          <span class="material-symbols-rounded">description</span>
+        </div>
+        <h3 class="subhead">Rapid Report</h3>
+        <p class="copy-small copy-muted" style="margin-top: 12px;">Für Situationen <strong>ohne Team vor Ort</strong> – auf dem Campus, in Unternehmen, im ÖPNV oder im öffentlichen Raum. Meldungen werden asynchron bearbeitet.</p>
+        <ul class="check-list" style="margin-top: 16px; font-size: 14px;">
+          <li>24/7 permanent verfügbar</li>
+          <li>Festes Abo-Modell</li>
+          <li>White Label verfügbar</li>
+          <li>Anonyme standortbezogene Meldungen</li>
+          <li>100 % DSGVO-konform</li>
+          <li>Analyse Dashboard optional</li>
+        </ul>
+        <span style="display: inline-block; margin-top: 16px; font-size: 14px; font-weight: 700; color: var(--purple-main);">Preise ansehen ↓</span>
+      </a>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     SEKTION 3: RAPID RESPONSE KALKULATOR
      Der Kalkulator wird durch pricing-calculator.js initialisiert
      ============================================================ -->
-<section class="section bg-white" aria-label="Preiskalkulator" style="padding-top: 64px;">
+<section class="section bg-white" id="rapid-response-preise" aria-label="Rapid Response Preiskalkulator" style="padding-top: 64px;">
   <div class="section-content">
+    <div style="text-align: center; margin-bottom: 40px;">
+      <p class="label-text" style="color: var(--purple-main);">Rapid Response</p>
+      <h2 class="headline3" style="color: var(--purple-main);">Da sein, wenn Hilfe gebraucht wird</h2>
+      <p class="copy" style="margin-top: 12px; max-width: 600px; margin-left: auto; margin-right: auto;">Für Events, Stadien, Arenen und Veranstaltungen mit Awareness-Team. Preis basiert auf Kapazität und Nutzungsart.</p>
+    </div>
     <div id="pricing-calculator">
       <div class="pricing-wizard" id="pricingWizard" style="max-width:720px; margin:0 auto;">
 
@@ -155,59 +207,30 @@
           </div>
         </div>
 
-        <!-- Step 1: Art der Veranstaltung/Ort -->
+        <!-- Step 1: Nutzungsart -->
         <div class="pw-step active" data-step="1">
-          <h2 class="headline5 pw-step-title">Art der Veranstaltung / Event</h2>
-          <p class="copy-small copy-muted pw-step-desc">Um was für eine Art von Veranstaltung/Ort handelt es sich? Wählt die passende Kategorie aus.</p>
-          <div class="pw-options-grid">
-            <button class="pw-option-card" data-value="club">
-              <span class="material-symbols-rounded pw-option-icon">nightlife</span>
-              <strong>Club</strong>
-              <span class="pw-option-sub">Club, Bar, Jugendhaus</span>
-            </button>
-            <button class="pw-option-card" data-value="stadion">
-              <span class="material-symbols-rounded pw-option-icon">stadium</span>
-              <strong>Venue</strong>
-              <span class="pw-option-sub">Stadion, Arena, Multifunktionshalle</span>
-            </button>
-            <button class="pw-option-card" data-value="stadtfest">
-              <span class="material-symbols-rounded pw-option-icon">festival</span>
-              <strong>Event</strong>
-              <span class="pw-option-sub">Stadtfest, Festival, Messe</span>
-            </button>
-            <button class="pw-option-card" data-value="kommune" data-redirect="kommunen-preise.html">
-              <span class="material-symbols-rounded pw-option-icon">account_balance</span>
-              <strong>Städte &amp; Kommunen</strong>
-            </button>
-            <button class="pw-option-card" data-value="andere">
-              <span class="material-symbols-rounded pw-option-icon">more_horiz</span>
-              <strong>Andere</strong>
-              <span class="pw-option-sub">Sonstiges</span>
-            </button>
-          </div>
-        </div>
-
-        <!-- Step 2: Nutzung -->
-        <div class="pw-step" data-step="2">
-          <h2 class="headline5 pw-step-title">Nutzung</h2>
+          <h2 class="headline5 pw-step-title">Wie möchtet ihr saferspaces einsetzen?</h2>
           <p class="copy-small copy-muted pw-step-desc">Wählt zwischen einer dauerhaften und einer einmaligen Nutzung.</p>
           <div class="pw-options-row">
             <button class="pw-option-card pw-option-wide" data-value="dauerhaft">
               <span class="material-symbols-rounded pw-option-icon">autorenew</span>
               <div>
                 <strong>Dauerhaft</strong>
-                <span class="pw-option-sub">Für die Nutzung der Anwendung an einem festen Ort.</span>
+                <span class="pw-option-sub">Stadion, Arena, Club, Venue oder fester Standort</span>
               </div>
             </button>
             <button class="pw-option-card pw-option-wide" data-value="einmalig">
               <span class="material-symbols-rounded pw-option-icon">event</span>
               <div>
                 <strong>Einmalig</strong>
-                <span class="pw-option-sub">Für die Nutzung der Anwendung für einen bestimmten Zeitraum.</span>
+                <span class="pw-option-sub">Event, Festival, Party, Firmenfeier oder Messe</span>
               </div>
             </button>
           </div>
         </div>
+
+        <!-- Step 2: (übersprungen – in Step 1 integriert) -->
+        <div class="pw-step" data-step="2"></div>
 
         <!-- Step 3: Auslastung -->
         <div class="pw-step" data-step="3">
@@ -285,7 +308,7 @@
           <!-- Summary -->
           <div class="pw-result-summary">
             <div class="pw-summary-row">
-              <span>Art</span>
+              <span>Nutzung</span>
               <span id="pwSummaryType">–</span>
             </div>
             <div class="pw-summary-row">
@@ -335,7 +358,7 @@
           <!-- CTA -->
           <div style="text-align:center; margin-top:32px;">
             <a href="https://cal.com/saferspaces/hello" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Demo buchen →</a>
-            <p class="copy-small copy-muted" style="margin-top:12px;">Unverbindlich &amp; kostenlos – in 30 Minuten zeigen wir euch alles.</p>
+            <p class="copy-small copy-muted" style="margin-top:12px;">Unverbindlich &amp; kostenlos – in 30 Minuten geben wir euch einen umfassenden Einblick in unsere Systeme.</p>
           </div>
         </div>
 
@@ -347,9 +370,125 @@
 
       </div>
     </div>
+
+    <!-- Enterprise Card -->
+    <div class="card animate-on-scroll" style="max-width: 720px; margin: 48px auto 0; padding: 32px; display: flex; gap: 32px; align-items: center; border: 2px solid var(--purple-main); background: linear-gradient(135deg, rgba(42,20,130,0.03) 0%, transparent 100%);">
+      <div style="flex: 1;">
+        <span style="display: inline-block; background: var(--purple-main); color: #fff; font-size: 11px; font-weight: 700; padding: 4px 12px; border-radius: 100px; margin-bottom: 12px; text-transform: uppercase; letter-spacing: 0.5px;">Enterprise</span>
+        <h3 class="subhead" style="color: var(--purple-main);">Mehr Standorte. Mehr Kontrolle.</h3>
+        <p class="copy-small copy-muted" style="margin-top: 8px;">Für Organisationen mit mehreren Venues, komplexen Anforderungen oder hohen Sicherheitsstandards.</p>
+        <ul class="check-list" style="margin-top: 16px; font-size: 13px;">
+          <li>Multi-Location-Management</li>
+          <li>Vollständiges White Label</li>
+          <li>Custom Reports &amp; Auswertungen</li>
+          <li>Cyberversicherung</li>
+          <li>Dedizierter Ansprechpartner</li>
+          <li>Individuelle Preisgestaltung</li>
+        </ul>
+      </div>
+      <div style="text-align: center; min-width: 180px;">
+        <p style="font-size: 24px; font-weight: 800; color: var(--purple-main); margin-bottom: 16px;">Auf Anfrage</p>
+        <a href="https://cal.com/saferspaces/hello" target="_blank" rel="noopener" class="btn btn-primary btn-md" style="width: 100%;">Kontakt aufnehmen</a>
+      </div>
+    </div>
+
   </div>
 </section>
 
+
+<!-- ============================================================
+     SEKTION 4: RAPID REPORT PREISE
+     ============================================================ -->
+<section class="section bg-lavender" id="rapid-report-preise" aria-labelledby="rr-preise-title" style="padding-top: 64px;">
+  <div class="section-content">
+    <div style="text-align: center; margin-bottom: 40px;">
+      <p class="label-text" style="color: var(--purple-main);">Rapid Report</p>
+      <h2 class="headline3" id="rr-preise-title" style="color: var(--purple-main);">Feste Preise – Verlässliche Strukturen</h2>
+      <p class="copy" style="margin-top: 12px; max-width: 640px; margin-left: auto; margin-right: auto;">Für Hochschulen, Unternehmen, Kommunen, ÖPNV und überall dort, wo ein permanenter Meldekanal gebraucht wird. Alle Preise zzgl. 19&nbsp;% MwSt.</p>
+    </div>
+
+    <!-- Pricing Cards -->
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 24px; max-width: 960px; margin: 0 auto;">
+
+      <!-- Basis -->
+      <div class="card" style="padding: 32px 24px; text-align: center; border: 2px solid transparent;">
+        <h3 class="subhead" style="color: var(--purple-main);">Basis</h3>
+        <p class="copy-small copy-muted" style="margin-top: 8px; min-height: 80px;">Unbegrenzte Meldungen, interne Meldestelle, anonym &amp; standortbasiert, mehrsprachig (DE/EN).</p>
+        <div style="margin: 24px 0 8px;">
+          <span style="font-size: 14px; color: var(--grey-mid, #6b7280);">ab</span>
+          <span style="font-size: 36px; font-weight: 800; color: var(--purple-main);">19,90</span>
+          <span style="font-size: 16px; color: var(--purple-main);">€/Monat</span>
+        </div>
+        <p class="copy-small copy-muted">bis 1.000 Personen</p>
+        <div style="margin-top: 24px; text-align: left;">
+          <p style="font-size: 13px; font-weight: 700; margin-bottom: 8px;">Monatliche Kosten:</p>
+          <div style="display: flex; justify-content: space-between; font-size: 13px; padding: 4px 0; border-bottom: 1px solid rgba(0,0,0,0.08);"><span>bis 1.000 Personen</span><span style="font-weight: 600;">19,90 €</span></div>
+          <div style="display: flex; justify-content: space-between; font-size: 13px; padding: 4px 0; border-bottom: 1px solid rgba(0,0,0,0.08);"><span>bis 10.000 Personen</span><span style="font-weight: 600;">49,90 €</span></div>
+          <div style="display: flex; justify-content: space-between; font-size: 13px; padding: 4px 0;"><span>mehr als 10.000</span><span style="font-weight: 600;">99,90 €</span></div>
+        </div>
+        <div style="margin-top: 16px; text-align: left;">
+          <p style="font-size: 13px; font-weight: 700; margin-bottom: 8px;">Einmalig:</p>
+          <div style="display: flex; justify-content: space-between; font-size: 13px; padding: 4px 0; border-bottom: 1px solid rgba(0,0,0,0.08);"><span>Setup inkl. Onboarding</span><span style="font-weight: 600;">150 €</span></div>
+          <div style="display: flex; justify-content: space-between; font-size: 13px; padding: 4px 0;"><span>Individuelle CI</span><span style="font-weight: 600;">120 €</span></div>
+        </div>
+        <a href="https://cal.com/saferspaces/hello" target="_blank" rel="noopener" class="btn btn-secondary btn-md" style="margin-top: 24px; width: 100%;">Demo buchen</a>
+      </div>
+
+      <!-- Standard -->
+      <div class="card" style="padding: 32px 24px; text-align: center; border: 2px solid var(--purple-main);">
+        <span style="display: inline-block; background: var(--purple-main); color: #fff; font-size: 11px; font-weight: 700; padding: 4px 12px; border-radius: 100px; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px;">Empfohlen</span>
+        <h3 class="subhead" style="color: var(--purple-main);">Standard</h3>
+        <p class="copy-small copy-muted" style="margin-top: 8px; min-height: 80px;">Alles aus Basis + externe Meldestelle, Kontaktfotos hinzufügen, individuelle Texte.</p>
+        <div style="margin: 24px 0 8px;">
+          <span style="font-size: 14px; color: var(--grey-mid, #6b7280);">ab</span>
+          <span style="font-size: 36px; font-weight: 800; color: var(--purple-main);">29,90</span>
+          <span style="font-size: 16px; color: var(--purple-main);">€/Monat</span>
+        </div>
+        <p class="copy-small copy-muted">bis 1.000 Personen</p>
+        <div style="margin-top: 24px; text-align: left;">
+          <p style="font-size: 13px; font-weight: 700; margin-bottom: 8px;">Monatliche Kosten:</p>
+          <div style="display: flex; justify-content: space-between; font-size: 13px; padding: 4px 0; border-bottom: 1px solid rgba(0,0,0,0.08);"><span>bis 1.000 Personen</span><span style="font-weight: 600;">29,90 €</span></div>
+          <div style="display: flex; justify-content: space-between; font-size: 13px; padding: 4px 0; border-bottom: 1px solid rgba(0,0,0,0.08);"><span>bis 10.000 Personen</span><span style="font-weight: 600;">69,90 €</span></div>
+          <div style="display: flex; justify-content: space-between; font-size: 13px; padding: 4px 0;"><span>mehr als 10.000</span><span style="font-weight: 600;">129,90 €</span></div>
+        </div>
+        <div style="margin-top: 16px; text-align: left;">
+          <p style="font-size: 13px; font-weight: 700; margin-bottom: 8px;">Einmalig:</p>
+          <div style="display: flex; justify-content: space-between; font-size: 13px; padding: 4px 0; border-bottom: 1px solid rgba(0,0,0,0.08);"><span>Setup inkl. Onboarding</span><span style="font-weight: 600;">360 €</span></div>
+          <div style="display: flex; justify-content: space-between; font-size: 13px; padding: 4px 0;"><span>Individuelle CI</span><span style="font-weight: 600;">Inklusive</span></div>
+        </div>
+        <a href="https://cal.com/saferspaces/hello" target="_blank" rel="noopener" class="btn btn-primary btn-md" style="margin-top: 24px; width: 100%;">Demo buchen</a>
+      </div>
+
+      <!-- Enterprise -->
+      <div class="card" style="padding: 32px 24px; text-align: center; border: 2px solid var(--purple-main); background: linear-gradient(180deg, rgba(42,20,130,0.03) 0%, transparent 100%);">
+        <span style="display: inline-block; background: var(--purple-main); color: #fff; font-size: 11px; font-weight: 700; padding: 4px 12px; border-radius: 100px; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.5px;">Individuell</span>
+        <h3 class="subhead" style="color: var(--purple-main);">Enterprise</h3>
+        <p class="copy-small copy-muted" style="margin-top: 8px;">Für Organisationen mit komplexen Anforderungen, mehreren Standorten oder hohen Sicherheitsstandards.</p>
+        <div style="margin: 24px 0 8px;">
+          <span style="font-size: 28px; font-weight: 800; color: var(--purple-main);">Auf Anfrage</span>
+        </div>
+        <ul class="check-list" style="margin-top: 20px; text-align: left; font-size: 13px;">
+          <li>Alles aus Standard</li>
+          <li>Individuelle Formulare</li>
+          <li>Eigene Subdomain (xyz.saferspaces.io)</li>
+          <li>Vollständiges White Label</li>
+          <li>Analyse Dashboard inklusive</li>
+          <li>Custom Reports</li>
+          <li>Cyberversicherung</li>
+          <li>Dedizierter Ansprechpartner</li>
+        </ul>
+        <a href="https://cal.com/saferspaces/hello" target="_blank" rel="noopener" class="btn btn-primary btn-md" style="margin-top: 24px; width: 100%;">Kontakt aufnehmen</a>
+      </div>
+
+    </div>
+
+    <div style="max-width: 680px; margin: 32px auto 0; padding: 20px 24px; background: rgba(255,255,255,0.6); border-radius: var(--rounded-small, 12px); border-left: 3px solid var(--purple-main);">
+      <p style="font-size: 14px; font-weight: 700; color: var(--purple-main); margin-bottom: 4px;">Analyse Dashboard</p>
+      <p class="copy-small copy-muted">Im Enterprise-Paket inklusive. Für Basis und Standard optional zubuchbar – die Preise variieren je nach Größe des jeweiligen Kontextes. Gerne unterbreiten wir ein individuelles Angebot.</p>
+    </div>
+    <p class="copy-small copy-muted" style="text-align: center; margin-top: 20px; max-width: 680px; margin-left: auto; margin-right: auto;">* Das Rapid-Response-System kann bei einzelnen Events zusätzlich aktiviert werden. Die Nutzung wird individuell abgerechnet.</p>
+  </div>
+</section>
 
 <!-- ============================================================
      CTA
@@ -358,7 +497,7 @@
   <div class="section-content">
     <div class="cta-block animate-on-scroll">
       <h2 class="headline3">Jetzt Demo buchen</h2>
-      <p class="copy" style="margin-top: 16px; max-width: 600px; margin-left: auto; margin-right: auto;">Unverbindlich &amp; kostenlos – in 30 Minuten zeigen wir euch alles.</p>
+      <p class="copy" style="margin-top: 16px; max-width: 600px; margin-left: auto; margin-right: auto;">Unverbindlich &amp; kostenlos – in 30 Minuten geben wir euch einen umfassenden Einblick in unsere Systeme.</p>
       <a href="https://cal.com/saferspaces/hello" target="_blank" rel="noopener" class="btn btn-primary btn-lg" style="margin-top: 32px;">Demo buchen</a>
     </div>
   </div>
@@ -445,6 +584,6 @@ function toggleMobile() {
 }
 </script>
 <script src="animations.js"></script>
-<script src="pricing-calculator.js?v=3"></script>
+<script src="pricing-calculator.js?v=4"></script>
 </body>
 </html>

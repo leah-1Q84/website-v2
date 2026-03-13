@@ -80,11 +80,15 @@
   }
 
   function getSetupFee() {
+    // Non-Profit / Clubkultur always gets reduced setup fee
+    if (state.nonprofit) return 190;
     var type = state.venueType || 'andere';
     return SETUP_FEES[type] || SETUP_FEES.andere;
   }
 
   function isSetupFeeFixed() {
+    // Non-Profit has a fixed 190 € fee, others show "ab"
+    if (state.nonprofit) return true;
     return state.venueType === 'club' || state.venueType === 'stadion';
   }
 
@@ -154,11 +158,9 @@
   }
 
   // ===== STEP SKIPPING LOGIC =====
-  // Step 2 (usage) is only needed for "andere"
-  // Step 4 (nonprofit) is hidden for "stadion" (always commercial) and "club" (always nonprofit)
+  // Step 2 is always skipped (usage is now selected in Step 1)
   function shouldSkipStep(step) {
-    if (step === 2 && state.venueType !== 'andere') return true;
-    if (step === 4 && (state.venueType === 'stadion' || state.venueType === 'club')) return true;
+    if (step === 2) return true;
     return false;
   }
 
@@ -273,8 +275,8 @@
 
   function isStepComplete(step) {
     switch (step) {
-      case 1: return state.venueType !== null;
-      case 2: return state.usage !== null;
+      case 1: return state.usage !== null;
+      case 2: return true; // skipped
       case 3: return true;
       case 4: return state.nonprofit !== null;
       case 5: return state.customCI !== null;
@@ -287,8 +289,8 @@
     var titleEl = document.getElementById('pwCapacityTitle');
     if (!descEl) return;
 
-    // Set default capacity for venue type
-    var defaultCap = DEFAULT_CAPACITIES[state.venueType] || 5000;
+    // Set default capacity based on usage type
+    var defaultCap = state.usage === 'dauerhaft' ? 5000 : 25000;
     state.capacity = defaultCap;
     var slider = document.getElementById('pwCapacitySlider');
     if (slider) {
@@ -296,10 +298,7 @@
     }
     updateSliderDisplay();
 
-    if (state.venueType === 'club') {
-      if (titleEl) titleEl.innerHTML = '<span data-lang-de>Kapazität</span><span data-lang-en>Capacity</span>';
-      descEl.innerHTML = '<span data-lang-de>Wie viele Menschen passen maximal in eure Location?</span><span data-lang-en>What is the maximum capacity of your location?</span>';
-    } else if (state.usage === 'dauerhaft') {
+    if (state.usage === 'dauerhaft') {
       if (titleEl) titleEl.innerHTML = '<span data-lang-de>Auslastung</span><span data-lang-en>Capacity</span>';
       descEl.innerHTML = '<span data-lang-de>Wie hoch ist die durchschnittliche Auslastung?</span><span data-lang-en>What is the average capacity?</span>';
     } else {
@@ -336,13 +335,11 @@
     }
 
     // Summary table
-    var typeLabels = {
-      club: 'Club',
-      stadion: 'Venue',
-      stadtfest: 'Event',
-      andere: isDE ? 'Andere' : 'Other'
+    var usageLabels = {
+      dauerhaft: isDE ? 'Dauerhaft' : 'Permanent',
+      einmalig: isDE ? 'Einmalig' : 'One-time'
     };
-    document.getElementById('pwSummaryType').textContent = typeLabels[state.venueType] || '\u2013';
+    document.getElementById('pwSummaryType').textContent = usageLabels[state.usage] || '\u2013';
     document.getElementById('pwSummaryCapacity').textContent = formatNumber(state.capacity);
     document.getElementById('pwSummaryDesign').textContent = state.customCI
       ? (isDE ? 'Eigene CI' : 'Custom CI')
@@ -467,24 +464,12 @@
     var value = this.getAttribute('data-value');
     switch (stepNum) {
       case 1:
-        state.venueType = value;
-        // Auto-set usage for known types
-        if (DEFAULT_USAGE[value]) {
-          state.usage = DEFAULT_USAGE[value];
-        } else {
-          state.usage = null; // reset for "andere"
-        }
-        // Auto-set nonprofit based on venue type
-        if (value === 'club') {
-          state.nonprofit = true;   // Club is always nonprofit
-        } else if (value === 'stadion') {
-          state.nonprofit = false;  // Stadion is always commercial
-        } else {
-          state.nonprofit = null;   // User selects in Step 4
-        }
+        state.usage = value === 'dauerhaft' ? 'dauerhaft' : 'einmalig';
+        state.venueType = 'andere'; // generic for pricing
+        state.nonprofit = null;     // User selects in Step 4
         break;
       case 2:
-        state.usage = value === 'dauerhaft' ? 'dauerhaft' : 'einmalig';
+        // Step 2 is skipped – usage is set in Step 1
         break;
       case 4:
         state.nonprofit = (value === 'nonprofit');
