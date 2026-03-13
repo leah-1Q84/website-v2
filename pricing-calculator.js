@@ -1,7 +1,6 @@
 /**
  * saferspaces Pricing Calculator Wizard
  * Multi-step wizard for calculating custom pricing based on venue type, usage, capacity, etc.
- * Pricing logic mirrors https://www.saferspaces.io/pricing
  */
 (function() {
   'use strict';
@@ -10,7 +9,7 @@
   var state = {
     currentStep: 1,
     totalSteps: 6,
-    venueType: null,       // 'club' | 'stadion' | 'stadtfest' | 'andere'
+    venueType: null,       // 'club' | 'stadion' | 'stadtfest' | 'messe' | 'andere'
     usage: null,           // 'dauerhaft' | 'einmalig'
     capacity: 5000,
     nonprofit: null,       // true | false
@@ -37,12 +36,11 @@
   ];
 
   // Setup fees: by venue type
-  // Club and Venue (stadion) have fixed setup fees
-  // Event (stadtfest) and Andere show "ab 690 €"
   var SETUP_FEES = {
     club:      190,
     stadion:   3200,
     stadtfest: 690,   // minimum, displayed as "ab 690 €"
+    messe:     690,   // minimum, displayed as "ab 690 €"
     andere:    690    // minimum, displayed as "ab 690 €"
   };
 
@@ -50,16 +48,27 @@
   var DEFAULT_USAGE = {
     club: 'dauerhaft',
     stadion: 'dauerhaft',
-    stadtfest: 'einmalig'
-    // 'andere' -> user selects
+    stadtfest: 'einmalig',
+    messe: 'einmalig'
+    // 'andere' -> user selects in Step 2
   };
 
   // Default capacities per venue type
   var DEFAULT_CAPACITIES = {
     club: 500,
     stadion: 15000,
-    stadtfest: 250000,
+    stadtfest: 25000,
+    messe: 10000,
     andere: 5000
+  };
+
+  // Venue labels for result display
+  var VENUE_LABELS = {
+    club:      { de: 'Club / Venue',       en: 'Club / Venue' },
+    stadion:   { de: 'Stadion / Arena',     en: 'Stadium / Arena' },
+    stadtfest: { de: 'Festival / Event',    en: 'Festival / Event' },
+    messe:     { de: 'Messe / Kongress',    en: 'Trade Fair / Congress' },
+    andere:    { de: 'Andere',              en: 'Other' }
   };
 
   // Modifiers
@@ -158,9 +167,9 @@
   }
 
   // ===== STEP SKIPPING LOGIC =====
-  // Step 2 is always skipped (usage is now selected in Step 1)
+  // Step 2 is only shown when venueType === 'andere' (user must choose dauerhaft/einmalig)
   function shouldSkipStep(step) {
-    if (step === 2) return true;
+    if (step === 2 && state.venueType !== 'andere') return true;
     return false;
   }
 
@@ -275,8 +284,8 @@
 
   function isStepComplete(step) {
     switch (step) {
-      case 1: return state.usage !== null;
-      case 2: return true; // skipped
+      case 1: return state.venueType !== null;
+      case 2: return state.usage !== null;
       case 3: return true;
       case 4: return state.nonprofit !== null;
       case 5: return state.customCI !== null;
@@ -289,8 +298,8 @@
     var titleEl = document.getElementById('pwCapacityTitle');
     if (!descEl) return;
 
-    // Set default capacity based on usage type
-    var defaultCap = state.usage === 'dauerhaft' ? 5000 : 25000;
+    // Set default capacity based on venue type
+    var defaultCap = DEFAULT_CAPACITIES[state.venueType] || 5000;
     state.capacity = defaultCap;
     var slider = document.getElementById('pwCapacitySlider');
     if (slider) {
@@ -334,7 +343,14 @@
         '<span data-lang-en>' + formatPricePerPerson(result.perPersonPerMonth) + ' \u20AC per person</span>';
     }
 
-    // Summary table
+    // Summary table – Venue
+    var venueEl = document.getElementById('pwSummaryVenue');
+    if (venueEl) {
+      var vl = VENUE_LABELS[state.venueType] || VENUE_LABELS.andere;
+      venueEl.textContent = isDE ? vl.de : vl.en;
+    }
+
+    // Summary table – Usage
     var usageLabels = {
       dauerhaft: isDE ? 'Dauerhaft' : 'Permanent',
       einmalig: isDE ? 'Einmalig' : 'One-time'
@@ -410,7 +426,7 @@
 
   // ===== EVENT LISTENERS =====
   function init() {
-    // Option card selection (Steps 1, 2, 4, 5)
+    // Option card selection (all steps)
     var allCards = document.querySelectorAll('.pw-option-card, .pw-usage-card');
     for (var i = 0; i < allCards.length; i++) {
       allCards[i].addEventListener('click', handleCardClick);
@@ -447,7 +463,7 @@
     if (!step) return;
     var stepNum = parseInt(step.getAttribute('data-step'));
 
-    // Check for redirect (Städte & Kommunen)
+    // Check for redirect
     if (this.getAttribute('data-redirect')) {
       window.open(this.getAttribute('data-redirect'), '_blank');
       return;
@@ -464,12 +480,24 @@
     var value = this.getAttribute('data-value');
     switch (stepNum) {
       case 1:
-        state.usage = value === 'dauerhaft' ? 'dauerhaft' : 'einmalig';
-        state.venueType = 'andere'; // generic for pricing
-        state.nonprofit = null;     // User selects in Step 4
+        state.venueType = value;
+        if (value === 'andere') {
+          // Usage will be selected in Step 2
+          state.usage = null;
+        } else {
+          // Auto-set usage from DEFAULT_USAGE mapping
+          state.usage = DEFAULT_USAGE[value] || 'einmalig';
+        }
+        state.nonprofit = null;
+        state.customCI = null;
+        // Clear Step 2 visual selection when going back to Step 1
+        var step2Cards = document.querySelectorAll('.pw-step[data-step="2"] .pw-usage-card');
+        for (var k = 0; k < step2Cards.length; k++) {
+          step2Cards[k].classList.remove('selected');
+        }
         break;
       case 2:
-        // Step 2 is skipped – usage is set in Step 1
+        state.usage = (value === 'dauerhaft') ? 'dauerhaft' : 'einmalig';
         break;
       case 4:
         state.nonprofit = (value === 'nonprofit');
@@ -482,16 +510,14 @@
     // Enable next button
     document.getElementById('pwBtnNext').disabled = false;
 
-    // Auto-advance to next step after short delay (skip for slider step)
+    // Auto-advance to next step after short delay
     setTimeout(function() {
       goToStep(getNextStep(state.currentStep));
     }, 250);
   }
 
   function updateSliderDisplay() {
-    var isDE = !document.body.classList.contains('lang-en');
-    var label;
-    label = 'ca. ' + formatNumber(state.capacity);
+    var label = 'ca. ' + formatNumber(state.capacity);
     document.getElementById('pwSliderValue').textContent = label;
   }
 

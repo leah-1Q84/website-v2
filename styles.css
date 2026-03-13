@@ -1690,6 +1690,39 @@ body.menu-open { overflow: hidden; }
   border-radius: var(--rounded-full); font-size: 11px;
 }
 
+/* Venue category grid (Step 1 - 5 cards) */
+.pw-venue-grid {
+  display: flex; flex-wrap: wrap; gap: 12px;
+  margin-top: 8px; justify-content: center;
+}
+.pw-venue-grid .pw-usage-card {
+  flex: 0 1 calc(33.333% - 8px);
+  min-width: 180px; padding: 24px 16px; gap: 6px;
+}
+.pw-venue-grid .pw-usage-icon { width: 52px; height: 52px; font-size: 28px; }
+.pw-venue-grid .pw-usage-title { font-size: 15px; }
+.pw-venue-grid .pw-usage-sub { font-size: 12px; }
+
+/* Enterprise Upsell (inside Step 6) */
+.pw-enterprise-upsell {
+  margin-top: 48px; padding-top: 32px;
+}
+.pw-enterprise-divider {
+  height: 1px; background: var(--grey-main); margin-bottom: 32px;
+}
+.pw-enterprise-badge {
+  display: inline-block; background: var(--purple-main); color: #fff;
+  font-size: 11px; font-weight: 700; padding: 4px 12px;
+  border-radius: 100px; text-transform: uppercase; letter-spacing: 0.5px;
+}
+.pw-enterprise-content { text-align: center; }
+.pw-enterprise-features {
+  text-align: left; max-width: 400px; margin: 16px auto 0;
+}
+.pw-enterprise-features li {
+  font-size: 14px; padding: 6px 0 6px 28px; border-bottom: none;
+}
+
 /* Wizard Navigation */
 .pw-nav {
   display: flex; justify-content: space-between; align-items: center;
@@ -1709,9 +1742,12 @@ body.menu-open { overflow: hidden; }
 @media (max-width: 600px) {
   .pw-options-grid { grid-template-columns: repeat(2, 1fr); }
   .pw-option-card { padding: 16px 12px; }
+  .pw-venue-grid .pw-usage-card { flex: 0 1 calc(50% - 6px); min-width: 140px; }
 }
 @media (max-width: 480px) {
   .pw-usage-grid { grid-template-columns: 1fr; }
+  .pw-venue-grid { flex-direction: column; }
+  .pw-venue-grid .pw-usage-card { flex: 1 1 100%; }
   .pw-toggle-group { flex-direction: column; }
   .pw-result-card { padding: 32px 20px; }
   .pw-options-grid { grid-template-columns: 1fr; }
