@@ -9,7 +9,7 @@
   var state = {
     currentStep: 1,
     totalSteps: 6,
-    venueType: null,       // 'club' | 'stadion' | 'stadtfest' | 'messe' | 'andere'
+    venueType: null,       // 'club' | 'stadion' | 'stadtfest' | 'messe' | 'kommune' | 'andere'
     usage: null,           // 'dauerhaft' | 'einmalig'
     capacity: 5000,
     nonprofit: null,       // true | false
@@ -41,6 +41,7 @@
     stadion:   3200,
     stadtfest: 690,   // minimum, displayed as "ab 690 €"
     messe:     690,   // minimum, displayed as "ab 690 €"
+    kommune:   690,   // minimum, displayed as "ab 690 €"
     andere:    690    // minimum, displayed as "ab 690 €"
   };
 
@@ -49,7 +50,8 @@
     club: 'dauerhaft',
     stadion: 'dauerhaft',
     stadtfest: 'einmalig',
-    messe: 'einmalig'
+    messe: 'einmalig',
+    kommune: 'einmalig'
     // 'andere' -> user selects in Step 2
   };
 
@@ -59,6 +61,7 @@
     stadion: 15000,
     stadtfest: 25000,
     messe: 10000,
+    kommune: 30000,
     andere: 5000
   };
 
@@ -68,6 +71,7 @@
     stadion:   { de: 'Stadion / Arena',     en: 'Stadium / Arena' },
     stadtfest: { de: 'Festival / Event',    en: 'Festival / Event' },
     messe:     { de: 'Messe / Kongress',    en: 'Trade Fair / Congress' },
+    kommune:   { de: 'Städte & Kommunen',  en: 'Cities & Municipalities' },
     andere:    { de: 'Andere',              en: 'Other' }
   };
 

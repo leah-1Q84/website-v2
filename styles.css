@@ -1913,6 +1913,73 @@ body.menu-open { overflow: hidden; }
   .footer-grid { grid-template-columns: 1fr; gap: 24px; }
 }
 
+/* ===== DECISION WIZARD (Preise-Übersicht) ===== */
+.decision-btn {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  padding: 32px 28px;
+  border: 2px solid rgba(42, 20, 130, 0.12);
+  border-radius: 24px;
+  background: var(--white);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  flex: 1;
+  min-width: 240px;
+  max-width: 320px;
+  text-align: center;
+  color: var(--purple-main);
+}
+.decision-btn:hover {
+  border-color: var(--purple-main);
+  background: rgba(42, 20, 130, 0.03);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(42, 20, 130, 0.1);
+}
+.decision-btn.selected {
+  border-color: var(--purple-main);
+  background: rgba(42, 20, 130, 0.06);
+  box-shadow: 0 4px 16px rgba(42, 20, 130, 0.12);
+}
+.decision-btn strong {
+  font-size: 16px;
+}
+
+.decision-btn--compact {
+  padding: 16px 12px;
+  gap: 6px;
+  min-width: 0;
+  max-width: none;
+  border-radius: 16px;
+}
+.decision-btn--compact strong {
+  font-size: 14px;
+}
+
+.decision-result {
+  opacity: 0;
+  transform: translateY(16px);
+  transition: opacity 0.4s ease, transform 0.4s ease;
+}
+.decision-result.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+.decision-result-inner {
+  margin-top: 40px;
+  padding: 40px 32px;
+  background: var(--lavender-main);
+  border-radius: 24px;
+  text-align: center;
+}
+
+@media (max-width: 560px) {
+  .decision-btn { min-width: 100%; max-width: 100%; padding: 24px 20px; }
+  .decision-result-inner { padding: 32px 20px; }
+}
+
+
 /* ===== REFERENCE CARDS CAROUSEL (Live-Site Style) ===== */
 .ref-carousel-wrapper {
   overflow: hidden;
@@ -1959,6 +2026,34 @@ body.menu-open { overflow: hidden; }
 .ref-card-body .copy-small {
   color: var(--black);
 }
+
+/* Reference Tags (Response / Report badges) */
+.ref-tags {
+  display: flex;
+  gap: 6px;
+  flex-wrap: wrap;
+  margin-top: 4px;
+}
+.ref-tag {
+  display: inline-block;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  padding: 3px 10px;
+  border-radius: 100px;
+}
+.ref-tag--response {
+  color: var(--purple-main);
+  background: rgba(42, 20, 130, 0.08);
+}
+.ref-tag--report {
+  color: #0e7c6b;
+  background: rgba(14, 124, 107, 0.08);
+}
+
+/* Hide scrollbar on ref-carousel */
+.ref-carousel-wrapper::-webkit-scrollbar { display: none; }
+
 @media (max-width: 768px) {
   .ref-card-v2 { width: 264px; border-radius: 20px; }
   .ref-card-header { height: 140px; }
