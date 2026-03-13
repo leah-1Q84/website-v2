@@ -411,7 +411,7 @@
   // ===== EVENT LISTENERS =====
   function init() {
     // Option card selection (Steps 1, 2, 4, 5)
-    var allCards = document.querySelectorAll('.pw-option-card');
+    var allCards = document.querySelectorAll('.pw-option-card, .pw-usage-card');
     for (var i = 0; i < allCards.length; i++) {
       allCards[i].addEventListener('click', handleCardClick);
     }
@@ -454,7 +454,7 @@
     }
 
     // Deselect siblings
-    var siblings = step.querySelectorAll('.pw-option-card');
+    var siblings = step.querySelectorAll('.pw-option-card, .pw-usage-card');
     for (var i = 0; i < siblings.length; i++) {
       siblings[i].classList.remove('selected');
     }

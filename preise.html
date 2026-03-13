@@ -189,7 +189,7 @@
     <div style="text-align: center; margin-bottom: 40px;">
       <p class="label-text" style="color: var(--purple-main);">Rapid Response</p>
       <h2 class="headline3" style="color: var(--purple-main);">Da sein, wenn Hilfe gebraucht wird</h2>
-      <p class="copy" style="margin-top: 12px; max-width: 600px; margin-left: auto; margin-right: auto;">Für Events, Stadien, Arenen und Veranstaltungen mit Awareness-Team. Preis basiert auf Kapazität und Nutzungsart.</p>
+      <p class="copy" style="margin-top: 12px; max-width: 600px; margin-left: auto; margin-right: auto;">Für Events, Stadien, Arenen und alle Kontexte, in denen Teams vor Ort für Betroffene schon im Einsatz sind.</p>
     </div>
     <div id="pricing-calculator">
       <div class="pricing-wizard" id="pricingWizard" style="max-width:720px; margin:0 auto;">
@@ -209,22 +209,17 @@
 
         <!-- Step 1: Nutzungsart -->
         <div class="pw-step active" data-step="1">
-          <h2 class="headline5 pw-step-title">Wie möchtet ihr saferspaces einsetzen?</h2>
-          <p class="copy-small copy-muted pw-step-desc">Wählt zwischen einer dauerhaften und einer einmaligen Nutzung.</p>
-          <div class="pw-options-row">
-            <button class="pw-option-card pw-option-wide" data-value="dauerhaft">
-              <span class="material-symbols-rounded pw-option-icon">autorenew</span>
-              <div>
-                <strong>Dauerhaft</strong>
-                <span class="pw-option-sub">Stadion, Arena, Club, Venue oder fester Standort</span>
-              </div>
+          <h2 class="headline5 pw-step-title">Wie möchtet ihr das System einsetzen?</h2>
+          <div class="pw-usage-grid">
+            <button class="pw-usage-card" data-value="dauerhaft">
+              <span class="material-symbols-rounded pw-usage-icon">autorenew</span>
+              <strong class="pw-usage-title">Dauerhaft</strong>
+              <span class="pw-usage-sub">Stadion, Arena, Club, Venue o.&nbsp;Ä.</span>
             </button>
-            <button class="pw-option-card pw-option-wide" data-value="einmalig">
-              <span class="material-symbols-rounded pw-option-icon">event</span>
-              <div>
-                <strong>Einmalig</strong>
-                <span class="pw-option-sub">Event, Festival, Party, Firmenfeier oder Messe</span>
-              </div>
+            <button class="pw-usage-card" data-value="einmalig">
+              <span class="material-symbols-rounded pw-usage-icon">event</span>
+              <strong class="pw-usage-title">Einmalig</strong>
+              <span class="pw-usage-sub">Event, Festival, Party, Messe o.&nbsp;Ä.</span>
             </button>
           </div>
         </div>
@@ -584,6 +579,6 @@ function toggleMobile() {
 }
 </script>
 <script src="animations.js"></script>
-<script src="pricing-calculator.js?v=4"></script>
+<script src="pricing-calculator.js?v=5"></script>
 </body>
 </html>
