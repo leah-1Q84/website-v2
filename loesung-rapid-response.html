@@ -109,27 +109,8 @@
      HERO
      ============================================================ -->
 <div class="hero-wrapper">
-  <div class="hero-section hero-image-bg" style="position: relative; overflow: hidden;">
-    <video id="hero-video" autoplay muted playsinline style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; object-fit: cover; z-index: 0;">
-      <source src="images/23e2eb53-14b3-41ee-be7d-e8695f1ed3b1.MOV" type="video/mp4">
-    </video>
-    <script>
-      (function() {
-        var video = document.getElementById('hero-video');
-        var sources = [
-          'images/23e2eb53-14b3-41ee-be7d-e8695f1ed3b1.MOV',
-          'images/23e2eb53-14b3-41ee-udgibe7d-e8695f1ed3b1.MOV'
-        ];
-        var current = 0;
-        video.addEventListener('ended', function() {
-          current = (current + 1) % sources.length;
-          video.src = sources[current];
-          video.play();
-        });
-      })();
-    </script>
-    <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0,0,0,0.55); z-index: 1;"></div>
-    <div class="hero-content" style="position: relative; z-index: 2;">
+  <div class="hero-section hero-image-bg" style="background-image: url('images/hero-events.jpg'); background-position: center center;">
+    <div class="hero-content">
       <p class="label-text" style="color: var(--lavender-main);">Produkt</p>
       <h1 class="headline1 headline-white">Rapid Response</h1>
       <p class="copy copy-white" style="margin: 24px 0 32px; max-width: 560px;">Das Live-System für Veranstaltungen, Stadien und Events. Echtzeit Meldungen und Unterstützung von jedem Standort.</p>
@@ -295,11 +276,6 @@
     </div>
     <div class="benefit-grid animate-on-scroll">
       <div class="benefit-card">
-        <span class="material-symbols-rounded benefit-icon">cell_tower</span>
-        <h3 class="subhead-small">Maximal barrierearm</h3>
-        <p class="copy-small copy-muted" style="margin-top: 8px;">Kein App-Download, keine Registrierung. Per QR-Code oder Link ist das Team von jedem Standort aus erreichbar.</p>
-      </div>
-      <div class="benefit-card">
         <span class="material-symbols-rounded benefit-icon">arrow_downward</span>
         <h3 class="subhead-small">Hemmschwelle senken</h3>
         <p class="copy-small copy-muted" style="margin-top: 8px;">Anonym, digital, ohne Gespräch. Wer nicht aktiv auf eine Person zugehen möchte, meldet sich trotzdem – mit einem Scan.</p>
@@ -315,68 +291,9 @@
         <p class="copy-small copy-muted" style="margin-top: 8px;">Allein das Wissen, dass Unterstützung nur einen Scan entfernt ist, verändert das Erlebnis – für alle Besuchenden.</p>
       </div>
       <div class="benefit-card">
-        <span class="material-symbols-rounded benefit-icon">radar</span>
-        <h3 class="subhead-small">Flächendeckende Erreichbarkeit</h3>
-        <p class="copy-small copy-muted" style="margin-top: 8px;">Digitale Zugänglichkeit erweitert die Reichweite. Weniger Personal deckt mehr Fläche ab – effizient und gezielt.</p>
-      </div>
-      <div class="benefit-card">
         <span class="material-symbols-rounded benefit-icon">trending_down</span>
         <h3 class="subhead-small">Dunkelziffer senken</h3>
         <p class="copy-small copy-muted" style="margin-top: 8px;">Jede Meldung ist ein Vorfall, der sonst unbemerkt geblieben wäre. Mehr Daten bedeuten bessere Prävention.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- ============================================================
-     FEATURES (horizontal scroll)
-     ============================================================ -->
-<section class="section bg-white" aria-labelledby="features-title">
-  <div class="section-content section-flex">
-    <div class="animate-on-scroll" style="text-align: center;">
-      <p class="label-text">Features</p>
-      <h2 class="headline2" id="features-title">Was Rapid Response kann.</h2>
-    </div>
-    <div class="feature-scroll-wrapper animate-on-scroll">
-      <div class="feature-scroll" id="featureScroll">
-        <div class="feature-scroll-card">
-          <span class="material-symbols-rounded benefit-icon">bolt</span>
-          <h3 class="subhead-small">Echtzeit-Koordination</h3>
-          <p class="copy-small copy-muted" style="margin-top: 8px;">Meldungen gehen sofort ein. Direkte Kommunikation im Chat ermöglicht koordinierte Einsätze in Echtzeit.</p>
-        </div>
-        <div class="feature-scroll-card">
-          <span class="material-symbols-rounded benefit-icon">my_location</span>
-          <h3 class="subhead-small">Geofencing</h3>
-          <p class="copy-small copy-muted" style="margin-top: 8px;">Ein Link für beliebig viele Standorte. Das System erkennt automatisch, welches Team zuständig ist.</p>
-        </div>
-        <div class="feature-scroll-card">
-          <span class="material-symbols-rounded benefit-icon">translate</span>
-          <h3 class="subhead-small">Mehrsprachig</h3>
-          <p class="copy-small copy-muted" style="margin-top: 8px;">Automatische Spracherkennung und Meldeformulare in über 40 Sprachen – für internationale Events und diverse Zielgruppen.</p>
-        </div>
-        <div class="feature-scroll-card">
-          <span class="material-symbols-rounded benefit-icon">palette</span>
-          <h3 class="subhead-small">White Label</h3>
-          <p class="copy-small copy-muted" style="margin-top: 8px;">Eigenes Logo, Farben und Domain. Meldeformular und Chat erscheinen im Look &amp; Feel eurer Organisation.</p>
-        </div>
-        <div class="feature-scroll-card">
-          <span class="material-symbols-rounded benefit-icon">description</span>
-          <h3 class="subhead-small">Protokollierung</h3>
-          <p class="copy-small copy-muted" style="margin-top: 8px;">Jeder Vorfall wird automatisch dokumentiert – mit Kategorie, Zeitstempel und Standort. Für lückenlose Nachverfolgung.</p>
-        </div>
-        <div class="feature-scroll-card">
-          <span class="material-symbols-rounded benefit-icon">verified_user</span>
-          <h3 class="subhead-small">DSGVO by Design</h3>
-          <p class="copy-small copy-muted" style="margin-top: 8px;">100% anonym – keine personenbezogenen Daten, keine Standortdaten, keine Gerätekennungen. Hosting in Deutschland.</p>
-        </div>
-      </div>
-      <div class="feature-scroll-nav">
-        <button class="feature-scroll-btn" onclick="document.getElementById('featureScroll').scrollBy({left:-300,behavior:'smooth'})" aria-label="Zurück">
-          <span class="material-symbols-rounded">chevron_left</span>
-        </button>
-        <button class="feature-scroll-btn" onclick="document.getElementById('featureScroll').scrollBy({left:300,behavior:'smooth'})" aria-label="Weiter">
-          <span class="material-symbols-rounded">chevron_right</span>
-        </button>
       </div>
     </div>
   </div>
