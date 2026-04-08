@@ -40,6 +40,16 @@
     const statsBar = document.getElementById('statsBar');
     if (!statsBar) return;
 
+    // Handle static stat numbers (no count-up animation)
+    statsBar.querySelectorAll('.stat-number[data-static]').forEach(el => {
+      el.textContent = el.dataset.static;
+    });
+
+    // Make stat numbers with data-source clickable
+    statsBar.querySelectorAll('.stat-number[data-source]').forEach(el => {
+      el.addEventListener('click', () => window.open(el.dataset.source, '_blank'));
+    });
+
     const numbers = statsBar.querySelectorAll('.stat-number[data-target]');
     if (!numbers.length) return;
 
@@ -144,12 +154,82 @@
     }, { passive: true });
   }
 
+  // ===== REF CAROUSEL – Touch/Drag + Arrow Buttons =====
+  function initRefCarousels() {
+    document.querySelectorAll('.ref-carousel-wrapper').forEach(wrapper => {
+      // Wrap in outer container for arrow positioning if not already
+      if (!wrapper.parentElement.classList.contains('ref-carousel-outer')) {
+        const outer = document.createElement('div');
+        outer.className = 'ref-carousel-outer';
+        wrapper.parentNode.insertBefore(outer, wrapper);
+        outer.appendChild(wrapper);
+      }
+      const outer = wrapper.parentElement;
+
+      // Create arrow buttons
+      const prevBtn = document.createElement('button');
+      prevBtn.className = 'ref-carousel-btn ref-carousel-btn--prev';
+      prevBtn.innerHTML = '&#8249;';
+      prevBtn.setAttribute('aria-label', 'Zurück');
+
+      const nextBtn = document.createElement('button');
+      nextBtn.className = 'ref-carousel-btn ref-carousel-btn--next';
+      nextBtn.innerHTML = '&#8250;';
+      nextBtn.setAttribute('aria-label', 'Weiter');
+
+      outer.appendChild(prevBtn);
+      outer.appendChild(nextBtn);
+
+      // Update arrow visibility
+      function updateButtons() {
+        prevBtn.disabled = wrapper.scrollLeft <= 10;
+        nextBtn.disabled = wrapper.scrollLeft >= wrapper.scrollWidth - wrapper.clientWidth - 10;
+      }
+      updateButtons();
+      wrapper.addEventListener('scroll', updateButtons);
+
+      // Arrow click handlers
+      const scrollAmount = 380;
+      prevBtn.addEventListener('click', () => {
+        wrapper.scrollBy({ left: -scrollAmount, behavior: 'smooth' });
+      });
+      nextBtn.addEventListener('click', () => {
+        wrapper.scrollBy({ left: scrollAmount, behavior: 'smooth' });
+      });
+
+      // Mouse drag support
+      let isDragging = false;
+      let startX, scrollStart;
+
+      wrapper.addEventListener('mousedown', (e) => {
+        isDragging = true;
+        startX = e.pageX;
+        scrollStart = wrapper.scrollLeft;
+        wrapper.style.scrollBehavior = 'auto';
+      });
+      wrapper.addEventListener('mousemove', (e) => {
+        if (!isDragging) return;
+        e.preventDefault();
+        wrapper.scrollLeft = scrollStart - (e.pageX - startX);
+      });
+      wrapper.addEventListener('mouseup', () => {
+        isDragging = false;
+        wrapper.style.scrollBehavior = 'smooth';
+      });
+      wrapper.addEventListener('mouseleave', () => {
+        isDragging = false;
+        wrapper.style.scrollBehavior = 'smooth';
+      });
+    });
+  }
+
   // ===== INIT =====
   function init() {
     initScrollReveal();
     initCountUp();
     initLiveTicker();
     initNavScroll();
+    initRefCarousels();
   }
 
   // Run when DOM is ready

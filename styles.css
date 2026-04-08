@@ -481,6 +481,9 @@ a.nav-item-link.active { border-bottom: 2px solid var(--purple-main); }
   color: var(--purple-main); line-height: 1; font-weight: 700;
 }
 .stat-label { font-size: 16px; color: var(--grey-mid); margin-top: 8px; font-weight: 700; }
+.stat-prefix { font-size: 16px; color: var(--grey-mid); font-weight: 700; margin-bottom: 4px; }
+.stat-number[data-source] { cursor: pointer; }
+.stat-number[data-source]:hover { opacity: 0.8; }
 @media (max-width: 768px) { .stats-grid { grid-template-columns: repeat(2, 1fr); } }
 
 /* ===== PROCESS FLOW ===== */
@@ -1981,16 +1984,47 @@ body.menu-open { overflow: hidden; }
 
 
 /* ===== REFERENCE CARDS CAROUSEL (Live-Site Style) ===== */
+.ref-carousel-outer { position: relative; }
 .ref-carousel-wrapper {
-  overflow: hidden;
+  overflow-x: auto;
+  overflow-y: hidden;
   cursor: grab;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
 }
 .ref-carousel-wrapper:active { cursor: grabbing; }
 .ref-carousel {
   display: flex;
   gap: 24px;
-  transition: transform 0.3s ease-out;
   padding-bottom: 8px;
+}
+/* Carousel navigation arrows */
+.ref-carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+  border: none;
+  background: var(--white);
+  box-shadow: 0 2px 12px rgba(0,0,0,0.15);
+  cursor: pointer;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 20px;
+  color: var(--purple-main);
+  transition: opacity 0.2s, background 0.2s;
+}
+.ref-carousel-btn:hover { background: var(--lavender-main); }
+.ref-carousel-btn--prev { left: -24px; }
+.ref-carousel-btn--next { right: -24px; }
+.ref-carousel-btn[disabled] { opacity: 0; pointer-events: none; }
+@media (max-width: 768px) {
+  .ref-carousel-btn { display: none; }
 }
 .ref-card-v2 {
   flex-shrink: 0;
@@ -2053,6 +2087,7 @@ body.menu-open { overflow: hidden; }
 
 /* Hide scrollbar on ref-carousel */
 .ref-carousel-wrapper::-webkit-scrollbar { display: none; }
+.ref-carousel-wrapper { -ms-overflow-style: none; }
 
 @media (max-width: 768px) {
   .ref-card-v2 { width: 264px; border-radius: 20px; }
