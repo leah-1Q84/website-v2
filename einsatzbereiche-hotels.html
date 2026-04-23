@@ -1,0 +1,479 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Hotels &amp; Gastronomie – saferspaces</title>
+<meta name="description" content="Anonyme Meldewege für Hotels, Restaurants, Bars und Küchen – Schutz für Gäste und Personal vor Belästigung, Gewalt und Diskriminierung.">
+<meta name="author" content="saferspaces">
+<meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#2A1482">
+<link rel="icon" type="image/svg+xml" href="images/favicon.svg">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="stylesheet" href="styles.css?v=17">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0">
+</head>
+<body>
+
+<a href="#main" class="skip-nav">Zum Inhalt springen</a>
+
+<nav class="nav" id="nav" aria-label="Hauptnavigation">
+  <div class="nav-inner">
+    <div class="nav-logo">
+      <a href="index.html" aria-label="saferspaces – Startseite">
+        <img src="images/logo-folded.svg" alt="saferspaces" class="logo-folded">
+        <img src="images/logo-unfolded.svg" alt="saferspaces" class="logo-unfolded">
+      </a>
+    </div>
+    <div class="nav-menu">
+      <div class="nav-item">
+        <a href="loesung.html">Lösung</a>
+        <div class="nav-dropdown">
+          <a href="loesung.html"><strong>Übersicht</strong><span>Das Gesamtsystem</span></a>
+          <a href="loesung-rapid-response.html"><strong>Rapid Response</strong><span>Live-Einsatz &amp; Koordination</span></a>
+          <a href="loesung-rapid-report.html"><strong>Rapid Report</strong><span>Meldungen ohne Team vor Ort</span></a>
+          <a href="loesung-analyse.html"><strong>Analyse Dashboard</strong><span>Daten &amp; Auswertungen</span></a>
+        </div>
+      </div>
+      <div class="nav-item">
+        <a href="einsatzbereiche.html">Einsatzbereiche</a>
+        <div class="nav-dropdown">
+          <a href="einsatzbereiche-sport.html"><strong>Sport &amp; Stadien</strong><span>DFB/DFL, Bundesliga, UEFA</span></a>
+          <a href="einsatzbereiche-events.html"><strong>Festivals &amp; Events</strong><span>OMR, gamescom, Reeperbahn</span></a>
+          <a href="einsatzbereiche-kommunen.html"><strong>Kommunen</strong><span>Stadtfeste, öffentl. Raum</span></a>
+          <a href="einsatzbereiche-bildung.html"><strong>Bildung</strong><span>Hochschulen, Schulträger</span></a>
+          <a href="einsatzbereiche-oepnv.html"><strong>ÖPNV &amp; Mobilität</strong><span>Busse, Bahnen, Haltestellen</span></a>
+          <a href="einsatzbereiche-freizeit.html"><strong>Clubkultur &amp; Freizeit</strong><span>Clubs, Arenen, Theater</span></a>
+          <a href="einsatzbereiche-hotels.html"><strong>Hotels &amp; Gastronomie</strong><span>Gäste- und Personalschutz</span></a>
+          <a href="einsatzbereiche-kliniken.html"><strong>Kliniken &amp; Krankenhäuser</strong><span>Personal- und Patientenschutz</span></a>
+          <a href="einsatzbereiche-unternehmen.html"><strong>Unternehmen</strong><span>HR, Compliance, Hinweisgeberschutz</span></a>
+        </div>
+      </div>
+      <a href="preise.html" class="nav-item nav-item-link">Preise</a>
+      <div class="nav-item">
+        <span>Mehr</span>
+        <div class="nav-dropdown">
+          <a href="ueber-uns-mission.html"><strong>Mission</strong><span>Warum saferspaces?</span></a>
+          <a href="ueber-uns-haltung.html"><strong>Haltung</strong><span>Werte &amp; Grundsätze</span></a>
+          <a href="ueber-uns-netzwerk.html"><strong>Netzwerk</strong><span>Begleitung &amp; Partner</span></a>
+          <a href="ueber-uns-faq.html"><strong>FAQ</strong><span>Häufig gestellte Fragen</span></a>
+        </div>
+      </div>
+    </div>
+    <div class="nav-actions">
+      <a href="https://cal.com/saferspaces/hello" target="_blank" rel="noopener" class="btn btn-primary btn-sm">Kontakt</a>
+      <!-- Login TODO: aktivieren wenn Portal live <a href="#" class="btn btn-secondary btn-sm" style="font-size:14px; height:36px; padding:0 16px;">Login</a> -->
+      <button class="mobile-toggle" onclick="toggleMobile()" aria-label="Menü öffnen" aria-expanded="false"><span></span><span></span><span></span></button>
+    </div>
+  </div>
+</nav>
+
+<div id="mobileMenu" class="mobile-menu" role="dialog" aria-label="Navigation">
+  <div class="mobile-menu-section">
+    <div class="mobile-menu-section-title"><a href="loesung.html">Lösung</a><span class="mobile-menu-toggle" onclick="event.stopPropagation(); this.closest('.mobile-menu-section').classList.toggle('open')"></span></div>
+    <div class="mobile-menu-links"><a href="loesung-rapid-response.html">Rapid Response</a><a href="loesung-rapid-report.html">Rapid Report</a><a href="loesung-analyse.html">Analyse Dashboard</a></div>
+  </div>
+  <div class="mobile-menu-section">
+    <div class="mobile-menu-section-title"><a href="einsatzbereiche.html">Einsatzbereiche</a><span class="mobile-menu-toggle" onclick="event.stopPropagation(); this.closest('.mobile-menu-section').classList.toggle('open')"></span></div>
+    <div class="mobile-menu-links"><a href="einsatzbereiche-sport.html">Sport &amp; Stadien</a><a href="einsatzbereiche-events.html">Festivals &amp; Events</a><a href="einsatzbereiche-kommunen.html">Kommunen</a><a href="einsatzbereiche-bildung.html">Bildung</a><a href="einsatzbereiche-oepnv.html">ÖPNV &amp; Mobilität</a><a href="einsatzbereiche-freizeit.html">Clubkultur &amp; Freizeit</a><a href="einsatzbereiche-hotels.html">Hotels &amp; Gastronomie</a><a href="einsatzbereiche-kliniken.html">Kliniken &amp; Krankenhäuser</a><a href="einsatzbereiche-unternehmen.html">Unternehmen</a></div>
+  </div>
+  <div class="mobile-menu-section">
+    <div class="mobile-menu-section-title"><a href="preise.html">Preise</a></div>
+  </div>
+  <div class="mobile-menu-section">
+    <div class="mobile-menu-section-title"><span>Mehr</span><span class="mobile-menu-toggle" onclick="event.stopPropagation(); this.closest('.mobile-menu-section').classList.toggle('open')"></span></div>
+    <div class="mobile-menu-links">
+      <a href="ueber-uns-mission.html">Mission</a>
+      <a href="ueber-uns-haltung.html">Haltung</a>
+      <a href="ueber-uns-netzwerk.html">Netzwerk</a>
+      <a href="ueber-uns-faq.html">FAQ</a>
+    </div>
+  </div>
+  <div style="padding: 24px 0; display: flex; gap: 12px;">
+    <a href="https://cal.com/saferspaces/hello" target="_blank" rel="noopener" class="btn btn-primary btn-md" style="flex:1;">Kontakt</a>
+    <!-- Login TODO: aktivieren wenn Portal live <a href="#" class="btn btn-secondary btn-md" style="flex:1;">Login</a> -->
+  </div>
+</div>
+
+<main id="main">
+
+<div class="hero-wrapper">
+  <div class="hero-section hero-image-bg hero-purple-overlay" style="background-image: url('https://images.unsplash.com/photo-1668270973870-bb22ba5d1381?w=2000&q=80&auto=format&fit=crop');">
+    <div class="hero-content">
+      <p class="label-text" style="color: var(--lavender-main);">EINSATZBEREICH · HOTELS &amp; GASTRONOMIE</p>
+      <h1 class="headline1 headline-white">Sicherheit für Gäste und Personal</h1>
+      <p class="copy copy-white" style="margin: 24px 0 32px; max-width: 560px;">Anonyme Meldewege für Hotels, Restaurants, Bars und Küchen – Schutz vor Belästigung, Gewalt und Diskriminierung. Für Gäste, Servicekräfte und Küchenteams.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ============================================================
+     STATS BAR – Kennzahlen
+     ============================================================ -->
+<section class="section bg-white" style="padding-top: 56px; padding-bottom: 56px;" aria-label="Kennzahlen">
+  <div class="section-content">
+    <div class="stats-grid animate-on-scroll" id="statsBar">
+      <div class="stat-item">
+        <div class="stat-number" data-target="70" data-suffix="%" data-source="https://www.rollingpin.de/news/alarmierende-umfrage-belaestigung-in-gastro-erschreckend-haeufig">0</div>
+        <div class="stat-label">der Gastro-Beschäftigten erleben Belästigung am Arbeitsplatz</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-target="80" data-suffix="%" data-source="https://www.falstaff.com/profi/newsbeitrag/sexuelle-belaestigung-hat-in-der-gastronomie-nichts-verloren/">0</div>
+        <div class="stat-label">der Frauen in der Gastronomie erleben sexuelle Belästigung</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-static="48.500 €" data-source="https://www.lieferkassen.de/personalfluktuation-hotellerie/">0</div>
+        <div class="stat-label">Fluktuationskosten pro Betrieb und Jahr</div>
+      </div>
+      <div class="stat-item">
+        <div class="stat-number" data-target="80" data-suffix="%" data-source="https://www.gesichtzeigen.de/wp-content/uploads/2020/10/studie_rassismus_wirtschaft_arbeit_gesichtzeigen_ey_civey.pdf">0</div>
+        <div class="stat-label">der Unternehmen reagieren nicht auf rassistische Vorfälle</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     BRANCHE IM WANDEL – Hintergrund
+     ============================================================ -->
+<section class="section bg-lightblue" aria-labelledby="branche-title">
+  <div class="section-content">
+    <div class="uefa-inner animate-on-scroll">
+      <div class="uefa-text">
+        <p class="label-text" style="color: var(--purple-main);">Branche unter Druck</p>
+        <h2 class="headline2" id="branche-title" style="color: var(--purple-main);">Fachkräftemangel lässt sich nur mit sicheren Arbeitsplätzen lösen.</h2>
+        <p class="copy" style="margin-top: 16px;">Hotels, Restaurants und Bars konkurrieren um Personal wie nie zuvor. Gleichzeitig sind Belästigung, Übergriffe und toxische Küchenkulturen einer der Hauptgründe, warum Mitarbeitende die Branche verlassen. Ein anonymer Meldekanal ist heute ein Standortvorteil – für Gäste wie für Teams.</p>
+        <ul class="check-list" style="margin-top: 24px;">
+          <li>Anonymität technisch garantiert – keine Rückverfolgung</li>
+          <li>Einsatzbereit in Restaurant, Bar, Küche, Hotel-Zimmer</li>
+          <li>Keine App, keine IT-Integration – QR-Plakate reichen</li>
+          <li>Mehrsprachig – für internationales Personal &amp; Gäste</li>
+        </ul>
+      </div>
+      <div class="uefa-card">
+        <span class="uefa-card-source">Quelle · AK Wien / vida</span>
+        <p class="uefa-card-quote" style="font-size: 18px; line-height: 1.5;">Rund <strong>70 %</strong> der Angestellten im Gastgewerbe haben innerhalb der letzten zwei Jahre sexuelle Belästigung erlebt, beobachtet oder davon erfahren. Ein anonymer Meldekanal senkt die Hürde und macht strukturelle Probleme sichtbar.</p>
+        <div style="display: flex; align-items: center; gap: 12px; margin-top: 16px;">
+          <span class="material-symbols-rounded" style="font-size: 40px; color: var(--purple-main);">restaurant</span>
+          <div>
+            <p style="font-size: 14px; font-weight: 700; color: var(--purple-main);">Für Hotels &amp; Gastro entwickelt</p>
+            <p style="font-size: 13px; color: var(--grey-mid, #6b7280);"><a href="https://www.gleichbehandlungsanwaltschaft.gv.at/aktuelles-und-services/aktuelle-informationen/leitfaden-fuer-gastronom-innen-schluss-mit-sexueller-belaestigung-in-der-gastronomie.html" target="_blank" rel="noopener" style="color: inherit; text-decoration: underline;">AK Wien &amp; vida</a> · <a href="https://www.antidiskriminierungsstelle.de/SharedDocs/pressemitteilungen/DE/2019/20191025_Studie_Sexuelle_Belaestigung.html" target="_blank" rel="noopener" style="color: inherit; text-decoration: underline;">ADS Deutschland</a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     HERAUSFORDERUNGEN – Nummeriert 01-04
+     ============================================================ -->
+<section class="section bg-white" aria-labelledby="challenges-title">
+  <div class="section-content section-flex">
+    <div class="animate-on-scroll">
+      <p class="label-text" style="color: var(--purple-main);">Herausforderungen</p>
+      <h2 class="headline2" id="challenges-title" style="color: var(--purple-main);">Service, Nachtbetrieb, Küche – drei Welten, ein Problem.</h2>
+      <p class="copy" style="margin-top: 16px; max-width: 680px;">Hotels und Gastronomie haben besondere Risikoprofile: enge Teams, steile Hierarchien, späte Schichten und Alkohol im Raum. saferspaces schafft einen Meldekanal, der zu genau diesen Bedingungen passt.</p>
+    </div>
+    <div class="challenge-list animate-on-scroll">
+      <div class="challenge-row">
+        <div class="challenge-number">01</div>
+        <div class="challenge-content">
+          <h3 class="subhead-small">Sexuelle Belästigung</h3>
+          <p class="copy-small">Gäste, Kolleg:innen, Vorgesetzte – Belästigung im Gastgewerbe ist strukturell und betrifft besonders Frauen, junge Azubis und internationale Mitarbeitende.</p>
+        </div>
+      </div>
+      <div class="challenge-row">
+        <div class="challenge-number">02</div>
+        <div class="challenge-content">
+          <h3 class="subhead-small">Küchenkultur &amp; Machtmissbrauch</h3>
+          <p class="copy-small">Steile Hierarchien, autoritäre Chefkultur, Demütigungen und körperliche Gewalt – Profiküchen gelten als einer der härtesten Arbeitsumgebungen überhaupt.</p>
+        </div>
+      </div>
+      <div class="challenge-row">
+        <div class="challenge-number">03</div>
+        <div class="challenge-content">
+          <h3 class="subhead-small">Gästesicherheit &amp; Nachtbetrieb</h3>
+          <p class="copy-small">K.o.-Tropfen, Übergriffe, Belästigung durch andere Gäste – vor allem in Bars, Hotelbars und Restaurants mit spätem Betrieb.</p>
+        </div>
+      </div>
+      <div class="challenge-row">
+        <div class="challenge-number">04</div>
+        <div class="challenge-content">
+          <h3 class="subhead-small">Fluktuation &amp; Fachkräftemangel</h3>
+          <p class="copy-small">Belästigung und toxische Kulturen sind ein Hauptgrund für Kündigungen. Sichere Arbeitsplätze sind heute der wichtigste Hebel gegen Personalabwanderung.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     MELDEKATEGORIEN – 6 Icon-Cards
+     ============================================================ -->
+<section class="section bg-white" aria-labelledby="cases-title">
+  <div class="section-content section-flex">
+    <div class="animate-on-scroll" style="text-align: center;">
+      <p class="label-text" style="color: var(--purple-main);">Meldekategorien</p>
+      <h2 class="headline2" id="cases-title" style="color: var(--purple-main);">Was wird im Gastgewerbe gemeldet?</h2>
+      <p class="copy" style="margin-top: 16px; max-width: 680px; margin-left: auto; margin-right: auto;">Von K.o.-Tropfen an der Hotelbar bis zum Machtmissbrauch in der Küche – saferspaces erfasst die realen Vorfälle der Branche.</p>
+    </div>
+    <div class="category-grid animate-on-scroll">
+      <div class="category-item">
+        <div class="category-icon"><span class="material-symbols-rounded">shield</span></div>
+        <div class="category-text">
+          <h3 class="subhead-small">Sexuelle Belästigung</h3>
+          <p class="copy-small">Grenzüberschreitungen durch Gäste, Kolleg:innen oder Vorgesetzte – besonders gegenüber Service, Housekeeping und Azubis.</p>
+        </div>
+      </div>
+      <div class="category-item">
+        <div class="category-icon"><span class="material-symbols-rounded">supervisor_account</span></div>
+        <div class="category-text">
+          <h3 class="subhead-small">Machtmissbrauch in der Küche</h3>
+          <p class="copy-small">Demütigungen, Anschreien, körperliche Übergriffe – besonders gegenüber Auszubildenden und Commis-Positionen.</p>
+        </div>
+      </div>
+      <div class="category-item">
+        <div class="category-icon"><span class="material-symbols-rounded">local_bar</span></div>
+        <div class="category-text">
+          <h3 class="subhead-small">K.o.-Tropfen &amp; Spiking</h3>
+          <p class="copy-small">Unbemerkte Substanzen in Getränken – Bars und Restaurants als Meldepunkt für Gäste und Personal.</p>
+        </div>
+      </div>
+      <div class="category-item">
+        <div class="category-icon"><span class="material-symbols-rounded">personal_injury</span></div>
+        <div class="category-text">
+          <h3 class="subhead-small">Gewalt gegen Personal</h3>
+          <p class="copy-small">Aggressive Gäste, Bedrohungen, körperliche Übergriffe – vor allem in Nachtbetrieb, Rezeption und Türdienst.</p>
+        </div>
+      </div>
+      <div class="category-item">
+        <div class="category-icon"><span class="material-symbols-rounded">diversity_1</span></div>
+        <div class="category-text">
+          <h3 class="subhead-small">Diskriminierung</h3>
+          <p class="copy-small">Rassistische Äußerungen, sexistische Bemerkungen, Ablehnung von Gästen oder Mitarbeitenden – anonym dokumentierbar.</p>
+        </div>
+      </div>
+      <div class="category-item">
+        <div class="category-icon"><span class="material-symbols-rounded">groups</span></div>
+        <div class="category-text">
+          <h3 class="subhead-small">Mobbing &amp; Teamkonflikte</h3>
+          <p class="copy-small">Systematische Ausgrenzung, Benachteiligung, Hierarchiekonflikte – auch in kleinen Betrieben oft tabuisiert.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     MEHRWERTE – Nummerierte Liste (mehrwert-split)
+     ============================================================ -->
+<section class="section bg-lavender" aria-labelledby="vorteile-title">
+  <div class="section-content">
+    <div class="mehrwert-split animate-on-scroll">
+      <div class="mehrwert-left">
+        <p class="label-text" style="color: var(--purple-main);">Mehrwerte</p>
+        <h2 class="headline2" id="vorteile-title" style="color: var(--purple-main);">Warum saferspaces für Hotels &amp; Gastronomie?</h2>
+      </div>
+      <div class="mehrwert-right">
+        <div class="mehrwert-item">
+          <span class="mehrwert-num">1</span>
+          <div>
+            <h3 class="subhead">Technische Anonymität</h3>
+            <p class="copy copy-muted" style="margin-top: 8px;">Keine IP-Adressen, keine Gerätekennungen, keine Rückverfolgung. Anonymität ist technisch garantiert – nicht nur versprochen.</p>
+          </div>
+        </div>
+        <div class="mehrwert-item">
+          <span class="mehrwert-num">2</span>
+          <div>
+            <h3 class="subhead">Für Gäste &amp; Personal</h3>
+            <p class="copy copy-muted" style="margin-top: 8px;">Ein Kanal für beide Zielgruppen – QR-Plakate in Hotelzimmern, auf Toiletten, in Pausenräumen und an der Bar.</p>
+          </div>
+        </div>
+        <div class="mehrwert-item">
+          <span class="mehrwert-num">3</span>
+          <div>
+            <h3 class="subhead">Schnelles Setup</h3>
+            <p class="copy copy-muted" style="margin-top: 8px;">Keine IT-Integration, kein App-Download. Setup in wenigen Stunden – auch für kleine Betriebe und Filialketten.</p>
+          </div>
+        </div>
+        <div class="mehrwert-item">
+          <span class="mehrwert-num">4</span>
+          <div>
+            <h3 class="subhead">Mehrsprachig</h3>
+            <p class="copy copy-muted" style="margin-top: 8px;">Öffnet sich in der Gerätesprache. 30+ Sprachen – ideal für internationale Gäste und Teams.</p>
+          </div>
+        </div>
+        <div class="mehrwert-item">
+          <span class="mehrwert-num">5</span>
+          <div>
+            <h3 class="subhead">Zentrales Dashboard</h3>
+            <p class="copy copy-muted" style="margin-top: 8px;">Alle Meldungen strukturiert erfasst, exportierbar für Geschäftsleitung, HR und Berufsgenossenschaft.</p>
+          </div>
+        </div>
+        <div class="mehrwert-item">
+          <span class="mehrwert-num">6</span>
+          <div>
+            <h3 class="subhead">Employer Branding</h3>
+            <p class="copy copy-muted" style="margin-top: 8px;">Ein sichtbarer Meldekanal ist ein Signal an Gäste und Bewerber:innen: Dieses Haus nimmt Sicherheit ernst.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     ANALYSE & REPORTS – Feature-Split
+     ============================================================ -->
+<section class="section bg-white" aria-labelledby="analyse-title">
+  <div class="section-content">
+    <div class="feature-split reverse animate-on-scroll">
+      <div class="feature-visual" style="background: var(--lavender-main);">
+        <img src="images/highlight-data-analysis.png" alt="saferspaces Analyse Dashboard – Vorfallstatistiken und Reports" style="max-width: 90%; max-height: 95%; object-fit: contain; filter: drop-shadow(0 12px 32px rgba(0,0,0,0.4)); border-radius: 12px;">
+      </div>
+      <div class="feature-content">
+        <p class="label-text" style="color: var(--purple-main);">Analyse &amp; Reports</p>
+        <h2 class="headline3" id="analyse-title" style="color: var(--purple-main);">Datenbasierte Prävention statt Bauchgefühl.</h2>
+        <p class="copy" style="margin-top: 16px;">Jede Meldung wird strukturiert erfasst – nach Kategorie, Bereich (Restaurant, Küche, Bar, Hotel) und Zeitverlauf. Das Analyse Dashboard zeigt, wo Handlungsbedarf besteht, und liefert die Grundlage für Schulungen, Hausregeln und personelle Entscheidungen.</p>
+        <ul class="check-list" style="margin-top: 24px;">
+          <li>Vorfallstatistiken nach Bereich und Zeitverlauf</li>
+          <li>Exportierbar für Geschäftsleitung und Audits</li>
+          <li>Datenbasis für Schulungen und Schutzkonzepte</li>
+          <li>Frühwarnsystem für problematische Muster</li>
+        </ul>
+        <a href="loesung-analyse.html" class="btn btn-primary btn-md" style="margin-top: 28px;">Analyse Dashboard entdecken</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     RAPID REPORT – Feature-Split
+     ============================================================ -->
+<section class="section bg-white" aria-labelledby="rapid-report-title">
+  <div class="section-content">
+    <div class="feature-split animate-on-scroll">
+      <div class="feature-visual" style="aspect-ratio: auto; overflow: visible; background: none;">
+        <img src="images/meldeplakat-vorgefallen.png" alt="saferspaces Meldeplakat – Etwas vorgefallen?" style="border-radius: var(--rounded-medium); width: 100%; max-width: 380px; display: block; margin: 0 auto; box-shadow: 0 12px 40px rgba(0,0,0,0.2);">
+      </div>
+      <div class="feature-content">
+        <p class="label-text" style="color: var(--purple-main);">Rapid Report</p>
+        <h2 class="headline3" id="rapid-report-title" style="color: var(--purple-main);">Meldungen rund um die Uhr.</h2>
+        <p class="copy" style="margin-top: 16px;">Vorfälle passieren abends, nachts, am Wochenende. Mit Rapid Report können Gäste und Mitarbeitende anonym und zeitunabhängig melden – auch Tage oder Wochen später, wenn die Hemmschwelle sinkt.</p>
+        <ul class="check-list" style="margin-top: 24px;">
+          <li>24/7 erreichbar – kein Personal vor Ort nötig</li>
+          <li>QR-Plakate an Bar, Toilette, Zimmer, Küche</li>
+          <li>Ideal für Nachtbetrieb und Wochenendschichten</li>
+          <li>Daten fließen ins zentrale Dashboard</li>
+        </ul>
+        <a href="loesung-rapid-report.html" class="btn btn-primary btn-md" style="margin-top: 28px;">Rapid Report entdecken</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     EINSATZSZENARIEN – Wo im Einsatz?
+     ============================================================ -->
+<section class="section bg-lightblue" aria-labelledby="szenarien-title">
+  <div class="section-content section-flex">
+    <div class="animate-on-scroll" style="text-align: center;">
+      <p class="label-text" style="color: var(--purple-main);">Einsatzszenarien</p>
+      <h2 class="headline2" id="szenarien-title" style="color: var(--purple-main);">Überall einsetzbar, wo Gäste und Personal aufeinandertreffen.</h2>
+      <p class="copy" style="margin-top: 16px; max-width: 680px; margin-left: auto; margin-right: auto;">saferspaces passt sich eurem Betrieb an – vom kleinen Restaurant bis zur Hotelkette.</p>
+    </div>
+    <div class="category-grid animate-on-scroll">
+      <div class="category-item" style="background: #fff;">
+        <div class="category-icon"><span class="material-symbols-rounded">hotel</span></div>
+        <div class="category-text">
+          <h3 class="subhead-small">Hotel</h3>
+          <p class="copy-small">Rezeption, Housekeeping, Zimmer, Bar – QR-Plakate auf Zimmerkarten und in Personalräumen.</p>
+        </div>
+      </div>
+      <div class="category-item" style="background: #fff;">
+        <div class="category-icon"><span class="material-symbols-rounded">restaurant</span></div>
+        <div class="category-text">
+          <h3 class="subhead-small">Restaurant &amp; Service</h3>
+          <p class="copy-small">Für Servicekräfte, Gäste und Lieferanten – Meldung über QR-Code auf der Rechnung oder am Toiletteneingang.</p>
+        </div>
+      </div>
+      <div class="category-item" style="background: #fff;">
+        <div class="category-icon"><span class="material-symbols-rounded">soup_kitchen</span></div>
+        <div class="category-text">
+          <h3 class="subhead-small">Profiküche</h3>
+          <p class="copy-small">Der härteste Arbeitsplatz der Branche – ein anonymer Kanal durchbricht die Kultur des Schweigens.</p>
+        </div>
+      </div>
+      <div class="category-item" style="background: #fff;">
+        <div class="category-icon"><span class="material-symbols-rounded">local_bar</span></div>
+        <div class="category-text">
+          <h3 class="subhead-small">Bar &amp; Nachtbetrieb</h3>
+          <p class="copy-small">Spätschichten, Alkohol, K.o.-Tropfen – der Bereich mit dem höchsten Risikoprofil für Gäste und Personal.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ============================================================
+     CTA
+     ============================================================ -->
+<section class="section bg-lavender" aria-label="Demo buchen">
+  <div class="section-content">
+    <div class="cta-block animate-on-scroll">
+      <h2 class="headline3" style="color: var(--purple-main);">Mehr Sicherheit für mehr Zufriedenheit – bei Gästen und im Team.</h2>
+      <p class="copy" style="margin-top: 16px; max-width: 600px; margin-left: auto; margin-right: auto;">In einer persönlichen Demo zeigen wir euch, wie saferspaces Gäste und Personal schützt – DSGVO-konform und sofort einsatzbereit.</p>
+      <div style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; margin-top: 32px;">
+        <a href="https://cal.com/saferspaces/hello" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Gespräch vereinbaren</a>
+        <a href="preise.html" class="btn btn-secondary btn-lg">Preis berechnen</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="section bg-purple" style="padding-bottom: 32px;" role="contentinfo">
+  <div class="section-content">
+    <div class="footer-grid">
+      <div><p class="footer-col-title">Lösung</p><a href="loesung.html" class="footer-link">Übersicht</a><a href="loesung-rapid-response.html" class="footer-link">Rapid Response</a><a href="loesung-rapid-report.html" class="footer-link">Rapid Report</a><a href="loesung-analyse.html" class="footer-link">Analyse Dashboard</a></div>
+      <div><p class="footer-col-title">Einsatzbereiche</p><a href="einsatzbereiche-sport.html" class="footer-link">Sport &amp; Stadien</a><a href="einsatzbereiche-events.html" class="footer-link">Festivals &amp; Events</a><a href="einsatzbereiche-kommunen.html" class="footer-link">Kommunen</a><a href="einsatzbereiche-bildung.html" class="footer-link">Bildung</a><a href="einsatzbereiche-oepnv.html" class="footer-link">ÖPNV &amp; Mobilität</a><a href="einsatzbereiche-freizeit.html" class="footer-link">Clubkultur &amp; Freizeit</a><a href="einsatzbereiche-hotels.html" class="footer-link">Hotels &amp; Gastronomie</a><a href="einsatzbereiche-kliniken.html" class="footer-link">Kliniken &amp; Krankenhäuser</a><a href="einsatzbereiche-unternehmen.html" class="footer-link">Unternehmen</a></div>
+      <div>
+        <p class="footer-col-title">Mehr</p>
+        <a href="ueber-uns-mission.html" class="footer-link">Mission</a>
+        <a href="ueber-uns-haltung.html" class="footer-link">Haltung</a>
+        <a href="ueber-uns-netzwerk.html" class="footer-link">Netzwerk</a>
+        <a href="ueber-uns-faq.html" class="footer-link">FAQ</a>
+      </div>
+      <!-- Case Studies -->
+      <div>
+        <p class="footer-col-title">Case Studies</p>
+        <p style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: rgba(255,255,255,0.5); margin-top: 14px; margin-bottom: 4px; font-weight: 700;">Events</p>
+        <a href="case-kiwo.html" class="footer-link">Kieler Woche</a>
+        <p style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: rgba(255,255,255,0.5); margin-top: 14px; margin-bottom: 4px; font-weight: 700;">Konzerte</p>
+        <a href="case-touren.html" class="footer-link">Konzerte &amp; Touren</a>
+        <p style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: rgba(255,255,255,0.5); margin-top: 14px; margin-bottom: 4px; font-weight: 700;">Sport</p>
+        <a href="case-euro2025.html" class="footer-link">UEFA EURO 2024 &amp; 2025</a>
+        <p style="font-size: 11px; text-transform: uppercase; letter-spacing: 0.05em; color: rgba(255,255,255,0.5); margin-top: 14px; margin-bottom: 4px; font-weight: 700;">Arenen &amp; Venues</p>
+        <a href="case-barclays.html" class="footer-link">Barclays Arena</a>
+      </div>
+
+
+      <div><p class="footer-col-title">Rechtliches</p><a href="impressum.html" class="footer-link">Impressum</a><a href="datenschutz.html" class="footer-link">Datenschutz</a>
+<div style="margin-top: 24px;"><a href="preise.html" class="footer-link footer-link--bold">Preise</a><a href="https://cal.com/saferspaces/hello" target="_blank" rel="noopener" class="footer-link footer-link--bold">Gespräch vereinbaren</a></div></div>
+    </div>
+    <div class="footer-bottom-bar">
+      <p class="footer-copyright">&copy; 2026 saferspaces GmbH. Alle Rechte vorbehalten.</p>
+      <img src="images/logo-unfolded.svg" alt="saferspaces" class="footer-logo-small">
+    </div>
+  </div>
+</footer>
+
+<script>
+window.addEventListener('scroll', () => { document.getElementById('nav').classList.toggle('scrolled', window.scrollY > 60); }, { passive: true });
+function toggleMobile() { const menu = document.getElementById('mobileMenu'); const btn = document.querySelector('.mobile-toggle'); const isOpen = menu.classList.contains('active'); if (isOpen) { menu.classList.remove('active'); btn.classList.remove('active'); btn.setAttribute('aria-expanded','false'); btn.setAttribute('aria-label','Menü öffnen'); document.body.style.overflow=''; } else { menu.classList.add('active'); btn.classList.add('active'); btn.setAttribute('aria-expanded','true'); btn.setAttribute('aria-label','Menü schließen'); document.body.style.overflow='hidden'; } }
+</script>
+<script src="animations.js"></script>
+</body>
+</html>
