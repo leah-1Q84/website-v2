@@ -2150,6 +2150,30 @@ body.menu-open { overflow: hidden; }
 .partner-card--sm { width: 320px; }
 .partner-card--sm > a > header { height: 180px !important; }
 
+/* Kooperations-Card (Featured Kooperation mitHaltung) */
+.kooperation-card {
+  display: flex;
+  background: #fff;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(42, 20, 130, 0.08);
+}
+.kooperation-card__image {
+  flex: 0 0 38%;
+  background-size: cover;
+  background-position: center;
+  min-height: 540px;
+}
+.kooperation-card__content {
+  flex: 1;
+  padding: 48px 56px;
+}
+@media (max-width: 900px) {
+  .kooperation-card { flex-direction: column; }
+  .kooperation-card__image { flex: 0 0 auto; min-height: 260px; }
+  .kooperation-card__content { padding: 32px 28px; }
+}
+
 /* Partner-Grid (ehem. Karussell) */
 .partner-grid {
   display: grid;
@@ -2195,42 +2219,72 @@ body.menu-open { overflow: hidden; }
 .ideell-card {
   display: flex;
   flex-direction: column;
-  gap: 8px;
-  padding: 24px;
-  background: var(--lavender-main);
+  background: #fff;
   border-radius: 16px;
+  overflow: hidden;
   text-decoration: none;
   color: inherit;
+  box-shadow: 0 2px 8px rgba(42, 20, 130, 0.06);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 .ideell-card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(42, 20, 130, 0.1);
+  box-shadow: 0 6px 20px rgba(42, 20, 130, 0.12);
 }
-.ideell-logo {
-  height: 72px;
+.ideell-card__img {
+  height: 140px;
+  overflow: hidden;
+  flex-shrink: 0;
+  background: var(--lavender-main);
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-bottom: 8px;
+  padding: 20px;
 }
-.ideell-logo img {
-  max-width: 80%;
+.ideell-card__img img {
+  max-width: 100%;
   max-height: 100%;
+  width: auto;
+  height: auto;
   object-fit: contain;
+  display: block;
 }
-.ideell-initial {
+.ideell-card__img--fallback {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.ideell-card__img--fallback > div {
   font-family: 'GT Alpina Condensed', Georgia, serif;
-  font-size: 48px;
+  font-size: 56px;
   font-weight: 700;
   color: var(--purple-main);
+}
+.ideell-card__body {
+  padding: 18px 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 1;
 }
 .ideell-card--cta {
   background: var(--purple-main);
   color: #fff;
 }
+.ideell-card--cta .ideell-card__body strong,
+.ideell-card--cta .ideell-card__body p,
+.ideell-card--cta .ideell-card__body span {
+  color: #fff !important;
+}
+.ideell-card--cta .ideell-card__img {
+  background: transparent;
+}
 .ideell-card--cta:hover {
   box-shadow: 0 6px 20px rgba(42, 20, 130, 0.25);
+}
+.netzwerk-cta {
+  margin-top: 56px;
+  text-align: center;
 }
 
 /* Förderer-Bar */
@@ -2250,10 +2304,9 @@ body.menu-open { overflow: hidden; }
   gap: 8px;
   text-decoration: none;
   color: inherit;
-  transition: opacity 0.2s ease;
-  opacity: 0.65;
+  transition: transform 0.2s ease;
 }
-.foerderer-item:hover { opacity: 1; }
+.foerderer-item:hover { transform: translateY(-2px); }
 .foerderer-item img,
 .foerderer-item > div {
   height: 48px;
