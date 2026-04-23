@@ -10,7 +10,7 @@
 <meta name="theme-color" content="#2A1482">
 <link rel="icon" type="image/svg+xml" href="images/favicon.svg">
 <link rel="icon" type="image/png" href="favicon.png">
-<link rel="stylesheet" href="styles.css?v=17">
+<link rel="stylesheet" href="styles.css?v=21">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0">
 </head>
 <body>
@@ -146,21 +146,6 @@
   </div>
 </section>
 
-<!-- Voraussetzungen -->
-<section class="section bg-white" style="padding-top: 80px; padding-bottom: 80px;">
-  <div class="section-content" style="max-width: 800px;">
-    <p class="label-text" style="color: var(--purple-main); margin-bottom: 8px;">Voraussetzungen</p>
-    <h2 class="headline3" style="color: var(--purple-main);">Was es braucht</h2>
-    <p class="copy" style="margin-top: 16px;">Ihr braucht keine perfekte Struktur, um loszulegen. Entscheidend ist die klare Absicht, Schutz zu ermöglichen – den Rest entwickeln wir gemeinsam.</p>
-    <ul class="check-list" style="margin-top: 28px;">
-      <li>Ein ernsthaftes Bekenntnis zum Schutz vulnerabler Gruppen</li>
-      <li>Ansprechpersonen, die auf Meldungen reagieren können</li>
-      <li>Bereitschaft, Abläufe und Strukturen weiterzuentwickeln</li>
-      <li>Rückzugsmöglichkeiten für Betroffene vor Ort <span style="color: var(--grey-mid, #6b7280); font-weight: 400;">(beim Einsatz von Rapid Response)</span></li>
-    </ul>
-  </div>
-</section>
-
 <!-- Netzwerk – eigene Sektion, visuell abgesetzt -->
 <section id="netzwerk" class="section bg-lavender" style="padding-top: 80px; padding-bottom: 80px;">
   <div class="section-content">
@@ -190,13 +175,27 @@
       </a>
     </div>
 
-    <!-- Partner-Karussell -->
-    <div class="partner-carousel-wrapper">
-      <div class="partner-carousel">
+    <!-- Partner-Kacheln (Grid) -->
+    <div class="partner-grid">
+<article class="partner-card">
+  <a href="https://mithaltung.de/" target="_blank" rel="noopener" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; height: 100%;">
+    <header style="height: 180px; overflow: hidden; flex-shrink: 0; background: var(--lavender-main);">
+      <img src="https://api.microlink.io?url=https%3A%2F%2Fmithaltung.de%2F&screenshot=true&meta=false&embed=screenshot.url&viewport.width=1280&viewport.height=720&type=png" alt="Mit Haltung" data-initial="M" class="partner-shot" style="width: 100%; height: 100%; object-fit: cover;">
+    </header>
+    <main style="padding: 20px 24px; display: flex; flex-direction: column; gap: 6px; flex: 1;">
+      <strong class="subhead-small" style="color: var(--purple-main);">Mit Haltung</strong>
+      <p class="copy-small copy-muted" style="font-size: 12px; margin: 0;">Schulungen und Sensibilisierungsformate</p>
+      <ul style="list-style: none; padding: 0; margin: 10px 0 0; flex: 1;">
+          <li style="font-size: 12px; color: var(--purple-main); font-weight: 600; margin: 2px 0;">→ Fan Fest Hamburg · UEFA EURO 2024</li>
+          <li style="font-size: 12px; color: var(--purple-main); font-weight: 600; margin: 2px 0;">→ Kieler Woche</li>
+      </ul>
+    </main>
+  </a>
+</article>
 <article class="partner-card">
   <a href="https://www.l-unita-security.de/" target="_blank" rel="noopener" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; height: 100%;">
-    <header style="height: 140px; background: var(--lightblue-main); display: flex; align-items: center; justify-content: center; padding: 24px; flex-shrink: 0;">
-      <img src="https://logo.clearbit.com/l-unita-security.de" alt="L'Unità" data-initial="L" class="partner-logo" style="max-width: 70%; max-height: 70%; object-fit: contain;">
+    <header style="height: 180px; overflow: hidden; flex-shrink: 0; background: var(--lavender-main);">
+      <img src="https://api.microlink.io?url=https%3A%2F%2Fwww.l-unita-security.de%2F&screenshot=true&meta=false&embed=screenshot.url&viewport.width=1280&viewport.height=720&type=png" alt="L'Unità" data-initial="L" class="partner-shot" style="width: 100%; height: 100%; object-fit: cover;">
     </header>
     <main style="padding: 20px 24px; display: flex; flex-direction: column; gap: 6px; flex: 1;">
       <strong class="subhead-small" style="color: var(--purple-main);">L&#x27;Unità</strong>
@@ -211,8 +210,8 @@
 </article>
 <article class="partner-card">
   <a href="https://the-changency.de/" target="_blank" rel="noopener" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; height: 100%;">
-    <header style="height: 140px; background: var(--lightblue-main); display: flex; align-items: center; justify-content: center; padding: 24px; flex-shrink: 0;">
-      <img src="https://logo.clearbit.com/the-changency.de" alt="The Changency" data-initial="T" class="partner-logo" style="max-width: 70%; max-height: 70%; object-fit: contain;">
+    <header style="height: 180px; overflow: hidden; flex-shrink: 0; background: var(--lavender-main);">
+      <img src="https://api.microlink.io?url=https%3A%2F%2Fthe-changency.de%2F&screenshot=true&meta=false&embed=screenshot.url&viewport.width=1280&viewport.height=720&type=png" alt="The Changency" data-initial="T" class="partner-shot" style="width: 100%; height: 100%; object-fit: cover;">
     </header>
     <main style="padding: 20px 24px; display: flex; flex-direction: column; gap: 6px; flex: 1;">
       <strong class="subhead-small" style="color: var(--purple-main);">The Changency</strong>
@@ -225,8 +224,8 @@
 </article>
 <article class="partner-card">
   <a href="https://omr.com/" target="_blank" rel="noopener" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; height: 100%;">
-    <header style="height: 140px; background: var(--lightblue-main); display: flex; align-items: center; justify-content: center; padding: 24px; flex-shrink: 0;">
-      <img src="https://logo.clearbit.com/omr.com" alt="Awareness OMR" data-initial="A" class="partner-logo" style="max-width: 70%; max-height: 70%; object-fit: contain;">
+    <header style="height: 180px; overflow: hidden; flex-shrink: 0; background: var(--lavender-main);">
+      <img src="https://api.microlink.io?url=https%3A%2F%2Fomr.com%2F&screenshot=true&meta=false&embed=screenshot.url&viewport.width=1280&viewport.height=720&type=png" alt="Awareness OMR" data-initial="A" class="partner-shot" style="width: 100%; height: 100%; object-fit: cover;">
     </header>
     <main style="padding: 20px 24px; display: flex; flex-direction: column; gap: 6px; flex: 1;">
       <strong class="subhead-small" style="color: var(--purple-main);">Awareness OMR</strong>
@@ -239,24 +238,9 @@
   </a>
 </article>
 <article class="partner-card">
-  <a href="https://mithaltung.de/" target="_blank" rel="noopener" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; height: 100%;">
-    <header style="height: 140px; background: var(--lightblue-main); display: flex; align-items: center; justify-content: center; padding: 24px; flex-shrink: 0;">
-      <img src="https://logo.clearbit.com/mithaltung.de" alt="Mit Haltung" data-initial="M" class="partner-logo" style="max-width: 70%; max-height: 70%; object-fit: contain;">
-    </header>
-    <main style="padding: 20px 24px; display: flex; flex-direction: column; gap: 6px; flex: 1;">
-      <strong class="subhead-small" style="color: var(--purple-main);">Mit Haltung</strong>
-      <p class="copy-small copy-muted" style="font-size: 12px; margin: 0;">Schulungen und Sensibilisierungsformate</p>
-      <ul style="list-style: none; padding: 0; margin: 10px 0 0; flex: 1;">
-          <li style="font-size: 12px; color: var(--purple-main); font-weight: 600; margin: 2px 0;">→ Fan Fest Hamburg · UEFA EURO 2024</li>
-          <li style="font-size: 12px; color: var(--purple-main); font-weight: 600; margin: 2px 0;">→ Kieler Woche</li>
-      </ul>
-    </main>
-  </a>
-</article>
-<article class="partner-card">
-  <a href="https://actaware.de/" target="_blank" rel="noopener" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; height: 100%;">
-    <header style="height: 140px; background: var(--lightblue-main); display: flex; align-items: center; justify-content: center; padding: 24px; flex-shrink: 0;">
-      <img src="https://logo.clearbit.com/actaware.de" alt="Act Aware" data-initial="A" class="partner-logo" style="max-width: 70%; max-height: 70%; object-fit: contain;">
+  <a href="https://act-aware.net/" target="_blank" rel="noopener" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; height: 100%;">
+    <header style="height: 180px; overflow: hidden; flex-shrink: 0; background: var(--lavender-main);">
+      <img src="https://api.microlink.io?url=https%3A%2F%2Fact-aware.net%2F&screenshot=true&meta=false&embed=screenshot.url&viewport.width=1280&viewport.height=720&type=png" alt="Act Aware" data-initial="A" class="partner-shot" style="width: 100%; height: 100%; object-fit: cover;">
     </header>
     <main style="padding: 20px 24px; display: flex; flex-direction: column; gap: 6px; flex: 1;">
       <strong class="subhead-small" style="color: var(--purple-main);">Act Aware</strong>
@@ -269,8 +253,8 @@
 </article>
 <article class="partner-card">
   <a href="https://www.wetakecare-hannover.de/" target="_blank" rel="noopener" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; height: 100%;">
-    <header style="height: 140px; background: var(--lightblue-main); display: flex; align-items: center; justify-content: center; padding: 24px; flex-shrink: 0;">
-      <img src="https://logo.clearbit.com/wetakecare-hannover.de" alt="We Take Care" data-initial="W" class="partner-logo" style="max-width: 70%; max-height: 70%; object-fit: contain;">
+    <header style="height: 180px; overflow: hidden; flex-shrink: 0; background: var(--lavender-main);">
+      <img src="https://api.microlink.io?url=https%3A%2F%2Fwww.wetakecare-hannover.de%2F&screenshot=true&meta=false&embed=screenshot.url&viewport.width=1280&viewport.height=720&type=png" alt="We Take Care" data-initial="W" class="partner-shot" style="width: 100%; height: 100%; object-fit: cover;">
     </header>
     <main style="padding: 20px 24px; display: flex; flex-direction: column; gap: 6px; flex: 1;">
       <strong class="subhead-small" style="color: var(--purple-main);">We Take Care</strong>
@@ -284,8 +268,8 @@
 </article>
 <article class="partner-card">
   <a href="https://praxis-lechtenboehmer.de/" target="_blank" rel="noopener" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; height: 100%;">
-    <header style="height: 140px; background: var(--lightblue-main); display: flex; align-items: center; justify-content: center; padding: 24px; flex-shrink: 0;">
-      <img src="https://logo.clearbit.com/praxis-lechtenboehmer.de" alt="Sandra Lechtenböhmer" data-initial="S" class="partner-logo" style="max-width: 70%; max-height: 70%; object-fit: contain;">
+    <header style="height: 180px; overflow: hidden; flex-shrink: 0; background: var(--lavender-main);">
+      <img src="https://api.microlink.io?url=https%3A%2F%2Fpraxis-lechtenboehmer.de%2F&screenshot=true&meta=false&embed=screenshot.url&viewport.width=1280&viewport.height=720&type=png" alt="Sandra Lechtenböhmer" data-initial="S" class="partner-shot" style="width: 100%; height: 100%; object-fit: cover;">
     </header>
     <main style="padding: 20px 24px; display: flex; flex-direction: column; gap: 6px; flex: 1;">
       <strong class="subhead-small" style="color: var(--purple-main);">Sandra Lechtenböhmer</strong>
@@ -299,8 +283,8 @@
 </article>
 <article class="partner-card">
   <a href="https://www.wilmssicherheit.de/" target="_blank" rel="noopener" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; height: 100%;">
-    <header style="height: 140px; background: var(--lightblue-main); display: flex; align-items: center; justify-content: center; padding: 24px; flex-shrink: 0;">
-      <img src="https://logo.clearbit.com/wilmssicherheit.de" alt="Wilms Sicherheit" data-initial="W" class="partner-logo" style="max-width: 70%; max-height: 70%; object-fit: contain;">
+    <header style="height: 180px; overflow: hidden; flex-shrink: 0; background: var(--lavender-main);">
+      <img src="https://api.microlink.io?url=https%3A%2F%2Fwww.wilmssicherheit.de%2F&screenshot=true&meta=false&embed=screenshot.url&viewport.width=1280&viewport.height=720&type=png" alt="Wilms Sicherheit" data-initial="W" class="partner-shot" style="width: 100%; height: 100%; object-fit: cover;">
     </header>
     <main style="padding: 20px 24px; display: flex; flex-direction: column; gap: 6px; flex: 1;">
       <strong class="subhead-small" style="color: var(--purple-main);">Wilms Sicherheit</strong>
@@ -314,8 +298,8 @@
 </article>
 <article class="partner-card">
   <a href="https://www.stpauli-fanladen.de/" target="_blank" rel="noopener" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; height: 100%;">
-    <header style="height: 140px; background: var(--lightblue-main); display: flex; align-items: center; justify-content: center; padding: 24px; flex-shrink: 0;">
-      <img src="https://logo.clearbit.com/stpauli-fanladen.de" alt="AK Awareness St. Pauli" data-initial="A" class="partner-logo" style="max-width: 70%; max-height: 70%; object-fit: contain;">
+    <header style="height: 180px; overflow: hidden; flex-shrink: 0; background: var(--lavender-main);">
+      <img src="https://api.microlink.io?url=https%3A%2F%2Fwww.stpauli-fanladen.de%2F&screenshot=true&meta=false&embed=screenshot.url&viewport.width=1280&viewport.height=720&type=png" alt="AK Awareness St. Pauli" data-initial="A" class="partner-shot" style="width: 100%; height: 100%; object-fit: cover;">
     </header>
     <main style="padding: 20px 24px; display: flex; flex-direction: column; gap: 6px; flex: 1;">
       <strong class="subhead-small" style="color: var(--purple-main);">AK Awareness St. Pauli</strong>
@@ -330,8 +314,8 @@
 </article>
 <article class="partner-card">
   <a href="https://www.fcstpauli.com/media/173883/awareness-konzept-fc-st-pauli.pdf" target="_blank" rel="noopener" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; height: 100%;">
-    <header style="height: 140px; background: var(--lightblue-main); display: flex; align-items: center; justify-content: center; padding: 24px; flex-shrink: 0;">
-      <img src="https://logo.clearbit.com/fcstpauli.com" alt="Paulin" data-initial="P" class="partner-logo" style="max-width: 70%; max-height: 70%; object-fit: contain;">
+    <header style="height: 180px; overflow: hidden; flex-shrink: 0; background: var(--lavender-main);">
+      <img src="https://api.microlink.io?url=https%3A%2F%2Fwww.fcstpauli.com%2F&screenshot=true&meta=false&embed=screenshot.url&viewport.width=1280&viewport.height=720&type=png" alt="Paulin" data-initial="P" class="partner-shot" style="width: 100%; height: 100%; object-fit: cover;">
     </header>
     <main style="padding: 20px 24px; display: flex; flex-direction: column; gap: 6px; flex: 1;">
       <strong class="subhead-small" style="color: var(--purple-main);">Paulin</strong>
@@ -344,8 +328,8 @@
 </article>
 <article class="partner-card">
   <a href="https://ru.muenchen.de/2025/103/Awareness-Team-im-Englischen-Garten-eingesetzt-118612" target="_blank" rel="noopener" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; height: 100%;">
-    <header style="height: 140px; background: var(--lightblue-main); display: flex; align-items: center; justify-content: center; padding: 24px; flex-shrink: 0;">
-      <img src="https://logo.clearbit.com/muenchen.de" alt="MucAware" data-initial="M" class="partner-logo" style="max-width: 70%; max-height: 70%; object-fit: contain;">
+    <header style="height: 180px; overflow: hidden; flex-shrink: 0; background: var(--lavender-main);">
+      <img src="https://api.microlink.io?url=https%3A%2F%2Fru.muenchen.de%2F2025%2F103%2FAwareness-Team-im-Englischen-Garten-eingesetzt-118612&screenshot=true&meta=false&embed=screenshot.url&viewport.width=1280&viewport.height=720&type=png" alt="MucAware" data-initial="M" class="partner-shot" style="width: 100%; height: 100%; object-fit: cover;">
     </header>
     <main style="padding: 20px 24px; display: flex; flex-direction: column; gap: 6px; flex: 1;">
       <strong class="subhead-small" style="color: var(--purple-main);">MucAware</strong>
@@ -358,8 +342,8 @@
 </article>
 <article class="partner-card">
   <a href="https://www.johanniter.de/" target="_blank" rel="noopener" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; height: 100%;">
-    <header style="height: 140px; background: var(--lightblue-main); display: flex; align-items: center; justify-content: center; padding: 24px; flex-shrink: 0;">
-      <img src="https://logo.clearbit.com/johanniter.de" alt="Johanniter-Unfall-Hilfe" data-initial="J" class="partner-logo" style="max-width: 70%; max-height: 70%; object-fit: contain;">
+    <header style="height: 180px; overflow: hidden; flex-shrink: 0; background: var(--lavender-main);">
+      <img src="https://api.microlink.io?url=https%3A%2F%2Fwww.johanniter.de%2F&screenshot=true&meta=false&embed=screenshot.url&viewport.width=1280&viewport.height=720&type=png" alt="Johanniter-Unfall-Hilfe" data-initial="J" class="partner-shot" style="width: 100%; height: 100%; object-fit: cover;">
     </header>
     <main style="padding: 20px 24px; display: flex; flex-direction: column; gap: 6px; flex: 1;">
       <strong class="subhead-small" style="color: var(--purple-main);">Johanniter-Unfall-Hilfe</strong>
@@ -372,8 +356,8 @@
 </article>
 <article class="partner-card">
   <a href="https://www.drk.de/" target="_blank" rel="noopener" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; height: 100%;">
-    <header style="height: 140px; background: var(--lightblue-main); display: flex; align-items: center; justify-content: center; padding: 24px; flex-shrink: 0;">
-      <img src="https://logo.clearbit.com/drk.de" alt="Deutsches Rotes Kreuz (DRK)" data-initial="D" class="partner-logo" style="max-width: 70%; max-height: 70%; object-fit: contain;">
+    <header style="height: 180px; overflow: hidden; flex-shrink: 0; background: var(--lavender-main);">
+      <img src="https://api.microlink.io?url=https%3A%2F%2Fwww.drk.de%2F&screenshot=true&meta=false&embed=screenshot.url&viewport.width=1280&viewport.height=720&type=png" alt="Deutsches Rotes Kreuz (DRK)" data-initial="D" class="partner-shot" style="width: 100%; height: 100%; object-fit: cover;">
     </header>
     <main style="padding: 20px 24px; display: flex; flex-direction: column; gap: 6px; flex: 1;">
       <strong class="subhead-small" style="color: var(--purple-main);">Deutsches Rotes Kreuz (DRK)</strong>
@@ -385,13 +369,13 @@
   </a>
 </article>
 <article class="partner-card">
-  <a href="https://www.asb.de/" target="_blank" rel="noopener" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; height: 100%;">
-    <header style="height: 140px; background: var(--lightblue-main); display: flex; align-items: center; justify-content: center; padding: 24px; flex-shrink: 0;">
-      <img src="https://logo.clearbit.com/asb.de" alt="Arbeiter-Samariter-Bund (ASB)" data-initial="A" class="partner-logo" style="max-width: 70%; max-height: 70%; object-fit: contain;">
+  <a href="https://www.awo-muenchen.de/" target="_blank" rel="noopener" style="text-decoration: none; color: inherit; display: flex; flex-direction: column; height: 100%;">
+    <header style="height: 180px; overflow: hidden; flex-shrink: 0; background: var(--lavender-main);">
+      <img src="https://api.microlink.io?url=https%3A%2F%2Fwww.awo-muenchen.de%2F&screenshot=true&meta=false&embed=screenshot.url&viewport.width=1280&viewport.height=720&type=png" alt="AWO München" data-initial="A" class="partner-shot" style="width: 100%; height: 100%; object-fit: cover;">
     </header>
     <main style="padding: 20px 24px; display: flex; flex-direction: column; gap: 6px; flex: 1;">
-      <strong class="subhead-small" style="color: var(--purple-main);">Arbeiter-Samariter-Bund (ASB)</strong>
-      <p class="copy-small copy-muted" style="font-size: 12px; margin: 0;">Sanitäts- und Rettungsdienst bei Großveranstaltungen</p>
+      <strong class="subhead-small" style="color: var(--purple-main);">AWO München</strong>
+      <p class="copy-small copy-muted" style="font-size: 12px; margin: 0;">Soziale Dienste &amp; Awareness-Kooperationen in München</p>
       <ul style="list-style: none; padding: 0; margin: 10px 0 0; flex: 1;">
           <li style="font-size: 12px; color: var(--purple-main); font-weight: 600; margin: 2px 0;">→ Allianz Arena München</li>
       </ul>
@@ -412,7 +396,8 @@
       <h2 class="headline3" style="color: var(--purple-main);">Inhaltlich verbunden.</h2>
       <p class="copy copy-muted" style="margin-top: 12px; max-width: 640px; margin-left: auto; margin-right: auto;">Mit diesen Initiativen teilen wir Werte und Ziele und unterstützen ihre Arbeit – auch ohne konkretes gemeinsames Projekt.</p>
     </div>
-    <div class="ideell-grid">
+    <div class="ideell-carousel-wrapper">
+      <div class="ideell-carousel">
       <a href="https://initiative-awareness.de/" target="_blank" rel="noopener" class="ideell-card">
         <div class="ideell-logo"><img src="https://logo.clearbit.com/initiative-awareness.de" alt="Initiative Awareness e.V." data-initial="I" class="partner-logo"></div>
         <strong class="subhead-small" style="color: var(--purple-main);">Initiative Awareness e.V.</strong>
@@ -438,6 +423,26 @@
         <strong class="subhead-small" style="color: var(--purple-main);">b-aware Kollektiv</strong>
         <p class="copy-small copy-muted" style="font-size: 12px; margin: 0;">Awareness-Arbeit bei Veranstaltungen in Berlin</p>
       </a>
+      <a href="https://gemeinsam-gegen-sexismus.de/" target="_blank" rel="noopener" class="ideell-card">
+        <div class="ideell-logo"><img src="https://logo.clearbit.com/gemeinsam-gegen-sexismus.de" alt="Gemeinsam gegen Sexismus" data-initial="G" class="partner-logo"></div>
+        <strong class="subhead-small" style="color: var(--purple-main);">Gemeinsam gegen Sexismus</strong>
+        <p class="copy-small copy-muted" style="font-size: 12px; margin: 0;">Bündnis gegen Sexismus im Alltag &amp; Berufsleben (BMFSFJ)</p>
+      </a>
+      <a href="https://www.fussball-gegen-sexismus.de/" target="_blank" rel="noopener" class="ideell-card">
+        <div class="ideell-logo"><img src="https://logo.clearbit.com/fussball-gegen-sexismus.de" alt="Fußball gegen Sexismus" data-initial="F" class="partner-logo"></div>
+        <strong class="subhead-small" style="color: var(--purple-main);">Fußball gegen Sexismus</strong>
+        <p class="copy-small copy-muted" style="font-size: 12px; margin: 0;">Initiative gegen sexistische Gewalt im Fußball</p>
+      </a>
+      <a href="https://inklusion-fussball.de/" target="_blank" rel="noopener" class="ideell-card">
+        <div class="ideell-logo"><img src="https://logo.clearbit.com/inklusion-fussball.de" alt="Inklusion im Fußball" data-initial="I" class="partner-logo"></div>
+        <strong class="subhead-small" style="color: var(--purple-main);">Inklusion im Fußball</strong>
+        <p class="copy-small copy-muted" style="font-size: 12px; margin: 0;">Barrierefreiheit und Teilhabe im Fußball</p>
+      </a>
+      <a href="https://fussballkannmehr.de/" target="_blank" rel="noopener" class="ideell-card">
+        <div class="ideell-logo"><img src="https://logo.clearbit.com/fussballkannmehr.de" alt="Fußball kann mehr" data-initial="F" class="partner-logo"></div>
+        <strong class="subhead-small" style="color: var(--purple-main);">Fußball kann mehr</strong>
+        <p class="copy-small copy-muted" style="font-size: 12px; margin: 0;">Initiative für Gleichstellung &amp; Vielfalt im Fußball</p>
+      </a>
       <!-- CTA-Kachel: Teil werden -->
       <a href="mailto:hello@saferspaces.io?subject=Netzwerk-Anfrage&amp;body=Hallo%20saferspaces-Team%2C%0A%0Aich%20m%C3%B6chte%20Teil%20eures%20Netzwerks%20werden.%0A%0AName%20%2F%20Organisation%3A%0ASchwerpunkt%20(Initiative%20%7C%20Beratung%20%7C%20Schulung%20%7C%20Awareness-Team)%3A%0AReferenzen%20%2F%20Einsatzgebiete%3A%0AWebsite%3A%0A%0AViele%20Gr%C3%BC%C3%9Fe" class="ideell-card ideell-card--cta">
         <div class="ideell-logo"><span class="material-symbols-rounded" style="color: #fff; font-size: 48px;">mail</span></div>
@@ -445,22 +450,88 @@
         <p class="copy-small" style="font-size: 12px; margin: 0; color: rgba(255,255,255,0.8);">Initiative, Verein oder Kollektiv? Schreibt uns – wir freuen uns auf Kooperation.</p>
         <span style="color: #fff; font-size: 13px; font-weight: 700; margin-top: 8px;">Anfrage senden →</span>
       </a>
+      </div>
     </div>
   </div>
 
   <script>
+    // Logo-Cascade für alle Partner/Förderer: Clearbit (primary src) → DuckDuckGo → Google favicon → Initiale
     (function() {
+      var sources = [
+        function(d) { return 'https://icons.duckduckgo.com/ip3/' + d + '.ico'; },
+        function(d) { return 'https://www.google.com/s2/favicons?domain=' + d + '&sz=256'; }
+      ];
+      function extractDomain(src) {
+        var m = src.match(/clearbit\.com\/([^?#]+)/);
+        return m ? m[1] : '';
+      }
+      function replaceWithInitial(img, size, color) {
+        var name = img.dataset.initial || img.alt || '?';
+        var div = document.createElement('div');
+        div.textContent = name.charAt(0);
+        div.style.cssText = 'font-family: GT Alpina Condensed, serif; font-size: ' + size + 'px; font-weight: 700; color: ' + color + '; display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;';
+        img.replaceWith(div);
+      }
       document.querySelectorAll('.partner-logo').forEach(function(img) {
+        var attempts = 0;
+        var domain = extractDomain(img.src);
+        var isForderer = !!img.closest('.foerderer-item');
+        var size = isForderer ? 28 : 48;
+        var color = isForderer ? 'var(--grey-mid)' : 'var(--purple-main)';
+        img.addEventListener('error', function onErr() {
+          if (attempts < sources.length && domain) {
+            this.src = sources[attempts++](domain);
+          } else {
+            this.removeEventListener('error', onErr);
+            replaceWithInitial(this, size, color);
+          }
+        });
+      });
+      // Partner-Card Website-Screenshots – bei Ausfall Fallback auf Initiale auf Lavender
+      document.querySelectorAll('.partner-shot').forEach(function(img) {
         img.addEventListener('error', function() {
-          var initial = (this.dataset.initial || '?').charAt(0);
+          var name = this.dataset.initial || this.alt || '?';
           var div = document.createElement('div');
-          div.textContent = initial;
-          div.style.cssText = 'font-family: GT Alpina Condensed, serif; font-size: 48px; font-weight: 700; color: var(--purple-main); display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;';
+          div.textContent = name.charAt(0);
+          div.style.cssText = 'font-family: GT Alpina Condensed, serif; font-size: 72px; font-weight: 700; color: var(--purple-main); background: var(--lavender-main); display: flex; align-items: center; justify-content: center; width: 100%; height: 100%;';
           this.replaceWith(div);
         });
       });
     })();
   </script>
+</section>
+
+<!-- Gefördert & unterstützt durch -->
+<section class="section bg-white" style="padding-top: 56px; padding-bottom: 56px;">
+  <div class="section-content" style="text-align: center;">
+    <p class="label-text" style="color: var(--purple-main); margin-bottom: 24px;">Gefördert &amp; unterstützt durch</p>
+    <div class="foerderer-grid">
+      <a href="https://www.ifbhh.de/" target="_blank" rel="noopener" class="foerderer-item">
+        <img src="https://www.ifbhh.de/resource/crblob/1206/8edb2fde2b6efbd528ab021b86d357e9/logo-svg-data.svg" alt="IFB Hamburg" data-initial="I" class="partner-logo">
+        <span class="foerderer-name">IFB Hamburg</span>
+      </a>
+      <a href="https://updatedeutschland.org/" target="_blank" rel="noopener" class="foerderer-item">
+        <img src="https://updatedeutschland.org/wp-content/uploads/2021/03/Logo_UpdateDeutschland.svg" alt="UpdateDeutschland" data-initial="U" class="partner-logo">
+        <span class="foerderer-name">UpdateDeutschland</span>
+      </a>
+      <a href="https://opencampus.sh/" target="_blank" rel="noopener" class="foerderer-item">
+        <img src="https://static.wixstatic.com/media/0f1bf3_16daf9be4ffd4bfaa0dd1df75faa0fd1~mv2.png" alt="opencampus.sh" data-initial="O" class="partner-logo">
+        <span class="foerderer-name">opencampus.sh</span>
+      </a>
+      <a href="https://clubkombinat.de/" target="_blank" rel="noopener" class="foerderer-item">
+        <img src="https://clubkombinat.de/wp-content/uploads/2023/11/logo_black.png" alt="Clubkombinat Hamburg" data-initial="C" class="partner-logo">
+        <span class="foerderer-name">Clubkombinat Hamburg</span>
+      </a>
+      <a href="https://kreativgesellschaft.org/en/innovation-inkubatoren/inkubatoren/music-worx/" target="_blank" rel="noopener" class="foerderer-item">
+        <img src="https://kreativgesellschaft.org/site/assets/files/1679/hkg.svg" alt="Music WorX" data-initial="M" class="partner-logo">
+        <span class="foerderer-name">Music WorX</span>
+      </a>
+      <a href="https://kreativgesellschaft.org/" target="_blank" rel="noopener" class="foerderer-item">
+        <img src="https://kreativgesellschaft.org/site/assets/files/1679/hkg.svg" alt="Hamburg Kreativ Gesellschaft" data-initial="K" class="partner-logo">
+        <span class="foerderer-name">Hamburg Kreativ Gesellschaft</span>
+      </a>
+    </div>
+  </div>
 </section>
 
 <section class="section bg-white">

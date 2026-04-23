@@ -2112,18 +2112,73 @@ body.menu-open { overflow: hidden; }
 }
 .partner-card {
   flex-shrink: 0;
-  width: 280px;
-  background: #fff;
-  border-radius: 16px;
+  width: 352px;
+  display: flex;
+  flex-direction: column;
   overflow: hidden;
-  box-shadow: 0 2px 8px rgba(42, 20, 130, 0.06);
+  border-radius: 40px;
+  background: #fff;
+  user-select: none;
   transition: transform 0.2s ease, box-shadow 0.2s ease;
 }
 .partner-card:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(42, 20, 130, 0.12);
+  box-shadow: 0 8px 28px rgba(42, 20, 130, 0.14);
 }
-.partner-card--sm { width: 260px; }
+.partner-card > a { height: 100%; }
+.partner-card > a > header {
+  height: 200px !important;
+  padding: 0 !important;
+  overflow: hidden;
+}
+.partner-card .partner-logo {
+  max-width: 100% !important;
+  max-height: 100% !important;
+  width: auto;
+  height: auto;
+}
+.partner-card .partner-shot {
+  width: 100% !important;
+  height: 100% !important;
+  object-fit: cover !important;
+  display: block;
+}
+.partner-card > a > main {
+  padding: 32px !important;
+  gap: 10px !important;
+}
+.partner-card--sm { width: 320px; }
+.partner-card--sm > a > header { height: 180px !important; }
+
+/* Partner-Grid (ehem. Karussell) */
+.partner-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+}
+@media (max-width: 900px) { .partner-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 540px) { .partner-grid { grid-template-columns: 1fr; } }
+.partner-grid .partner-card { width: auto !important; }
+
+/* Ideell-Karussell (ehem. Grid) */
+.ideell-carousel-wrapper {
+  overflow-x: auto;
+  overflow-y: hidden;
+  cursor: grab;
+  -webkit-overflow-scrolling: touch;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+  padding: 8px 4px 16px;
+  margin: 8px -4px 0;
+}
+.ideell-carousel-wrapper::-webkit-scrollbar { display: none; }
+.ideell-carousel-wrapper:active { cursor: grabbing; }
+.ideell-carousel {
+  display: flex;
+  gap: 16px;
+  padding: 0 4px;
+}
+.ideell-carousel .ideell-card { flex: 0 0 260px; }
 
 /* Gemeinsame Ziele – Grid mit Cards */
 .ideell-grid {
@@ -2176,6 +2231,41 @@ body.menu-open { overflow: hidden; }
 }
 .ideell-card--cta:hover {
   box-shadow: 0 6px 20px rgba(42, 20, 130, 0.25);
+}
+
+/* Förderer-Bar */
+.foerderer-grid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 40px 56px;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+.foerderer-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+  text-decoration: none;
+  color: inherit;
+  transition: opacity 0.2s ease;
+  opacity: 0.65;
+}
+.foerderer-item:hover { opacity: 1; }
+.foerderer-item img,
+.foerderer-item > div {
+  height: 48px;
+  max-width: 140px;
+  object-fit: contain;
+}
+.foerderer-name {
+  font-size: 11px;
+  color: var(--grey-mid);
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
 }
 
 /* Hide scrollbar on ref-carousel */
