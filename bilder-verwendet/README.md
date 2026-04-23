@@ -1,7 +1,7 @@
 # Bilder – Übersicht aller auf der Website verwendeten Assets
 
-Stand: 2026-04-20
-Summe: 72 Bilder in 8 Kategorien
+Stand: 2026-04-23
+Summe: 86 Bilder in 10 Kategorien
 
 Dieses Verzeichnis enthält **ausschließlich Bilder, die aktuell im HTML/CSS der Website referenziert werden**. Nicht mehr genutzte Altbestände sind bewusst nicht enthalten.
 
@@ -150,6 +150,42 @@ Marken-Assets, die im Header/Footer bzw. als Favicon jeder Seite eingebunden sin
 | `logo-folded.svg` | Kompaktes Logo (eingeklappter Header, mobile Nav) |
 | `logo-unfolded.svg` | Vollständiges Logo (Desktop-Header, Footer) |
 | `favicon.svg` | Favicon (Browser-Tab) |
+
+---
+
+## 10-foerderer-logos/ (5 Bilder)
+
+Logos von Förderer-/Unterstützer-Organisationen. Auf der Netzwerk-Seite `ueber-uns-netzwerk.html` in der Sektion „Gefördert & unterstützt durch" eingeblendet.
+
+Speicherort auf der Website: `images/logos/foerderer/` (Ausnahme: `opencampus.png` liegt direkt unter `images/opencampus logo.png`).
+
+| Datei | Organisation |
+|---|---|
+| `ifb-hamburg.svg` | IFB Hamburg – Hamburgische Investitions- und Förderbank |
+| `updatedeutschland.svg` | UpdateDeutschland (Tech4Germany / #UpdateDeutschland) |
+| `opencampus.png` | opencampus.sh – Startup-Inkubator Kiel |
+| `clubkombinat.png` | Clubkombinat Hamburg |
+| `kreativgesellschaft.svg` | Hamburg Kreativ Gesellschaft |
+
+---
+
+## 11-initiativen-logos/ (9 Bilder)
+
+Logos von Initiativen und Organisationen, mit denen saferspaces inhaltlich verbunden ist. Auf der Netzwerk-Seite `ueber-uns-netzwerk.html` in der Sektion „Inhaltlich verbunden" im Carousel „Gemeinsame Ziele" eingeblendet.
+
+Speicherort auf der Website: `images/logos/initiativen/`.
+
+| Datei | Initiative / Organisation |
+|---|---|
+| `initiative-awareness.png` | Initiative Awareness e.V. (Leipzig) |
+| `tba-clubkombinat.png` | TBA – To Be Aware (Clubkombinat Hamburg) |
+| `sichtbarkollektiv.png` | Das Sichtbar Kollektiv |
+| `medea-live.png` | Medea Live – Awareness bei Konzerten |
+| `b-aware.png` | b-aware Kollektiv (Berlin) |
+| `gemeinsam-gegen-sexismus.svg` | Bündnis „Gemeinsam gegen Sexismus" (BMFSFJ) |
+| `fussball-gegen-sexismus.png` | Fußball gegen Sexismus |
+| `inklusion-fussball.png` | Inklusion im Fußball |
+| `fussballkannmehr.png` | Fußball kann mehr |
 
 ---
 
