@@ -2547,3 +2547,55 @@ body.menu-open { overflow: hidden; }
 }
 .cs-related-card .label-text { margin-bottom: 8px; }
 .cs-related-card .subhead { color: var(--purple-main); }
+
+/* Team Grid (Mission-Seite) */
+.team-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 20px;
+}
+.team-card {
+  padding: 0;
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.team-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 40px rgba(42, 20, 130, 0.14);
+}
+.team-photo {
+  background-color: var(--lavender-main);
+  aspect-ratio: 3/4;
+  background-size: cover;
+  background-position: center top;
+  transition: transform 0.5s ease;
+}
+.team-card:hover .team-photo { transform: scale(1.03); }
+.team-info { padding: 22px 22px 26px; }
+.team-card .subhead-small { font-size: 17px; line-height: 1.25; }
+.team-card .copy-small { line-height: 1.5; }
+.team-bg-label {
+  display: block;
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--purple-main);
+  opacity: 0.5;
+  margin-top: 14px;
+  margin-bottom: 4px;
+}
+.team-bg {
+  font-size: 13px;
+  line-height: 1.45;
+  color: var(--purple-main);
+}
+@media (max-width: 1100px) {
+  .team-grid { grid-template-columns: repeat(3, 1fr); }
+}
+@media (max-width: 700px) {
+  .team-grid { grid-template-columns: repeat(2, 1fr); gap: 16px; }
+}
+@media (max-width: 420px) {
+  .team-grid { grid-template-columns: 1fr; }
+}
