@@ -2569,8 +2569,42 @@ body.menu-open { overflow: hidden; }
   background-size: cover;
   background-position: center top;
   transition: transform 0.5s ease;
+  position: relative;
+  overflow: hidden;
 }
 .team-card:hover .team-photo { transform: scale(1.03); }
+
+/* Hover-Overlay mit Zitat auf den Team-Fotos */
+.team-quote-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(42, 20, 130, 0.94);
+  color: var(--white);
+  padding: 24px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  opacity: 0;
+  transition: opacity 0.35s ease;
+  pointer-events: none;
+}
+.team-quote-text {
+  font-size: 15px;
+  line-height: 1.5;
+  margin: 0;
+  font-style: italic;
+}
+.team-card:hover .team-quote-overlay { opacity: 1; }
+.team-card:hover .team-photo { transform: none; }
+/* Mobile/Touch: kein Hover möglich → Overlay ausblenden, separate Statements-Sektion bleibt */
+@media (hover: none) {
+  .team-quote-overlay { display: none; }
+}
+@media (hover: hover) {
+  /* Desktop: Statements-Sektion ausblenden, da bereits in Hover-Karten */
+  .statements-section { display: none; }
+}
 .team-info { padding: 22px 22px 26px; }
 .team-card .subhead-small { font-size: 17px; line-height: 1.25; }
 .team-card .copy-small { line-height: 1.5; }
