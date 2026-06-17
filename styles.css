@@ -744,18 +744,32 @@ a.nav-item-link.active { border-bottom: 2px solid var(--purple-main); }
   .feature-split { flex-direction: column !important; gap: 32px; padding: 0; }
 }
 
-/* Founders-Foto: Desktop neben Story-Intro, Mobile in der "Wie wir uns gefunden haben"-Sektion */
-.founders-photo-mobile { display: none; }
-@media (max-width: 900px) {
-  .founders-photo-desktop { display: none; }
-  .founders-photo-mobile {
-    display: block;
-    width: 100%;
-    aspect-ratio: 4 / 3;
-    background-size: cover;
-    background-position: center;
-    border-radius: 16px;
-  }
+/* Founders-Foto: inline zwischen den Story-Absätzen, zentriert */
+.story-inline-figure {
+  margin: 40px auto;
+  max-width: 560px;
+  padding: 0;
+}
+.story-inline-photo {
+  width: 100%;
+  aspect-ratio: 4 / 3;
+  background-size: cover;
+  background-position: center;
+  border-radius: 16px;
+}
+.story-inline-caption {
+  display: block;
+  text-align: center;
+  font-size: 12px;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 700;
+  color: var(--purple-main);
+  opacity: 0.55;
+  margin-top: 12px;
+}
+@media (max-width: 700px) {
+  .story-inline-figure { margin: 28px auto; }
 }
 
 /* ===== STATEMENT CARDS (Homepage Mehrwerte) ===== */
