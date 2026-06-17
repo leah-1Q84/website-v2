@@ -2648,6 +2648,42 @@ body.menu-open { overflow: hidden; }
   .team-grid { grid-template-columns: 1fr; }
 }
 
+/* Kernteam (3 Karten) und Team-Support aus der Praxis (2 Karten) */
+.team-block-title {
+  font-family: 'Mabry Pro', sans-serif;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--purple-main);
+  margin: 0;
+}
+.team-grid--core {
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 800px;
+  margin-left: auto;
+  margin-right: auto;
+}
+.team-grid--praxis {
+  grid-template-columns: repeat(2, 1fr);
+  max-width: 540px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 700px) {
+  .team-grid--core, .team-grid--praxis { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 420px) {
+  .team-grid--core, .team-grid--praxis { grid-template-columns: 1fr; }
+}
+
+/* Praxis-Karten: flieder-getöntes Hintergrund-Akzent */
+.team-card--praxis { background: #F2EDFA; }
+.team-card--praxis .team-bg-label,
+.team-card--praxis .team-bg {
+  color: #6B4FA0;
+}
+
 /* ===== Team-Seite ===== */
 
 /* Persönliche Statements */
