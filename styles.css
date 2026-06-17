@@ -2679,13 +2679,16 @@ body.menu-open { overflow: hidden; }
   margin-right: auto;
 }
 .team-grid--praxis {
-  grid-template-columns: repeat(2, 1fr);
-  max-width: 540px;
+  grid-template-columns: repeat(4, 1fr);
+  max-width: 1080px;
   margin-left: auto;
   margin-right: auto;
 }
+@media (max-width: 1000px) {
+  .team-grid--praxis { grid-template-columns: repeat(2, 1fr); max-width: 540px; }
+}
 @media (max-width: 700px) {
-  .team-grid--core, .team-grid--praxis { grid-template-columns: repeat(2, 1fr); }
+  .team-grid--core { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 420px) {
   .team-grid--core, .team-grid--praxis { grid-template-columns: 1fr; }
